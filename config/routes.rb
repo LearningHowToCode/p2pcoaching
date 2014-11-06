@@ -1,4 +1,5 @@
 Belluga2::Application.routes.draw do
+  devise_for :tutors
   resources :students
 
   resources :tutors
