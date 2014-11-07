@@ -1,8 +1,5 @@
 Belluga2::Application.routes.draw do
-  devise_for :students
-  devise_for :tutors
   resources :students
-
   resources :tutors
 
   root "pages#home"
