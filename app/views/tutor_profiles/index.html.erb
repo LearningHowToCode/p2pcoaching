@@ -3,7 +3,11 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Format</th>
+      <th>University</th>
+      <th>Price</th>
+      <th>Bio</th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,10 +17,12 @@
   <tbody>
     <% @tutor_profiles.each do |tutor_profile| %>
       <tr>
+        <td><%= link_to tutor_profile.name, tutor_profile %></td>
         <td><%= tutor_profile.format %></td>
+        <td><%= tutor_profile.university %></td>
+        <td><%= tutor_profile.price %></td>
+        <td><%= tutor_profile.bio %></td>
         <td><%= link_to 'Show', tutor_profile %></td>
-        <td><%= link_to 'Edit', edit_tutor_profile_path(tutor_profile) %></td>
-        <td><%= link_to 'Destroy', tutor_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

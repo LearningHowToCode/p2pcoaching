@@ -31,6 +31,6 @@ class TutorProfilesController < ApplicationController
     end
 
     def tutor_profile_params
-      params.require(:tutor_profile).permit(:format)
+      params.require(:tutor_profile).permit(:university, :format, :price, :bio)
     end
 end

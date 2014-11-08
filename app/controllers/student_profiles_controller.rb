@@ -31,6 +31,6 @@ class StudentProfilesController < ApplicationController
     end
 
     def student_profile_params
-      params[:student_profile]
+      params.require(:student_profile).permit(:country)
     end
 end
