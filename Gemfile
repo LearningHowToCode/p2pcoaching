@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
+gem 'pry-rails'
+gem 'quiet_assets', group: :development
 
 group :development, :test do
      gem 'sqlite3'
