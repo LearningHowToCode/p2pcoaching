@@ -9,19 +9,19 @@ class User < ActiveRecord::Base
   after_create :create_profile
 
   def student?
-    self.profile_type == 'StudentProfile'
+    self.profile_type == 'Student'
   end
 
   def tutor?
-    self.profile_type == 'TutorProfile'
+    self.profile_type == 'Tutor'
   end
 
   private
   def create_profile
     if self.profile_type == 'tutor'
-      TutorProfile.create(user: self)
+      Tutor.create(user: self)
     else
-      StudentProfile.create(user: self)
+      Student.create(user: self)
     end
   end
 end

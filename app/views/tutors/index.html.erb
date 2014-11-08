@@ -1,0 +1,29 @@
+<h1>Listing tutors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Format</th>
+      <th>University</th>
+      <th>Price</th>
+      <th>Bio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tutors.each do |tutor| %>
+      <tr>
+        <td><%= link_to tutor.name, tutor %></td>
+        <td><%= tutor.format %></td>
+        <td><%= tutor.university %></td>
+        <td><%= tutor.price %></td>
+        <td><%= tutor.bio %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>

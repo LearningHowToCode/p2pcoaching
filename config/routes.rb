@@ -1,8 +1,6 @@
 Belluga2::Application.routes.draw do
-  resources :tutor_profiles, except: [:new, :create]
-  resources :student_profiles, except: [:new, :create]
-
-  get 'tutors', to: 'tutor_profiles#index', as: 'tutors'
+  resources :students
+  resources :tutors
 
   devise_for :users
   devise_scope :user do
