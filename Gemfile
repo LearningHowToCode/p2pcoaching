@@ -9,7 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'pry-rails'
 gem 'quiet_assets', group: :development
 
