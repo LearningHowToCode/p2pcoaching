@@ -1,4 +1,6 @@
 <h1>Welcome to Belluga!</h1>
-<%= link_to "Tutor Sign Up", new_registration_path('tutor') %>
-<br>
-<%= link_to "Student Sign Up", new_registration_path('student') %>
+<% unless user_signed_in? %>
+  <%= link_to "Tutor Sign Up", new_registration_path('tutor') %>
+  <br>
+  <%= link_to "Student Sign Up", new_registration_path('student') %>
+<% end %>
