@@ -8,7 +8,6 @@ Belluga2::Application.routes.draw do
   resources :tutors
 
   root "pages#home"
-  get "list" => "pages#list"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
