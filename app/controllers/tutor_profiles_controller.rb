@@ -1,5 +1,6 @@
 class TutorProfilesController < ApplicationController
   before_action :set_tutor_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update]
   respond_to :html
 
   def index
