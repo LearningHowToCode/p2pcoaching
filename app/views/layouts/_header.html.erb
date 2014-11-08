@@ -17,9 +17,13 @@
             <ul class="nav navbar-nav">
               <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "Search Tutors", tutors_path %></li>
-              <li><%= link_to "Tutor Sign Up", new_registration_path('tutor') %></li>
-              <li><%= link_to "Student Sign Up", new_registration_path('student') %></li>
-              <li><%= link_to "Tutor Sign In", destroy_user_session_path, method: :delete %></li>
+              <% if user_signed_in?  %>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              <% else  %>
+                <li><%= link_to "Tutor Sign Up", new_registration_path('tutor') %></li>
+                <li><%= link_to "Student Sign Up", new_registration_path('student') %></li>
+                <li><%= link_to "Sign In", new_user_session_path %></li>
+              <% end %>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
