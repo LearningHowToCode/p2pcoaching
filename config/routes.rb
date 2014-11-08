@@ -1,5 +1,5 @@
 Belluga2::Application.routes.draw do
-  resources :sessions
+  resources :lessons
 
   resources :students
   resources :tutors

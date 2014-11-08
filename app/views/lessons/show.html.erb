@@ -2,33 +2,33 @@
 
 <p>
   <strong>Day:</strong>
-  <%= @session.day %>
+  <%= @lesson.day %>
 </p>
 
 <p>
   <strong>Start time:</strong>
-  <%= @session.start_time %>
+  <%= @lesson.start_time %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @session.end_time %>
+  <%= @lesson.end_time %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @session.status %>
+  <%= @lesson.status %>
 </p>
 
 <p>
   <strong>Tutor:</strong>
-  <%= @session.tutor_id %>
+  <%= @lesson.tutor_id %>
 </p>
 
 <p>
   <strong>Student:</strong>
-  <%= @session.student_id %>
+  <%= @lesson.student_id %>
 </p>
 
-<%= link_to 'Edit', edit_session_path(@session) %> |
-<%= link_to 'Back', sessions_path %>
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
