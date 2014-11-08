@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :profile_type
+    devise_parameter_sanitizer.for(:sign_up) << [:profile_type, :name]
   end
 end
