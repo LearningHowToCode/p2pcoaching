@@ -11,23 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107233357) do
+ActiveRecord::Schema.define(version: 20141108021434) do
 
-  create_table "students", force: true do |t|
-    t.string   "name"
+  create_table "student_profiles", force: true do |t|
     t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "tutor_profiles", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tutors", force: true do |t|
-    t.string   "name"
     t.string   "format"
     t.string   "university"
     t.decimal  "price"
@@ -37,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141107233357) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "name"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
