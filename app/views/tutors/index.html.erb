@@ -1,6 +1,6 @@
-<h1>Listing tutors</h1>
+<h1>Tutors</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -20,7 +20,7 @@
         <td><%= link_to tutor.name, tutor %></td>
         <td><%= tutor.format %></td>
         <td><%= tutor.university %></td>
-        <td><%= tutor.price %></td>
+        <td><%= number_to_currency tutor.price %></td>
         <td><%= tutor.bio %></td>
       </tr>
     <% end %>

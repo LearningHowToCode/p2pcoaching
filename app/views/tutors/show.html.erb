@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @tutor.name %>
-</p>
+</h1>
 
 <p>
   <strong>Format:</strong>
@@ -17,7 +16,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @tutor.price %>
+  <%= number_to_currency @tutor.price %>
 </p>
 
 <p>
@@ -25,5 +24,4 @@
   <%= @tutor.bio %>
 </p>
 
-<%= link_to 'Edit', edit_tutor_path(@tutor) %> |
-<%= link_to 'Back', tutors_path %>
+<%= link_to 'Edit', edit_tutor_path(@tutor) %>
