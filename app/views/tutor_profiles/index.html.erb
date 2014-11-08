@@ -1,0 +1,27 @@
+<h1>Listing tutor_profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tutor_profiles.each do |tutor_profile| %>
+      <tr>
+        <td><%= tutor_profile.format %></td>
+        <td><%= link_to 'Show', tutor_profile %></td>
+        <td><%= link_to 'Edit', edit_tutor_profile_path(tutor_profile) %></td>
+        <td><%= link_to 'Destroy', tutor_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tutor profile', new_tutor_profile_path %>
