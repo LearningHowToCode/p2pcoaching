@@ -1,5 +1,6 @@
 class TutorProfilesController < ApplicationController
   before_action :set_tutor_profile, only: [:show, :edit, :update, :destroy]
+  respond_to :html
 
   def index
     @tutor_profiles = TutorProfile.all
@@ -10,18 +11,7 @@ class TutorProfilesController < ApplicationController
     respond_with(@tutor_profile)
   end
 
-  def new
-    @tutor_profile = TutorProfile.new
-    respond_with(@tutor_profile)
-  end
-
   def edit
-  end
-
-  def create
-    @tutor_profile = TutorProfile.new(tutor_profile_params)
-    @tutor_profile.save
-    respond_with(@tutor_profile)
   end
 
   def update

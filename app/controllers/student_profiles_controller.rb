@@ -1,5 +1,6 @@
 class StudentProfilesController < ApplicationController
   before_action :set_student_profile, only: [:show, :edit, :update, :destroy]
+  respond_to :html
 
   def index
     @student_profiles = StudentProfile.all
@@ -10,18 +11,7 @@ class StudentProfilesController < ApplicationController
     respond_with(@student_profile)
   end
 
-  def new
-    @student_profile = StudentProfile.new
-    respond_with(@student_profile)
-  end
-
   def edit
-  end
-
-  def create
-    @student_profile = StudentProfile.new(student_profile_params)
-    @student_profile.save
-    respond_with(@student_profile)
   end
 
   def update
