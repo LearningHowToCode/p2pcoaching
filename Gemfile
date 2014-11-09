@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'pry-rails'
 gem 'quiet_assets', group: :development
+gem "paperclip", "~> 3.0"
 
 group :development, :test do
      gem 'sqlite3'
