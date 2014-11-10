@@ -44,7 +44,7 @@ class TutorsController < ApplicationController
     end
 
     def tutor_params
-      params.require(:tutor).permit(:name, :format, :university, :price, :bio)
+      params.require(:tutor).permit(:name, :image, :format, :university, :price, :bio)
     end
 
     def check_user
@@ -52,6 +52,5 @@ class TutorsController < ApplicationController
         redirect_to root_url, alert: "Sorry, you cannot edit someone else's profile."
       end
     end
-
 end
 

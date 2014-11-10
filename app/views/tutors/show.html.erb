@@ -7,6 +7,9 @@
   <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
 <% end %>
 <p>
+  <%= image_tag @tutor.image, width: 100 %>
+</p>
+<p>
   <strong>Format:</strong>
   <%= @tutor.format %>
 </p>
