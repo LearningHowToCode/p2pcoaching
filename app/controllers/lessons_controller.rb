@@ -24,6 +24,7 @@ class LessonsController < ApplicationController
 
   def create
     @lesson = Lesson.new(lesson_params)
+    @lesson.tutor = current_user
     @lesson.save
     respond_with(@lesson)
   end
