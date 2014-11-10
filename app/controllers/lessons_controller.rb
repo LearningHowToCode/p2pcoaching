@@ -1,6 +1,9 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
   respond_to :html
+
 
   def index
     @lessons = Lesson.all
@@ -43,4 +46,12 @@ class LessonsController < ApplicationController
     def lesson_params
       params.require(:lesson).permit(:day, :start_time, :end_time, :status, :tutor_id, :student_id)
     end
+
+    def check_user
+      if current_user != @lesson.tutor
+        redirect_to root_url, alert: "Sorry, you cannot make changes to someone else's lesson."
+      end
+    end
+
 end
+

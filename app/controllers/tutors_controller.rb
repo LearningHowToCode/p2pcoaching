@@ -1,5 +1,7 @@
 class TutorsController < ApplicationController
   before_action :set_tutor, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
   respond_to :html
 
   def index
@@ -43,4 +45,12 @@ class TutorsController < ApplicationController
     def tutor_params
       params.require(:tutor).permit(:name, :format, :university, :price, :bio)
     end
+
+    def check_user
+      if current_user != @tutor.user
+        redirect_to root_url, alert: "Sorry, you cannot edit someone else's profile."
+      end
+    end
+
 end
+
