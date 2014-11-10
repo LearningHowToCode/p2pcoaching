@@ -24,17 +24,6 @@ ActiveRecord::Schema.define(version: 20141108171810) do
     t.datetime "updated_at"
   end
 
-  create_table "sessions", force: true do |t|
-    t.date     "day"
-    t.string   "start_time"
-    t.string   "end_time"
-    t.string   "status"
-    t.integer  "tutor_id"
-    t.integer  "student_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "students", force: true do |t|
     t.string   "name"
     t.string   "country"
