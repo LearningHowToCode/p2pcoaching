@@ -49,10 +49,8 @@ class LessonsController < ApplicationController
     end
 
     def check_user
-      if current_user != @lesson.tutor
+      if current_user != @lesson.tutor.user
         redirect_to root_url, alert: "Sorry, you cannot make changes to someone else's lesson."
       end
     end
-
 end
-
