@@ -3,6 +3,7 @@
 <table class='table'>
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Format</th>
       <th>University</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @tutors.each do |tutor| %>
       <tr>
+        <td><%= image_tag tutor.image, width: '30' %></td>
         <td><%= link_to tutor.name, tutor %></td>
         <td><%= tutor.format %></td>
         <td><%= tutor.university %></td>
