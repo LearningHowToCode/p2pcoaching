@@ -10,6 +10,7 @@ class TutorsController < ApplicationController
   end
 
   def show
+    @lessons = @tutor.lessons
     respond_with(@tutor)
   end
 

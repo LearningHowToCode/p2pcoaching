@@ -3,7 +3,9 @@
 <h1>
   <%= @tutor.name %>
 </h1>
-
+<% if current_user == @tutor.user %>
+  <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
+<% end %>
 <p>
   <strong>Format:</strong>
   <%= @tutor.format %>
@@ -24,7 +26,10 @@
   <%= @tutor.bio %>
 </p>
 
-<% if current_user == @tutor.user %>
-	<%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
-<% end %>
-<%= link_to 'Lessons', lessons_path, class: "btn btn-link" %>
+<div>
+  <h1 class='pull-left'>
+    Lessons
+  </h1>
+  <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+</div>
+<%= render 'lessons/lessons_list' %>
