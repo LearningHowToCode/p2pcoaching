@@ -1,0 +1,28 @@
+<div class="center">
+  <h2>Your Purchase History</h2>
+</div>
+
+
+<table class="table table-striped table-bordered">
+ <thead>
+  <tr>
+    <th>Day</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Status</th>
+    <th>Tutor</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.lesson.day %></td>
+      <td><%= order.lesson.start_time %></td>
+      <td><%= order.lesson.end_time %></td>
+      <td><%= order.lesson.status %></td>
+      <td><%= order.lesson.tutor.try(:name) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

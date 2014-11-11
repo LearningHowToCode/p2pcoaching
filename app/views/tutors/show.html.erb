@@ -3,9 +3,7 @@
 <h1>
   <%= @tutor.name %>
 </h1>
-<% if current_user == @tutor.user %>
-  <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
-<% end %>
+
 <p>
   <%= image_tag @tutor.image, width: 100 %>
 </p>
@@ -25,14 +23,20 @@
 </p>
 
 <p>
-  <strong>Bio:</strong>
+  <strong>Profile:</strong>
   <%= @tutor.bio %>
 </p>
+
+<% if current_user == @tutor.user %>
+  <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
+<% end %>
 
 <div>
   <h1 class='pull-left'>
     Lessons
   </h1>
-  <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+
 </div>
 <%= render 'lessons/lessons_list' %>
+
+<%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>

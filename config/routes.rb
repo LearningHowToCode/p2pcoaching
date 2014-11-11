@@ -11,6 +11,10 @@ Belluga2::Application.routes.draw do
   devise_scope :user do
     get ':profile/sign_up', to: 'devise/registrations#new', as: 'new_registration'
   end
+
+  get 'sales' => "orders#sales"
+  get 'purchases' => "orders#purchases"
+
   root "pages#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
