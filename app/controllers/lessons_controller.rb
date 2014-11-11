@@ -4,16 +4,6 @@ class LessonsController < ApplicationController
   before_filter :check_user, only: [:edit, :update, :destroy]
   respond_to :html
 
-
-  def index
-    @lessons = Lesson.all
-    respond_with(@lessons)
-  end
-
-  def show
-    respond_with(@lesson)
-  end
-
   def new
     @lesson = Lesson.new
     respond_with(@lesson)
@@ -24,19 +14,20 @@ class LessonsController < ApplicationController
 
   def create
     @lesson = Lesson.new(lesson_params)
-    @lesson.tutor = current_user
+    @lesson.tutor = current_user.profile
     @lesson.save
-    respond_with(@lesson)
+
+    redirect_to @lesson.tutor
   end
 
   def update
     @lesson.update(lesson_params)
-    respond_with(@lesson)
+    redirect_to @lesson.tutor
   end
 
   def destroy
     @lesson.destroy
-    respond_with(@lesson)
+    redirect_to @lesson.tutor
   end
 
   private

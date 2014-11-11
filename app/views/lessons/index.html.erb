@@ -1,8 +1,0 @@
-<h1>Lessons</h1>
-
-<%= render 'lessons/lesson_list' %>
-<br>
-
-<% if user_signed_in? %>
-  <%= link_to 'Add a New Lesson', new_lesson_path, class: "btn btn-link" %>
-<% end %>
