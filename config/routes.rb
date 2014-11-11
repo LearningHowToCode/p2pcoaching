@@ -1,7 +1,8 @@
 Belluga2::Application.routes.draw do
-  resources :orders
 
-  resources :lessons, except: [:index, :show]
+  resources :lessons, except: [:index, :show] do
+    resources :orders
+  end
 
   resources :students
   resources :tutors

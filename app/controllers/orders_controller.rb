@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  respond_to :html
 
   def index
     @orders = Order.all
@@ -12,6 +13,8 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @lesson = Lesson.find(params[:lesson_id])
+
     respond_with(@order)
   end
 
@@ -19,9 +22,23 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    @order.save
-    respond_with(@order)
+    @order = Order.new
+    @lesson = Lesson.find(params[:lesson_id])
+    @lesson.student_id = current_user.profile.id
+    @lesson.status = 'reserved'
+    @lesson.save
+
+    @order.lesson_id = @lesson.id
+    @order.buyer_id = current_user.profile.id
+    @order.seller_id = @lesson.tutor.id
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to root_path, notice: 'Thank you for making a reservation' }
+      else
+        render :new
+      end
+    end
   end
 
   def update

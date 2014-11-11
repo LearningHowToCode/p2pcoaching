@@ -1,5 +1,11 @@
-<h1>New order</h1>
+<h1>New Lesson Order</h1>
 
+<%= @lesson.tutor.name %>
+<br/>
+<%= @lesson.day %>
+<br/>
+<%= @lesson.start_time %><br/>
+<br/>
+<%= @lesson.end_time %>
+<br/>
 <%= render 'form' %>
-
-<%= link_to 'Back', orders_path %>
