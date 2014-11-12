@@ -36,13 +36,14 @@ class OrdersController < ApplicationController
     @order.lesson_id = @lesson.id
     @order.buyer_id = current_user.profile.id # Student
     @order.seller_id = @lesson.tutor.id
+    @order.price = @lesson.price
 
     Stripe.api_key = ENV["STRIPE_API_KEY"]
     token = params[:stripeToken]
 
     begin
       charge = Stripe::Charge.create(
-        :amount => 50.floor,
+        :amount => (@lesson.price * 100).floor,
         :currency => "usd",
         :card => token
         )
