@@ -7,4 +7,8 @@ module ApplicationHelper
       link_to 'My Profile', student_path(current_user.profile)
     end
   end
+
+  def format_time(time)
+    time.strftime('%H:%M')
+  end
 end

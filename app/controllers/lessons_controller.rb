@@ -39,7 +39,7 @@ class LessonsController < ApplicationController
     end
 
     def lesson_params
-      params.require(:lesson).permit(:day, :start_time, :end_time, :status, :tutor_id, :student_id)
+      params.require(:lesson).permit(:day, :start_time, :duration, :status, :tutor_id, :student_id)
     end
 
     def check_user

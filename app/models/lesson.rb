@@ -4,5 +4,5 @@ class Lesson < ActiveRecord::Base
 
   has_one :order
 
-  validates :start_time, :end_time, numericality: true
+  validates :duration, numericality: true
 end

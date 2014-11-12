@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141111153440) do
+ActiveRecord::Schema.define(version: 20141112205734) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
-    t.string   "start_time"
-    t.string   "end_time"
+    t.time     "start_time", limit: 255
     t.string   "status"
     t.integer  "tutor_id"
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "duration"
   end
 
   create_table "orders", force: true do |t|

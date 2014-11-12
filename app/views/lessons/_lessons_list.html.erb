@@ -3,7 +3,7 @@
   <tr>
     <th>Day</th>
     <th>Start time</th>
-    <th>End time</th>
+    <th>Duration</th>
     <th>Status</th>
     <th>Student</th>
     <th>Action</th>
@@ -14,8 +14,8 @@
   <% @lessons.each do |lesson| %>
     <tr>
       <td><%= lesson.day %></td>
-      <td><%= lesson.start_time %></td>
-      <td><%= lesson.end_time %></td>
+      <td><%= format_time lesson.start_time %></td>
+      <td><%= "#{lesson.duration} minutes" %></td>
       <td><%= lesson.status %></td>
       <td><%= lesson.student.try(:name) %></td>
       <td>
