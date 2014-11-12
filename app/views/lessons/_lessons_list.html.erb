@@ -24,7 +24,7 @@
           <%= link_to 'Delete', lesson, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'%>
         <% end %>
         <% if current_user.student? %>
-          <%= link_to 'Request a lesson', new_lesson_order_path(lesson), class: 'btn btn-sm btn-success' %>
+          <%= link_to 'Request a lesson', new_lesson_order_path(lesson), class: 'btn btn-sm btn-success', data: { no_turbolink: true } %>
         <% end  %>
       </td>
     </tr>
