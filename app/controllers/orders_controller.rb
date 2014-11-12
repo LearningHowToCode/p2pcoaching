@@ -3,14 +3,12 @@ class OrdersController < ApplicationController
   respond_to :html
   
   def sales
-    @orders = Order.all.where(seller: current_user).order("created_at DESC")
+    @orders = Order.all.where(seller: current_user.profile).order("created_at DESC")
   end
 
   def purchases
-    @orders = Order.all.where(buyer: current_user).order("created_at DESC")
+    @orders = Order.all.where(buyer: current_user.profile).order("created_at DESC")
   end
-
-
 
   def index
     @orders = Order.all
@@ -34,12 +32,9 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new
     @lesson = Lesson.find(params[:lesson_id])
-    @lesson.student_id = current_user.profile.id
-    @lesson.status = 'reserved'
-    @lesson.save
 
     @order.lesson_id = @lesson.id
-    @order.buyer_id = current_user.profile.id
+    @order.buyer_id = current_user.profile.id # Student
     @order.seller_id = @lesson.tutor.id
 
     Stripe.api_key = ENV["STRIPE_API_KEY"]
@@ -55,12 +50,13 @@ class OrdersController < ApplicationController
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
-    
-
-
 
     respond_to do |format|
       if @order.save
+        @lesson.student_id = current_user.profile.id
+        @lesson.status = 'reserved'
+        @lesson.save
+
         format.html { redirect_to root_path, notice: 'Thank you for making a reservation' }
       else
         render :new
