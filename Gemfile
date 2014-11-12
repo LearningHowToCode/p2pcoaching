@@ -13,6 +13,8 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'pry-rails'
 gem 'quiet_assets', group: :development
 gem 'carrierwave'
+gem 'figaro'
+gem 'stripe'
 
 group :development, :test do
      gem 'sqlite3'
