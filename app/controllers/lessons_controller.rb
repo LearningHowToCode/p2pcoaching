@@ -15,9 +15,12 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
     @lesson.tutor = current_user.profile
-    @lesson.save
 
-    redirect_to @lesson.tutor
+    if @lesson.save
+      redirect_to @lesson.tutor
+    else
+      render :new
+    end
   end
 
   def update
