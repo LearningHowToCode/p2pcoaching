@@ -1,11 +1,16 @@
-<h1>Lesson Details</h1>
+<h1>Make a Reservation</h1>
 
+<br/>
+<h4>Lesson Details:</h4>
 <%= @lesson.tutor.name %>
 <br/>
 <%= @lesson.day %>
 <br/>
-<%= @lesson.start_time %><br/>
+<%= @lesson.start_time %>
 <br/>
 <%= @lesson.end_time %>
 <br/>
+<br/>
+<br/>
+<h4>Please Fill In Your Payment Information:</h4>
 <%= render 'form' %>
