@@ -39,4 +39,6 @@
 </div>
 <%= render 'lessons/lessons_list' %>
 
-<%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+<% if current_user.profile == @tutor %>
+  <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+<% end  %>
