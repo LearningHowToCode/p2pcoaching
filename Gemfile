@@ -15,6 +15,7 @@ gem 'quiet_assets', group: :development
 gem 'carrierwave'
 gem 'figaro'
 gem 'stripe'
+gem 'rest-client'
 
 group :development, :test do
      gem 'sqlite3'
