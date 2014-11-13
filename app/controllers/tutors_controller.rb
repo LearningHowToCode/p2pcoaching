@@ -44,7 +44,10 @@ class TutorsController < ApplicationController
     end
 
     def tutor_params
-      params.require(:tutor).permit(:name, :image, :format, :university, :price, :bio)
+      params.require(:tutor).permit(:name, :image, :format, :price, :bio,
+                                    :undergraduate_institution, :undergraduate_major,
+                                    :graduate_institution, :graduate_study_field,
+                                    :subject, :long_bio)
     end
 
     def check_user

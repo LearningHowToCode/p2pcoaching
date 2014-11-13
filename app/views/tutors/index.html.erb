@@ -6,7 +6,10 @@
       <th></th>
       <th>Name</th>
       <th>Format</th>
-      <th>University</th>
+      <th>Undergraduate</th>
+      <th>Major</th>
+      <th>Graduate</th>
+      <th>Field of Study</th>
       <th>Price</th>
       <th>Profile</th>
       <th></th>
@@ -21,7 +24,10 @@
         <td><%= image_tag tutor.image, width: '30' %></td>
         <td><%= link_to tutor.name, tutor %></td>
         <td><%= tutor.format %></td>
-        <td><%= tutor.university %></td>
+        <td><%= tutor.undergraduate_institution %></td>
+        <td><%= tutor.undergraduate_major %></td>
+        <td><%= tutor.graduate_institution %></td>
+        <td><%= tutor.graduate_study_field %></td>
         <td><%= number_to_currency tutor.price %></td>
         <td><%= tutor.bio %></td>
       </tr>

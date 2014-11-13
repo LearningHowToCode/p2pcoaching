@@ -13,8 +13,27 @@
 </p>
 
 <p>
-  <strong>University:</strong>
-  <%= @tutor.university %>
+  <strong>Undergraduate:</strong>
+  <%= @tutor.undergraduate_institution %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @tutor.undergraduate_major %>
+</p>
+<p>
+  <strong>Graduate:</strong>
+  <%= @tutor.graduate_institution %>
+</p>
+
+<p>
+  <strong>Field of Study:</strong>
+  <%= @tutor.graduate_study_field %>
+</p>
+
+<p>
+  <strong>Subjects:</strong>
+  <%= @tutor.subject %>
 </p>
 
 <p>
@@ -24,7 +43,7 @@
 
 <p>
   <strong>Profile:</strong>
-  <%= @tutor.bio %>
+  <%= @tutor.long_bio %>
 </p>
 
 <% if current_user.try(:profile) == @tutor %>
