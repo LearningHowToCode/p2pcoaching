@@ -9,4 +9,8 @@ class Lesson < ActiveRecord::Base
   def price
     (self.tutor.price * self.duration) / 60
   end
+
+  def reserved?
+    self.status == 'reserved'
+  end
 end
