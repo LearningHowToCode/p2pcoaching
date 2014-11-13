@@ -27,7 +27,7 @@
   <%= @tutor.bio %>
 </p>
 
-<% if current_user == @tutor.user %>
+<% if current_user.try(:profile) == @tutor %>
   <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
 <% end %>
 
@@ -39,6 +39,6 @@
 </div>
 <%= render 'lessons/lessons_list' %>
 
-<% if current_user.profile == @tutor %>
+<% if current_user.try(:profile) == @tutor %>
   <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
 <% end  %>
