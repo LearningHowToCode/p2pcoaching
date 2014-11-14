@@ -15,6 +15,9 @@ Belluga2::Application.routes.draw do
   get 'sales' => "orders#sales"
   get 'purchases' => "orders#purchases"
 
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  get 'how_it_works', to: 'pages#how_it_works'
   root "pages#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
