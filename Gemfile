@@ -16,6 +16,7 @@ gem 'carrierwave'
 gem 'figaro'
 gem 'stripe'
 gem 'rest-client'
+gem 'country_select', github: 'stefanpenner/country_select'
 
 group :development, :test do
      gem 'sqlite3'
