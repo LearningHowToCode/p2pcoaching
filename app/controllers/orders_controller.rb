@@ -59,6 +59,7 @@ class OrdersController < ApplicationController
         @lesson.status = 'reserved'
         @lesson.save
 
+        NotificationMailer.lesson_confirmation(@order).deliver
         format.html { redirect_to root_path, notice: 'Thank you for making a reservation' }
       else
         render :new
