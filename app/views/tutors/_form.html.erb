@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Name (e.g., John Smith)' %><br>
     <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
@@ -24,16 +24,16 @@
     <%= f.select :format, ['Skype', 'In Person'], class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :undergraduate_institution, 'Undergraduate' %><br>
-    <%= f.text_field :undergraduate_institution, class: "form-control" %>
+    <%= f.label :undergraduate_institution, 'College' %><br>
+    <%= f.select :undergraduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'], class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :undergraduate_major, 'Major' %><br>
     <%= f.text_field :undergraduate_major, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :graduate_institution, 'Graduate' %><br>
-    <%= f.text_field :graduate_institution, class: "form-control" %>
+    <%= f.label :graduate_institution, 'Graduate School' %><br>
+    <%= f.select :graduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'], class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :graduate_study_field, 'Field of Study' %><br>
@@ -44,16 +44,16 @@
     <%= f.text_field :subject, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :price %><br>
-    <%= f.text_field :price, class: "form-control" %>
+    <%= f.label :price, 'Hourly Price (USD)' %><br>
+    <%= f.select :price, [20, 25, 30], class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :bio, 'Profile (200 characters or less)' %><br>
-    <%= f.text_area :bio, class: "form-control", maxlenght: 200 %>
+    <%= f.label :bio, 'Profile (150 characters or less)' %><br>
+    <%= f.text_area :bio, class: "form-control", maxlength: 150 %>
   </div>
   <div class="form-group">
     <%= f.label :long_bio, 'Profile (1000 characters or less)' %><br>
-    <%= f.text_area :long_bio, class: "form-control", maxlenght: 1000 %>
+    <%= f.text_area :long_bio, class: "form-control", maxlength: 1000 %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
