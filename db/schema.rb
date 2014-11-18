@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113203243) do
+ActiveRecord::Schema.define(version: 20141118193804) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -33,17 +33,6 @@ ActiveRecord::Schema.define(version: 20141113203243) do
     t.decimal  "price"
   end
 
-  create_table "sessions", force: true do |t|
-    t.date     "day"
-    t.string   "start_time"
-    t.string   "end_time"
-    t.string   "status"
-    t.integer  "tutor_id"
-    t.integer  "student_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "students", force: true do |t|
     t.string   "name"
     t.string   "country"
@@ -51,21 +40,8 @@ ActiveRecord::Schema.define(version: 20141113203243) do
     t.datetime "updated_at"
   end
 
-  create_table "tutors", force: true do |t|
-    t.string   "name"
-    t.string   "format"
-    t.decimal  "price"
-    t.text     "bio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image"
-    t.string   "undergraduate_institution"
-    t.string   "undergraduate_major"
-    t.string   "graduate_institution"
-    t.string   "graduate_study_field"
-    t.string   "subject"
-    t.text     "long_bio"
-  end
+# Could not dump table "tutors" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
