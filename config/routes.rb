@@ -7,7 +7,7 @@ Belluga2::Application.routes.draw do
   resources :students
   resources :tutors
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
   devise_scope :user do
     get ':profile/sign_up', to: 'devise/registrations#new', as: 'new_registration'
   end
