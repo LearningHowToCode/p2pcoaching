@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118195230) do
+ActiveRecord::Schema.define(version: 20141118195750) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20141118195230) do
     t.datetime "updated_at"
     t.string   "skype_id"
     t.string   "gmail_address"
+    t.string   "preference"
   end
 
 # Could not dump table "tutors" because of following NoMethodError
