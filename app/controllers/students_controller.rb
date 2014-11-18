@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_user!
   respond_to :html
 
   def index
@@ -42,9 +42,7 @@ class StudentsController < ApplicationController
     end
 
     def student_params
-      params.require(:student).permit(:name, :country)
+      params.require(:student).permit(:name, :country, :skype_id, :gmail_address)
     end
-
-
 end
 
