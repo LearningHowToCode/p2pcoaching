@@ -1,8 +1,9 @@
 <h4>Lesson Details</h4>
 <br/>
 <h5>Tutor: <%= @lesson.tutor.name %></h5>
-<h5>Lesson Time (US Eastern Time): <%= @lesson.day %><%= @lesson.start_time %></h5>
-<h5>Lesson Duration (minutes): <%= @lesson.duration %></h5>
+<h5>Lesson Day (US Eastern Time): <%= @lesson.day %></h5>
+<h5>Lesson Time (US Eastern Time): <%= format_time @lesson.start_time %></h5>
+<h5>Lesson Duration: <%= "#{@lesson.duration} Minutes" %></h5>
 <h5>Price: <%= number_to_currency @lesson.price %></h5>
 <br/>
 <br/>
