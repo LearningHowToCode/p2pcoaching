@@ -47,6 +47,14 @@
 </p>
 
 <% if current_user.try(:profile) == @tutor %>
+  <p>
+    <strong>Skype ID:</strong>
+    <%= @tutor.skype_id %>
+  </p>
+  <p>
+    <strong>Gmail address:</strong>
+    <%= @tutor.gmail_address %>
+  </p>
   <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
 <% end %>
 
