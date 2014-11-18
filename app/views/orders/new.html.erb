@@ -1,19 +1,10 @@
-<h1>Make a Reservation</h1>
-
+<h4>Lesson Details</h4>
 <br/>
-<h4>Lesson Details:</h4>
-<%= @lesson.tutor.name %>
-<br/>
-<%= @lesson.day %>
-<br/>
-<%= @lesson.start_time %>
-<br/>
-<%= @lesson.duration %>
-
-<h3>Price:</h3>
-<%= number_to_currency @lesson.price %>
+<h5>Tutor: <%= @lesson.tutor.name %></h5>
+<h5>Lesson Time (US Eastern Time): <%= @lesson.day %><%= @lesson.start_time %></h5>
+<h5>Lesson Duration (minutes): <%= @lesson.duration %></h5>
+<h5>Price: <%= number_to_currency @lesson.price %></h5>
 <br/>
 <br/>
-<br/>
-<h4>Please Fill In Your Payment Information:</h4>
+<h4>Your Payment Information</h4>
 <%= render 'form' %>
