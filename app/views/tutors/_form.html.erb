@@ -33,7 +33,8 @@
   </div>
   <div class="form-group">
     <%= f.label :graduate_institution, 'Graduate School' %><br>
-    <%= f.select :graduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'], class: "form-control" %>
+    <%= f.select :graduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'],
+                 { include_blank: true }, { class: "form-control" } %>
   </div>
   <div class="form-group">
     <%= f.label :graduate_study_field, 'Field of Study' %><br>
@@ -67,31 +68,31 @@
     <label for="">Languages</label>
     <div class="checkbox">
       <label>
-        <%= check_box_tag "user[languages][english]", 'English', false %>
+        <%= check_box_tag "tutor[languages]", 'English', false %>
         English
       </label>
     </div>
     <div class="checkbox">
       <label>
-        <%= check_box_tag "user[languages][chinese]", 'Chinese', false %>
+        <%= check_box_tag "tutor[languages][chinese]", 'Chinese', false %>
         Chinese
       </label>
     </div>
     <div class="checkbox">
       <label>
-        <%= check_box_tag "user[languages][japanese]", 'Japanese', false %>
+        <%= check_box_tag "tutor[languages][japanese]", 'Japanese', false %>
         Japanese
       </label>
     </div>
     <div class="checkbox">
       <label>
-        <%= check_box_tag "user[languages][korean]", 'Korean', false %>
+        <%= check_box_tag "tutor[languages][korean]", 'Korean', false %>
         Korean
       </label>
     </div>
     <div class="checkbox">
       <label>
-        <%= check_box_tag "user[languages][spanish]", 'Spanish', false %>
+        <%= check_box_tag "tutor[languages][spanish]", 'Spanish', false %>
         Spanish
       </label>
     </div>
