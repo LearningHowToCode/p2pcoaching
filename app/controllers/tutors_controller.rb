@@ -10,7 +10,7 @@ class TutorsController < ApplicationController
   end
 
   def show
-    @lessons = @tutor.lessons
+    @lessons = @tutor.lessons.where(['day >= ?', Date.today])
     respond_with(@tutor)
   end
 
