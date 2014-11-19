@@ -1,29 +1,31 @@
 
 
-<section>
-	<h2>Welcome to Belluga!</h2>
-	<h4>We will help you find an Ivy-League tutor for Skype lessons.</h4>
-  <%= link_to "Search Tutors", tutors_path, class: "btn btn-primary btn-lg" %>
+<section class="flex full-width height-two-thirds home-banner">
+  <div class="text-center">
+  	<h1>Welcome to Belluga!</h1>
+  	<h4>We will help you find an Ivy-League tutor for Skype lessons.</h4>
+    <%= link_to "Search Tutors", tutors_path, class: "btn btn-primary btn-lg" %>
+  </div>
 </section>
 
-<section class="row bg-white">
-    <div class="col-md-4">
+<section class="flex height-one-third bg-white">
+    <div class="home-item">
       <div class='text-center'>
-        <i class="glyphicon glyphicon-tower"></i>
+        <img src="assets/badge-ivy.png" width="100" height="100">
       </div>
       <h3 class="text-center">Ivy League Tutors</h3>
       <h5 class="text-center">You can choose from tutors from Harvard, Yale, and other top universities.</h5>
     </div>
-    <div class="col-md-4">
+    <div class="home-item">
       <div class='text-center'>
-        <i class="glyphicon glyphicon-credit-card"></i>
+        <img src="assets/badge-pay.png" width="100" height="100">
       </div>
       <h3 class="text-center">Pay-per-Lesson</h3>
       <h5 class="text-center">You pay only for the lessons you take. You can start from just one lesson and see how it goes.</h5>
     </div>
-    <div class="col-md-4">
+    <div class="home-item">
       <div class='text-center'>
-        <i class="glyphicon glyphicon-calendar"></i>
+        <img src="assets/badge-schedule.png" width="100" height="100">
       </div>
       <h3 class="text-center">Flexible Schedule</h3>
       <h5 class="text-center">All lessons take place over Skype, so you can choose a convenient time and a location for you.</h5>

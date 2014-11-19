@@ -1,11 +1,11 @@
 //@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                                                   #ecf0f1;
+$body-bg:                                                   #fff;
 $font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                                        45px;
 $navbar-default-bg:                          white;
 $navbar-default-brand-color:      #c0392b;
-$brand-primary:                                    #c0392b;
+$brand-primary:                                    #c65b39;
 $jumbotron-bg:                                         white;
 
 @import 'bootstrap';
@@ -33,3 +33,73 @@ section {
 .bg-white {
   background-color: white;
 }
+
+.flex{
+	display: flex;
+	justify-content: space-around;
+}
+
+.flex-center{
+	align-items: center;
+}
+
+.flex-center > div{
+	margin: auto;
+}
+
+.content{
+	display: block;
+	position: absolute;
+	top: 45px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.home-item h5{
+	padding: 0px 36px;
+	line-height: 1.5;
+}
+
+.home-banner{
+	background: url('bg-homepage.png') no-repeat bottom center;
+	background-size: cover;
+}
+
+.home-banner h1{
+	font-size: 4em;
+}
+
+.home-banner h1, .home-banner h4{
+	margin-bottom: 16px;
+}
+
+.navbar-default{
+	background-color: #173e29;
+	border: none;
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: #fff;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.flex{
+		flex-direction: column;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.height-one-third{
+		height: calc(100% / 3);
+	}
+
+	.height-two-thirds{
+		height: calc(100% / 3 * 2 - 55px);
+	}
+}
+
