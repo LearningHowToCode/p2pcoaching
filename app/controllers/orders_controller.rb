@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :auth_to_sign_up, only: :new
   before_filter :authenticate_user!
   respond_to :html
   
@@ -78,11 +79,15 @@ class OrdersController < ApplicationController
   end
 
   private
-    def set_order
-      @order = Order.find(params[:id])
-    end
+  def set_order
+    @order = Order.find(params[:id])
+  end
 
-    def order_params
-      params.require(:order).permit(:buyer_id, :seller_id, :lesson_id)
-    end
+  def order_params
+    params.require(:order).permit(:buyer_id, :seller_id, :lesson_id)
+  end
+
+  def auth_to_sign_up
+    redirect_to new_registration_path('student') unless user_signed_in?
+  end
 end
