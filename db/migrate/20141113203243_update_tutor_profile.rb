@@ -6,6 +6,5 @@ class UpdateTutorProfile < ActiveRecord::Migration
     add_column :tutors, :graduate_study_field, :string
     add_column :tutors, :subject, :array
     add_column :tutors, :long_bio, :text
-    remove_column :tutors, :university
   end
 end

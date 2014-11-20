@@ -3,7 +3,6 @@ class CreateTutors < ActiveRecord::Migration
     create_table :tutors do |t|
       t.string :name
       t.string :format
-      t.string :university
       t.decimal :price
       t.text :bio
 

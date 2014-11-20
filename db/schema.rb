@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141118195750) do
   create_table "lessons", force: true do |t|
     t.date     "day"
     t.time     "start_time", limit: 255
-    t.string   "status"
+    t.string   "status",                 default: "available"
     t.integer  "tutor_id"
     t.integer  "student_id"
     t.datetime "created_at"

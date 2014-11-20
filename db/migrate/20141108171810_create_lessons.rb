@@ -4,7 +4,7 @@ class CreateLessons < ActiveRecord::Migration
       t.date :day
       t.string :start_time
       t.string :end_time
-      t.string :status
+      t.string :status, default: 'available'
       t.integer :tutor_id
       t.integer :student_id
 
