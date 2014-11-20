@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118195750) do
+ActiveRecord::Schema.define(version: 20141120230116) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20141118195750) do
     t.string   "skype_id"
     t.string   "gmail_address"
     t.text     "languages"
+    t.boolean  "completed_profile",         default: false
   end
 
   create_table "users", force: true do |t|
