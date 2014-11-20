@@ -3,8 +3,8 @@ Belluga2::Application.routes.draw do
   resources :lessons, except: [:index, :show] do
     resources :orders
   end
-  resources :students
-  resources :tutors
+  resources :students, except: [:new, :create]
+  resources :tutors, except: [:new, :create]
 
   devise_for :users, :controllers => { :registrations => "registrations" }
   devise_scope :user do
