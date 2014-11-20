@@ -9,4 +9,6 @@ class Tutor < ActiveRecord::Base
                          'undergraduate_institution', 'undergraduate_major',
                          'subject', 'long_bio', 'skype_id','gmail_address',
                          'languages', on: :update
+
+  scope :completed, ->{ where(completed_profile: true) }
 end

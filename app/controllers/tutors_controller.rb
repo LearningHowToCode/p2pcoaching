@@ -5,7 +5,7 @@ class TutorsController < ApplicationController
   respond_to :html
 
   def index
-    @tutors = Tutor.all
+    @tutors = Tutor.all.completed
     respond_with(@tutors)
   end
 
