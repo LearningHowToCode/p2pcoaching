@@ -43,8 +43,24 @@ ActiveRecord::Schema.define(version: 20141118195750) do
     t.string   "preference"
   end
 
-# Could not dump table "tutors" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "tutors", force: true do |t|
+    t.string   "name"
+    t.string   "format"
+    t.decimal  "price"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+    t.string   "undergraduate_institution"
+    t.string   "undergraduate_major"
+    t.string   "graduate_institution"
+    t.string   "graduate_study_field"
+    t.text     "subject"
+    t.text     "long_bio"
+    t.string   "skype_id"
+    t.string   "gmail_address"
+    t.text     "languages"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
