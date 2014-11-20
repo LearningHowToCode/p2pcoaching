@@ -19,9 +19,9 @@ class User < ActiveRecord::Base
   private
   def create_profile
     if self.profile_type == 'tutor'
-      Tutor.create(user: self)
+      Tutor.create!(user: self)
     else
-      Student.create(user: self)
+      Student.create!(user: self)
     end
   end
 end

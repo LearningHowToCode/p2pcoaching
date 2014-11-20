@@ -8,5 +8,5 @@ class Tutor < ActiveRecord::Base
   validates_presence_of  "name", "format", "price", "bio", "image",
                          "undergraduate_institution", "undergraduate_major",
                          "subject", "long_bio", "skype_id","gmail_address",
-                         "languages"
+                         "languages", on: :update
 end

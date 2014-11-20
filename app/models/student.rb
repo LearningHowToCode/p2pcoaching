@@ -4,8 +4,8 @@ class Student < ActiveRecord::Base
 
   has_many :purchases, class_name: 'Order', foreign_key: 'buyer_id'
 
-  validates_presence_of "name", "country", "preference"
-  validate :tool_presence
+  validates_presence_of "name", "country", "preference", on: :update
+  validate :tool_presence, on: :update
 
   def country_name
     return '' if self.country.nil?
