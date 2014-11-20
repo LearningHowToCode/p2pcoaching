@@ -1,29 +1,13 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  before_action :set_student
+  before_action :authenticate_user!
   respond_to :html
-
-  def index
-    @students = Student.all
-    respond_with(@students)
-  end
 
   def show
     respond_with(@student)
   end
 
-  def new
-    @student = Student.new
-    respond_with(@student)
-  end
-
   def edit
-  end
-
-  def create
-    @student = Student.new(student_params)
-    @student.save
-    respond_with(@student)
   end
 
   def update
@@ -46,4 +30,3 @@ class StudentsController < ApplicationController
                                       :preference)
     end
 end
-

@@ -3,7 +3,7 @@ Belluga2::Application.routes.draw do
   resources :lessons, except: [:index, :show] do
     resources :orders
   end
-  resources :students, except: [:new, :create]
+  resources :students, except: [:new, :create, :index]
   resources :tutors, except: [:new, :create]
 
   devise_for :users, :controllers => { :registrations => "registrations" }
@@ -17,5 +17,6 @@ Belluga2::Application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'how_it_works', to: 'pages#how_it_works'
+
   root "pages#home"
 end
