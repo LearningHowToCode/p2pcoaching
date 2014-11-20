@@ -18,8 +18,12 @@ class TutorsController < ApplicationController
   end
 
   def update
-    @tutor.update(tutor_params)
-    respond_with(@tutor)
+    if @tutor.update(tutor_params)
+      @tutor.update_attributes(completed_profile: true)
+      redirect_to @tutor
+    else
+      render :edit
+    end
   end
 
   def destroy
