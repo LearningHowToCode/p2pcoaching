@@ -8,6 +8,14 @@ module ApplicationHelper
     end
   end
 
+  def link_to_my_schedule
+    if current_user.tutor?
+      link_to "My Schedule", sales_path
+    elsif current_user.student?
+      link_to "My Schedule", purchases_path
+    end
+  end
+
   def format_time(time)
     time.strftime('%H:%M')
   end
