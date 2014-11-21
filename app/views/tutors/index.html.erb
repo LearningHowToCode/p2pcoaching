@@ -5,21 +5,27 @@
   <div class="bg-white full-width tutors">
     <% @tutors.each do |tutor| %>
       <div class="tutor flex">
-        <div>
+        <div class="tutor-img">
           <%= image_tag tutor.image, width: '100', class: 'img-circle' %>
         </div>
-        <div>
+        <div class="tutor-info">
           <h3>
             <%= link_to tutor.name, tutor %>
           </h3>
-          <%= tutor.undergraduate_institution %>
-          <%= tutor.undergraduate_major %>
-          <%= tutor.graduate_institution %>
-          <%= tutor.graduate_study_field %>
-          <%= tutor.bio %>
+          <ul class="list-inline">
+            <li>
+              <%= tutor.undergraduate_major %>, <%= tutor.undergraduate_institution %>
+            </li>
+            <li>
+              <%= tutor.graduate_study_field %>, <%= tutor.graduate_institution %>
+            </li>
+          </ul>
+          <p><%= tutor.bio %></p>
         </div>
-        <div>
-          <%= number_to_currency tutor.price %>
+        <div class="tutor-rate flex flex-center">
+          <div>
+            <%= number_to_currency tutor.price %>
+          </div>
         </div>
       </div>
     <% end %>

@@ -1,3 +1,25 @@
-.tutors{
-	padding: 36px;
+.tutor{
+	padding: 24px 36px;
+	border-bottom: 1px solid #f0f0f0;
+}
+.tutor .tutor-img{
+	width: 136px;
+}
+.tutor .tutor-info{
+	width: calc(85% - 136px)
+}
+.tutor .tutor-info h3{
+	margin-top: 0px;
+}
+.tutor .list-inline > li {
+	padding-right: 12px;
+	font-weight: bold;
+}
+.tutor .tutor-info p{
+	font-size: 16px;
+	color: #888;
+}
+.tutor .tutor-rate{
+	width: 15%;
+	font-size: 18px;
 }

@@ -61,6 +61,7 @@ section {
 }
 
 .flex-center{
+	justify-content: center;
 	align-items: center;
 }
 
@@ -72,7 +73,6 @@ section {
 	justify-content: space-between;
 
 }
-
 .content{
 	display: block;
 	position: absolute;
@@ -81,12 +81,13 @@ section {
 	left: 0;
 	bottom: 0;
 }
-
 .content > header h1{
 	margin: 0;
 	padding: 36px 0px; 
 }
-
+.content-pad{
+	padding: 36px;
+}
 .full-width{
 	width: 100%;
 }

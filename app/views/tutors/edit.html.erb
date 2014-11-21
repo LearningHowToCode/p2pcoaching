@@ -1,5 +1,10 @@
-<h1>My Profile</h1>
+<header class="how-it-works-banner">
+  <h1 class="text-center">MY PROFILE</h1>
+</header>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', tutors_path, class: "btn btn-link" %>
+<section class="flex">
+  <div class="bg-white full-width content-pad">
+  	<%= render 'form' %>
+  	<%= link_to 'Back', tutors_path, class: "btn btn-link" %>
+  </div>
+</section>

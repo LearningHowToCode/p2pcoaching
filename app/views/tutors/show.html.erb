@@ -1,71 +1,75 @@
-<p id="notice"><%= notice %></p>
+<section class="flex">
+  <div class="bg-white full-width content-pad">
+    <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= @tutor.name %>
-</h1>
+    <h1>
+      <%= @tutor.name %>
+    </h1>
 
-<p>
-  <%= image_tag @tutor.image, width: 100 %>
-</p>
-<p>
-  <strong>Format:</strong>
-  <%= @tutor.format %>
-</p>
+    <p>
+      <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
+    </p>
+    <p>
+      <strong>Format:</strong>
+      <%= @tutor.format %>
+    </p>
 
-<p>
-  <strong>Undergraduate:</strong>
-  <%= @tutor.undergraduate_institution %>
-</p>
+    <p>
+      <strong>Undergraduate:</strong>
+      <%= @tutor.undergraduate_institution %>
+    </p>
 
-<p>
-  <strong>Major:</strong>
-  <%= @tutor.undergraduate_major %>
-</p>
-<p>
-  <strong>Graduate:</strong>
-  <%= @tutor.graduate_institution %>
-</p>
+    <p>
+      <strong>Major:</strong>
+      <%= @tutor.undergraduate_major %>
+    </p>
+    <p>
+      <strong>Graduate:</strong>
+      <%= @tutor.graduate_institution %>
+    </p>
 
-<p>
-  <strong>Field of Study:</strong>
-  <%= @tutor.graduate_study_field %>
-</p>
+    <p>
+      <strong>Field of Study:</strong>
+      <%= @tutor.graduate_study_field %>
+    </p>
 
-<p>
-  <strong>Subjects:</strong>
-  <%= @tutor.subject %>
-</p>
+    <p>
+      <strong>Subjects:</strong>
+      <%= @tutor.subject %>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= number_to_currency @tutor.price %>
-</p>
+    <p>
+      <strong>Price:</strong>
+      <%= number_to_currency @tutor.price %>
+    </p>
 
-<p>
-  <strong>Profile:</strong>
-  <%= @tutor.long_bio %>
-</p>
+    <p>
+      <strong>Profile:</strong>
+      <%= @tutor.long_bio %>
+    </p>
 
-<% if current_user.try(:profile) == @tutor %>
-  <p>
-    <strong>Skype ID:</strong>
-    <%= @tutor.skype_id %>
-  </p>
-  <p>
-    <strong>Gmail address:</strong>
-    <%= @tutor.gmail_address %>
-  </p>
-  <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
-<% end %>
+    <% if current_user.try(:profile) == @tutor %>
+      <p>
+        <strong>Skype ID:</strong>
+        <%= @tutor.skype_id %>
+      </p>
+      <p>
+        <strong>Gmail address:</strong>
+        <%= @tutor.gmail_address %>
+      </p>
+      <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
+    <% end %>
 
-<div>
-  <h1 class='pull-left'>
-    Lessons
-  </h1>
+    <div>
+      <h1 class='pull-left'>
+        Lessons
+      </h1>
 
-</div>
-<%= render 'lessons/lessons_list' %>
+    </div>
+    <%= render 'lessons/lessons_list' %>
 
-<% if (current_user.try(:profile) == @tutor) && @tutor.completed_profile? %>
-  <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
-<% end  %>
+    <% if (current_user.try(:profile) == @tutor) && @tutor.completed_profile? %>
+      <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+    <% end  %>
+  </div>
+</section>
