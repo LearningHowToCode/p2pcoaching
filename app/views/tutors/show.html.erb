@@ -1,5 +1,5 @@
-<header class="bg-green">
-  <div class="media">
+<header class="bg-green flex reg-header">
+  <div class="media full-width tutor-header">
     <div class="pull-left">
       <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
     </div>
@@ -7,30 +7,22 @@
       <h1>
         <%= @tutor.name %>
       </h1>
+      <ul class="list-inline">
+        <li><%= @tutor.undergraduate_major %>, <%= @tutor.undergraduate_institution %></li>
+        <li><%= @tutor.graduate_study_field %>, <%= @tutor.graduate_institution %></li>
+      </ul>
     </div>
   </div>
 </header>
 <section class="flex">
   <div class="bg-white full-width content-pad">
     <p id="notice"><%= notice %></p>
-
-    <p>
-      <strong>Undergraduate:</strong>
-      <%= @tutor.undergraduate_institution %>
-    </p>
-
-    <p>
-      <strong>Major:</strong>
-      <%= @tutor.undergraduate_major %>
+    <p class="lead">
+      <%= @tutor.long_bio %>
     </p>
     <p>
-      <strong>Graduate:</strong>
-      <%= @tutor.graduate_institution %>
-    </p>
-
-    <p>
-      <strong>Field of Study:</strong>
-      <%= @tutor.graduate_study_field %>
+      <strong>Format:</strong>
+      <%= @tutor.format %>
     </p>
 
     <p>
@@ -41,11 +33,6 @@
     <p>
       <strong>Price:</strong>
       <%= number_to_currency @tutor.price %>
-    </p>
-
-    <p>
-      <strong>Profile:</strong>
-      <%= @tutor.long_bio %>
     </p>
 
     <% if current_user.try(:profile) == @tutor %>
