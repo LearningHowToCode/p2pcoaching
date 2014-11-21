@@ -2,6 +2,7 @@ class Tutor < ActiveRecord::Base
 
   SUBJECTS = ['English', 'Business English', 'TOEFL', 'SAT', 'GRE', 'GMAT',
               'Essay Editing', 'General Admissions Advice']
+  LANGUAGES = ['English', 'Chinese', 'Japanese', 'Korean', 'Spanish']
 
   has_one :user, as: :profile, :dependent => :destroy
   has_many :lessons, dependent: :destroy
