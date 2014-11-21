@@ -65,3 +65,44 @@
 	font-size: 20px;
 	margin: 8px 0px;
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.how-item .media .pull-left{
+		float: none !important;
+	}
+	.how-item .media .pull-left > div, .how-item > img{
+		margin: 0 auto;
+		display: block;
+	}
+	.how-item .media h4, .how-item h3{
+		text-align: center;
+	}
+	.how-item .media{
+		padding: 36px 36px 0px 36px;
+	}
+	.how-item .media:last-child{
+		padding-bottom: 36px;
+	}
+	.for-students header{
+		background-size: 75px;
+		padding: 30px 0px;
+	}
+	.for-tutors{
+		margin-top: 36px;
+	}
+	.for-tutors header{
+		background-size: 75px;
+		padding: 30px 0px;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.home-item{
+		flex: 0;
+		padding: 24px 0px;
+	}
+	.how-item{
+		width: 100%;
+	}
+}

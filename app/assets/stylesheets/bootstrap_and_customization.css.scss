@@ -123,29 +123,10 @@ section {
 	width: 320px;
 	padding: 24px;
 }
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-	.how-item .media .pull-left{
-		float: none !important;
-	}
-	.how-item .media .pull-left > div, .how-item > img{
-		margin: 0 auto;
-		display: block;
-	}
-	.how-item .media h4, .how-item h3{
-		text-align: center;
-	}
-}
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	.flex{
 		flex-direction: column;
-	}
-	.home-item{
-		flex: 0;
-		padding: 24px 0px;
-	}
-	.how-item{
-		width: 100%;
 	}
 }
 
