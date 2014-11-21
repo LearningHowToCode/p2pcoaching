@@ -44,7 +44,8 @@ section {
 
 .flex{
 	display: flex;
-	justify-content: space-around;
+	flex-flow: row wrap;
+   justify-content: flex-start;
 }
 
 .flex-center{
@@ -80,6 +81,10 @@ section {
 
 .full-height{
 	height: 100%;
+}
+
+.home-item{
+	flex: 0 1 33.3333333%;
 }
 
 .home-item h5{
@@ -162,6 +167,10 @@ section {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	.flex{
 		flex-direction: column;
+	}
+	.home-item{
+		flex: 0;
+		padding: 24px 0px;
 	}
 }
 
