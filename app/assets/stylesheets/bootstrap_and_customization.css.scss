@@ -87,32 +87,6 @@ section {
 	height: 100%;
 }
 
-.home-item{
-	flex: 0 1 33.3333333%;
-}
-
-.home-item h5{
-	padding: 0px 36px;
-	line-height: 1.5;
-}
-
-.home-banner{
-	background: url('bg-homepage.png') no-repeat bottom center;
-	background-size: cover;
-}
-
-.home-banner h1{
-	font-size: 4em;
-}
-
-.home-banner h1, .home-banner h4{
-	margin-bottom: 16px;
-}
-
-.how-item{
-	width: 48%;
-}
-
 .navbar-default{
 	background-color: #173e29;
 	border: none;
@@ -143,28 +117,6 @@ section {
 .navbar-nav .dropdown-menu > li > a:hover{
 	color: #b3d1c0;
 	background-color: transparent;
-}
-
-.how-it-works-banner{
-	background: url('bg-how-it-works.png') no-repeat bottom left;
-	background-size: cover;
-}
-
-.how-it-works > div{
-	background-color: white;
-	padding: 36px;
-}
-
-.circle-num{
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-	text-align: center;
-	width: 70px;
-	height: 70px;
-	padding: 20px 0px;
-	font-size: 20px;
-	margin: 8px 0px;
 }
 
 .login{

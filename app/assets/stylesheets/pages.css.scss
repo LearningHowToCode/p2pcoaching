@@ -1,3 +1,67 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Home //
+.home-item{
+	flex: 0 1 33.3333333%;
+}
+
+.home-item h5{
+	padding: 0px 36px;
+	line-height: 1.5;
+}
+
+.home-banner{
+	background: url('bg-homepage.png') no-repeat bottom center;
+	background-size: cover;
+}
+
+.home-banner h1{
+	font-size: 4em;
+}
+
+.home-banner h1, .home-banner h4{
+	margin-bottom: 16px;
+}
+
+// How it works //
+.how-it-works-banner{
+	background: url('bg-how-it-works.png') no-repeat bottom left;
+	background-size: cover;
+}
+
+.how-item{
+	background-color: white;
+	width: 48%;
+}
+
+.how-item .media{
+	padding: 12px 36px;
+}
+
+.how-item header h3{
+	margin: 0;
+	text-align: center;
+	color: #fff;
+}
+
+.for-students header{
+	background: url('for-students.png') no-repeat bottom left #34867c;
+	background-size: 150px;
+	padding: 60px 0px;
+}
+
+.for-tutors header{
+	background: url('for-tutors.png') no-repeat bottom left #408b62;
+	background-size: 150px;
+	padding: 60px 0px;
+}
+
+.circle-num{
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	text-align: center;
+	width: 70px;
+	height: 70px;
+	padding: 20px 0px;
+	font-size: 20px;
+	margin: 8px 0px;
+}
