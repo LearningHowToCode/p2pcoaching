@@ -1,14 +1,17 @@
+<header class="bg-green">
+  <div class="media">
+    <div class="pull-left">
+      <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
+    </div>
+    <div class="media-body">
+      <h1>
+        <%= @tutor.name %>
+      </h1>
+    </div>
+</header>
 <section class="flex">
   <div class="bg-white full-width content-pad">
     <p id="notice"><%= notice %></p>
-
-    <h1>
-      <%= @tutor.name %>
-    </h1>
-
-    <p>
-      <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
-    </p>
     <p>
       <strong>Format:</strong>
       <%= @tutor.format %>
