@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120230116) do
+ActiveRecord::Schema.define(version: 20141121211545) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20141120230116) do
     t.string   "gmail_address"
     t.text     "languages"
     t.boolean  "completed_profile",         default: false
+    t.string   "routing_number"
+    t.string   "account_number"
   end
 
   create_table "users", force: true do |t|

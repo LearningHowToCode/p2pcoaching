@@ -41,7 +41,7 @@ class TutorsController < ApplicationController
                                   :undergraduate_institution, :undergraduate_major,
                                   :graduate_institution, :graduate_study_field,
                                   :subject, :long_bio, :skype_id, :gmail_address,
-                                  :languages)
+                                  :languages, :routing_number, :account_number)
   end
 
   def check_user_permissions
