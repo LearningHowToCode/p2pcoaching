@@ -20,12 +20,9 @@
     <%= f.file_field :image, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :format %><br>
-    <%= f.select :format, ['Skype', 'In Person'], class: "form-control" %>
-  </div>
-  <div class="form-group">
     <%= f.label :undergraduate_institution, 'College' %><br>
-    <%= f.select :undergraduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'], class: "form-control" %>
+    <%= f.select :undergraduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'],
+                 {}, { class: "form-control" } %>
   </div>
   <div class="form-group">
     <%= f.label :undergraduate_major, 'Major' %><br>

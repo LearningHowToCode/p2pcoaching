@@ -4,7 +4,7 @@ class Tutor < ActiveRecord::Base
               'Essay Editing', 'General Admissions Advice']
   LANGUAGES = ['English', 'Chinese', 'Japanese', 'Korean', 'Spanish']
 
-  has_one :user, as: :profile, :dependent => :destroy
+  has_one :user, as: :profile, dependent: :destroy
   has_many :lessons, dependent: :destroy
   has_many :sales, class_name: 'Order', foreign_key: 'seller_id', dependent: :destroy
 
