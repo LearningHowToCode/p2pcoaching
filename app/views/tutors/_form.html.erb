@@ -42,7 +42,9 @@
   </div>
   <div class="form-group">
     <%= f.label :subject %><br>
-    <%= f.text_field :subject, class: "form-control" %>
+    <% Tutor::SUBJECTS.each do |subject| %>
+        <%= subject_checkbox subject %>
+    <% end  %>
   </div>
   <div class="form-group">
     <%= f.label :price, 'Hourly Price (USD): This is the price students will pay. You will get 80% of it deposited to your bank account every week.' %><br>
