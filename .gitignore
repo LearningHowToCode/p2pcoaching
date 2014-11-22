@@ -19,3 +19,5 @@ bin/*
 # Ignore application configuration
 /config/application.yml
 /public/uploads/*
+.ruby-version
+.ruby-gemset
