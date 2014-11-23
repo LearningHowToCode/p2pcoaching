@@ -10,7 +10,7 @@ class Tutor < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  validates_presence_of  'name', 'format', 'price', 'bio', 'image',
+  validates_presence_of  'name', 'price', 'bio', 'image',
                          'undergraduate_institution', 'undergraduate_major',
                          'subject', 'long_bio', 'skype_id','gmail_address',
                          'languages', on: :update
