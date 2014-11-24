@@ -9,7 +9,7 @@
 }
 
 .home-banner{
-	background: url('bg-homepage.png') no-repeat bottom center;
+	background: image-url('bg-homepage.png') no-repeat bottom center;
 	background-size: cover;
 }
 
@@ -28,7 +28,7 @@
 
 // How it works //
 .how-it-works-banner{
-	background: url('bg-how-it-works.png') no-repeat bottom left;
+	background: image-url('bg-how-it-works.png') no-repeat bottom left;
 	background-size: cover;
 }
 
@@ -48,13 +48,13 @@
 }
 
 .for-students header{
-	background: url('for-students.png') no-repeat bottom left #34867c;
+	background: image-url('for-students.png') no-repeat bottom left #34867c;
 	background-size: 150px;
 	padding: 60px 0px;
 }
 
 .for-tutors header{
-	background: url('for-tutors.png') no-repeat bottom left #408b62;
+	background: image-url('for-tutors.png') no-repeat bottom left #408b62;
 	background-size: 150px;
 	padding: 60px 0px;
 }
