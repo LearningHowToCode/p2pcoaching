@@ -7,6 +7,8 @@ class Student < ActiveRecord::Base
   validates_presence_of 'name', 'country', 'preference', on: :update
   validate :tool_presence, on: :update
 
+  delegate :email, to: :user
+
   def country_name
     return '' if self.country.nil?
 

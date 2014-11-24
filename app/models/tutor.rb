@@ -17,6 +17,7 @@ class Tutor < ActiveRecord::Base
                          'languages', on: :update
 
   scope :completed, ->{ where(completed_profile: true) }
+  delegate :email, to: :user
 
   def has_language?(language)
     self.languages.split(', ').include?(language) if self.languages.present?
