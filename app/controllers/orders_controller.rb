@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :auth_to_sign_up, only: :new
   before_filter :authenticate_user!
   respond_to :html
-  
+
   def sales
     @orders = Order.all.where(seller: current_user.profile).order("created_at DESC")
   end
@@ -40,27 +40,25 @@ class OrdersController < ApplicationController
     @order.seller_id = @lesson.tutor.id
     @order.price = @lesson.price
 
-    Stripe.api_key = ENV["STRIPE_API_KEY"]
-    token = params[:stripeToken]
-
     begin
-      charge = Stripe::Charge.create(
-        :amount => (@lesson.price * 100).floor,
-        :currency => "usd",
-        :card => token
-        )
+      Stripe::Charge.create(
+          :amount => (@lesson.price * 100).floor,
+          :currency => "usd",
+          :card => params[:stripeToken]
+      )
       flash[:notice] = "Thanks for ordering!"
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
-
+    binding.pry
     respond_to do |format|
       if @order.save
         @lesson.student_id = current_user.profile.id
         @lesson.status = 'reserved'
         @lesson.save
 
-        NotificationMailer.lesson_confirmation(@order).deliver
+        NotificationMailer.lesson_confirmation_to_student(@order).deliver
+        NotificationMailer.lesson_confirmation_to_tutor(@order).deliver
         format.html { redirect_to root_path, notice: 'Thank you for making a reservation' }
       else
         render :new
