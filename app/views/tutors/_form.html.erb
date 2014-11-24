@@ -1,8 +1,6 @@
 <%= form_for(@tutor) do |f| %>
   <% if @tutor.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tutor.errors.count, "error") %> prohibited this tutor from being saved:</h2>
-
       <ul>
       <% @tutor.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -21,7 +19,7 @@
   </div>
   <div class="form-group">
     <%= f.label :undergraduate_institution, 'College' %><br>
-    <%= f.select :undergraduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'],
+    <%= f.select :undergraduate_institution, Tutor::INSTITUTIONS,
                  {}, { class: "form-control" } %>
   </div>
   <div class="form-group">
@@ -30,7 +28,7 @@
   </div>
   <div class="form-group">
     <%= f.label :graduate_institution, 'Graduate School' %><br>
-    <%= f.select :graduate_institution, ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other'],
+    <%= f.select :graduate_institution, Tutor::INSTITUTIONS,
                  { include_blank: true }, { class: "form-control" } %>
   </div>
   <div class="form-group">
