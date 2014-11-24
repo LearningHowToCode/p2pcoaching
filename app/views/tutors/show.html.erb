@@ -1,77 +1,134 @@
-<header class="bg-green">
-  <div class="media">
+<header class="bg-green flex reg-header">
+  <div class="media full-width tutor-header">
     <div class="pull-left">
       <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
+    </div>
+    <div class="pull-right">
+      <%= link_to 'Edit Profile', edit_tutor_path(@tutor), class: "btn btn-primary" %>
     </div>
     <div class="media-body">
       <h1>
         <%= @tutor.name %>
       </h1>
+      <ul class="list-inline">
+        <li><%= @tutor.undergraduate_major %>, <%= @tutor.undergraduate_institution %></li>
+        <li><%= @tutor.graduate_study_field %>, <%= @tutor.graduate_institution %></li>
+      </ul>
+      <%= @tutor.subject %>
+      <%= number_to_currency @tutor.price %>
     </div>
   </div>
 </header>
-<section class="flex">
+<% if current_user.try(:profile) == @tutor %>
+  <section class="flex sm">
+    <div class="bg-white full-width content-pad">
+      <div id="notice"><%= notice %></div>
+      <p class="lead rm-bottom">
+        <%= @tutor.long_bio %>
+      </p>    
+    </div>
+  </section>
+  <section class="flex space-between tutor-content md">
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-skype">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/skype-logo.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.skype_id %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-gmail">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/gmail-logo.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.gmail_address %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-lang">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/language.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.languages %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-routing">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/routing.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.routing_number %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-account">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/account.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.account_number %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+<% end %>
+<section class="flex sm">
   <div class="bg-white full-width content-pad">
-    <p id="notice"><%= notice %></p>
-
-    <p>
-      <strong>Undergraduate:</strong>
-      <%= @tutor.undergraduate_institution %>
-    </p>
-
-    <p>
-      <strong>Major:</strong>
-      <%= @tutor.undergraduate_major %>
-    </p>
-    <p>
-      <strong>Graduate:</strong>
-      <%= @tutor.graduate_institution %>
-    </p>
-
-    <p>
-      <strong>Field of Study:</strong>
-      <%= @tutor.graduate_study_field %>
-    </p>
-
-    <p>
-      <strong>Subjects:</strong>
-      <%= @tutor.subject %>
-    </p>
-
-    <p>
-      <strong>Price:</strong>
-      <%= number_to_currency @tutor.price %>
-    </p>
-
-    <p>
-      <strong>Profile:</strong>
-      <%= @tutor.long_bio %>
-    </p>
-
-    <% if current_user.try(:profile) == @tutor %>
-        <p>
-          <strong>Skype ID:</strong>
-          <%= @tutor.skype_id %>
-        </p>
-        <p>
-          <strong>Gmail address:</strong>
-          <%= @tutor.gmail_address %>
-        </p>
-        <p>
-          <strong>Languages:</strong>
-          <%= @tutor.languages %>
-        </p>
-        <p>
-          <strong>Routing Number:</strong>
-          <%= @tutor.routing_number %>
-        </p>
-        <p>
-          <strong>Account Number:</strong>
-          <%= @tutor.account_number %>
-        </p>
-        <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
-    <% end %>
-
     <div>
       <h1 class='pull-left'>
         Lessons
