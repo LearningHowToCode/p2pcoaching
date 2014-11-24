@@ -1,10 +1,10 @@
 module TutorsHelper
 
-  def custom_checkbox(resource)
+  def custom_checkbox(object, resource, selected)
     html = <<-HTML
         <div class="checkbox">
           <label>
-            #{ check_box_tag "tutor[#{resource}]", resource, false }
+            #{ check_box_tag "tutor[#{object}][#{resource}]", resource, selected }
             #{resource}
           </label>
         </div>

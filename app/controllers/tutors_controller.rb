@@ -18,7 +18,12 @@ class TutorsController < ApplicationController
   end
 
   def update
-    if @tutor.update(tutor_params)
+    subjects = languages = {}
+    subjects = params[:tutor][:subjects].keys.join(', ') if params[:tutor][:subjects]
+    languages = params[:tutor][:languages].keys.join(', ') if params[:tutor][:languages]
+
+    attrs = tutor_params.merge(subject: subjects).merge(languages: languages)
+    if @tutor.update(attrs)
       @tutor.update_attributes(completed_profile: true)
       redirect_to @tutor
     else
@@ -37,7 +42,7 @@ class TutorsController < ApplicationController
   end
 
   def tutor_params
-    params.require(:tutor).permit(:name, :image, :format, :price, :bio,
+    params.require(:tutor).permit(:name, :image, :price, :bio,
                                   :undergraduate_institution, :undergraduate_major,
                                   :graduate_institution, :graduate_study_field,
                                   :subject, :long_bio, :skype_id, :gmail_address,

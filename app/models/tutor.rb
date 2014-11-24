@@ -16,4 +16,12 @@ class Tutor < ActiveRecord::Base
                          'languages', on: :update
 
   scope :completed, ->{ where(completed_profile: true) }
+
+  def has_language?(language)
+    self.languages.split(', ').include?(language)
+  end
+
+  def has_subject?(subject)
+    self.subject.split(', ').include?(subject)
+  end
 end

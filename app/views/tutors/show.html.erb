@@ -8,6 +8,7 @@
         <%= @tutor.name %>
       </h1>
     </div>
+  </div>
 </header>
 <section class="flex">
   <div class="bg-white full-width content-pad">
@@ -48,23 +49,27 @@
     </p>
 
     <% if current_user.try(:profile) == @tutor %>
-      <p>
-        <strong>Skype ID:</strong>
-        <%= @tutor.skype_id %>
-      </p>
-      <p>
-        <strong>Gmail address:</strong>
-        <%= @tutor.gmail_address %>
-      </p>
-      <p>
-        <strong>Routing Number:</strong>
-        <%= @tutor.routing_number %>
-      </p>
-      <p>
-        <strong>Account Number:</strong>
-        <%= @tutor.account_number %>
-      </p>
-      <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
+        <p>
+          <strong>Skype ID:</strong>
+          <%= @tutor.skype_id %>
+        </p>
+        <p>
+          <strong>Gmail address:</strong>
+          <%= @tutor.gmail_address %>
+        </p>
+        <p>
+          <strong>Languages:</strong>
+          <%= @tutor.languages %>
+        </p>
+        <p>
+          <strong>Routing Number:</strong>
+          <%= @tutor.routing_number %>
+        </p>
+        <p>
+          <strong>Account Number:</strong>
+          <%= @tutor.account_number %>
+        </p>
+        <%= link_to 'Edit', edit_tutor_path(@tutor), class: "btn btn-link" %>
     <% end %>
 
     <div>
@@ -75,7 +80,7 @@
     <%= render 'lessons/lessons_list' %>
 
     <% if (current_user.try(:profile) == @tutor) && @tutor.completed_profile? %>
-      <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+        <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
     <% end  %>
   </div>
 </section>
