@@ -53,6 +53,9 @@ class TutorsController < ApplicationController
     if params[:tutor][:undergraduate_institution] == 'Other'
       attrs = attrs.merge(undergraduate_institution: params[:tutor][:other_undergraduate_institution])
     end
+    if params[:tutor][:graduate_institution] == 'Other'
+      attrs = attrs.merge(graduate_institution: params[:tutor][:other_graduate_institution])
+    end
 
     attrs.merge(subject: subjects).merge(languages: languages)
   end

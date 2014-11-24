@@ -34,7 +34,13 @@
     <div class="form-group">
       <%= f.label :graduate_institution, 'Graduate School' %><br>
       <%= f.select :graduate_institution, Tutor::INSTITUTIONS,
-                   { include_blank: true }, { class: "form-control" } %>
+                   { selected: selected_graduate_institution(@tutor), include_blank: true },
+                   { class: "form-control", id: 'graduate-institution' } %>
+    </div>
+    <div class="form-group <%= other_graduate_institution_class(@tutor) %>" id='other-graduate-institution'>
+      <%= label_tag :other_graduate_institution, 'Which one?' %><br>
+      <%= text_field_tag 'tutor[other_graduate_institution]',
+                         @tutor.graduate_institution, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :graduate_study_field, 'Field of Study' %><br>
@@ -89,6 +95,16 @@
     $(document).ready(function(){
         $('#undergraduate-institution').change(function(){
             $other = $('#other-undergraduate-institution');
+            if($(this).val() == 'Other'){
+                $other.removeClass('hide');
+                $other.find('input').val('');
+            }else{
+                $other.addClass('hide');
+            }
+        });
+
+        $('#graduate-institution').change(function(){
+            $other = $('#other-graduate-institution');
             if($(this).val() == 'Other'){
                 $other.removeClass('hide');
                 $other.find('input').val('');
