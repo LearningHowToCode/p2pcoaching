@@ -6,14 +6,14 @@ class NotificationMailer < ActionMailer::Base
     @tutor = @order.seller
     @student = @order.buyer
 
-    mail(to: @student.user.email, subject: 'Thank you for reserving a lesson at Belluga')
+    mail(to: @student.user.email, subject: 'Thank you for reserving a lesson at Pairbis')
   end
 
   def welcome_tutor(user)
-    mail(to: user.email, subject: 'Thank you for signing up for Belluga!')
+    mail(to: user.email, subject: 'Thank you for signing up for Pairbis!')
   end
 
   def welcome_student(user)
-    mail(to: user.email, subject: 'Thank you for signing up for Belluga!')
+    mail(to: user.email, subject: 'Thank you for signing up for Pairbis!')
   end
 end
