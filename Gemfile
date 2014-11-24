@@ -11,14 +11,17 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 3.0.3.0'
-gem 'pry-rails'
-gem 'quiet_assets', group: :development
 gem 'carrierwave'
 gem 'figaro'
 gem 'stripe'
 gem 'rest-client'
 gem 'country_select'
-gem "letter_opener", :group => :development
+
+group :development do
+  gem 'letter_opener'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+end
 
 group :development, :test do
      gem 'sqlite3'
