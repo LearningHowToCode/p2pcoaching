@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'stripe'
 gem 'rest-client'
 gem 'country_select'
+gem 'unicorn'
 
 group :development do
   gem 'letter_opener'
