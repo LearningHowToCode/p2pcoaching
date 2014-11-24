@@ -2,8 +2,8 @@ class CreateLessons < ActiveRecord::Migration
   def change
     create_table :lessons do |t|
       t.date :day
-      t.string :start_time
-      t.string :end_time
+      t.time :start_time
+      t.integer :duration
       t.string :status, default: 'available'
       t.integer :tutor_id
       t.integer :student_id
