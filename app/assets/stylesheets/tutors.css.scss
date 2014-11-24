@@ -23,6 +23,53 @@
 	width: 15%;
 	font-size: 18px;
 }
+.tutor-header{
+	padding-bottom: 24px;
+}
 .tutor-header h1{
 	padding: 12px 0px !important;
+}
+.tutor-header.media .btn{
+	margin-top: 24px;
+}
+.tutor-content > .flex{
+	width: calc(100% / 5 - 16px);
+	height: 150px;
+	float: left;
+	vertical-align: top;
+}
+.tutor-content figure{
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.tutor-content .icon-wrapper{
+	width: 80%;
+	height: 80%;
+}
+.tutor-content figure img{
+	display: block;
+}
+.tutor-content .tutor-icon{
+	height: 100px;
+}
+.tutor-content .tutor-value{
+	height: 50px;
+	background-color: #ffffff;
+}
+.bg-skype{
+	background-color: #D0EDFD;
+}
+.bg-gmail{
+	background-color: #F2CCCC;
+}
+.bg-lang{
+	background-color: #F2DFCC;
+}
+.bg-routing{
+	background-color: #E0F2CC;
+}
+.bg-account{
+	background-color: #CCF1DB;
 }
