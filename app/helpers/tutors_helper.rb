@@ -12,4 +12,18 @@ module TutorsHelper
 
     html.html_safe
   end
+
+  def other_institution_class(tutor)
+    if Tutor::INSTITUTIONS.include? tutor.undergraduate_institution
+      'hide'
+    end
+  end
+
+  def selected_institution(tutor)
+    if Tutor::INSTITUTIONS.include? tutor.undergraduate_institution
+      tutor.undergraduate_institution
+    else
+      'Other'
+    end
+  end
 end

@@ -18,12 +18,7 @@ class TutorsController < ApplicationController
   end
 
   def update
-    subjects = languages = {}
-    subjects = params[:tutor][:subjects].keys.join(', ') if params[:tutor][:subjects]
-    languages = params[:tutor][:languages].keys.join(', ') if params[:tutor][:languages]
-
-    attrs = tutor_params.merge(subject: subjects).merge(languages: languages)
-    if @tutor.update(attrs)
+    if @tutor.update(normalized_tutor_params)
       @tutor.update_attributes(completed_profile: true)
       redirect_to @tutor
     else
@@ -47,6 +42,19 @@ class TutorsController < ApplicationController
                                   :graduate_institution, :graduate_study_field,
                                   :subject, :long_bio, :skype_id, :gmail_address,
                                   :languages, :routing_number, :account_number)
+  end
+
+  def normalized_tutor_params
+    subjects = languages = {}
+    attrs = tutor_params
+    subjects = params[:tutor][:subjects].keys.join(', ') if params[:tutor][:subjects]
+    languages = params[:tutor][:languages].keys.join(', ') if params[:tutor][:languages]
+
+    if params[:tutor][:undergraduate_institution] == 'Other'
+      attrs = attrs.merge(undergraduate_institution: params[:tutor][:other_undergraduate_institution])
+    end
+
+    attrs.merge(subject: subjects).merge(languages: languages)
   end
 
   def check_user_permissions

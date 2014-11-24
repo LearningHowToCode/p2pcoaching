@@ -1,72 +1,77 @@
 <%= form_for(@tutor) do |f| %>
-  <% if @tutor.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @tutor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if @tutor.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @tutor.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-  <div class="form-group">
-    <%= f.label :name, 'Name (e.g., John Smith)' %><br>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :image %><br>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :undergraduate_institution, 'College' %><br>
-    <%= f.select :undergraduate_institution, Tutor::INSTITUTIONS,
-                 {}, { class: "form-control" } %>
-  </div>
-  <div class="form-group">
-    <%= f.label :undergraduate_major, 'Major' %><br>
-    <%= f.text_field :undergraduate_major, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :graduate_institution, 'Graduate School' %><br>
-    <%= f.select :graduate_institution, Tutor::INSTITUTIONS,
-                 { include_blank: true }, { class: "form-control" } %>
-  </div>
-  <div class="form-group">
-    <%= f.label :graduate_study_field, 'Field of Study' %><br>
-    <%= f.text_field :graduate_study_field, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :subject %><br>
-    <% Tutor::SUBJECTS.each do |subject| %>
-        <%= custom_checkbox 'subjects', subject, @tutor.has_subject?(subject) %>
-    <% end  %>
-  </div>
-  <div class="form-group">
-    <%= f.label :price, 'Hourly Price (USD): This is the price students will pay. You will get 80% of it deposited to your bank account every week.' %><br>
-    <%= f.select :price, (20..100).step(5).to_a, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :bio, 'Profile (150 characters or less)' %><br>
-    <%= f.text_area :bio, class: "form-control", maxlength: 150 %>
-  </div>
-  <div class="form-group">
-    <%= f.label :long_bio, 'Profile (1000 characters or less)' %><br>
-    <%= f.text_area :long_bio, class: "form-control", maxlength: 1000 %>
-  </div>
-  <div class="form-group">
-    <%= f.label :skype_id, 'Skype ID' %><br>
-    <%= f.text_field :skype_id, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :gmail_address %><br>
-    <%= f.email_field :gmail_address, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <label for="">Languages</label>
-    <% Tutor::LANGUAGES.each do |language| %>
-        <%= custom_checkbox 'languages', language, @tutor.has_language?(language) %>
-    <% end  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :name, 'Name (e.g., John Smith)' %><br>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :image %><br>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :undergraduate_institution, 'College' %><br>
+      <%= f.select :undergraduate_institution, Tutor::INSTITUTIONS,
+                   { selected: selected_institution(@tutor) }, { class: "form-control", id: 'undergraduate-institution' } %>
+    </div>
+    <div class="form-group <%= other_institution_class(@tutor) %>" id='other-undergraduate-institution'>
+      <%= label_tag :other_undergraduate_institution, 'Which one?' %><br>
+      <%= text_field_tag 'tutor[other_undergraduate_institution]',
+                         @tutor.undergraduate_institution, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :undergraduate_major, 'Major' %><br>
+      <%= f.text_field :undergraduate_major, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :graduate_institution, 'Graduate School' %><br>
+      <%= f.select :graduate_institution, Tutor::INSTITUTIONS,
+                   { include_blank: true }, { class: "form-control" } %>
+    </div>
+    <div class="form-group">
+      <%= f.label :graduate_study_field, 'Field of Study' %><br>
+      <%= f.text_field :graduate_study_field, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :subject %><br>
+      <% Tutor::SUBJECTS.each do |subject| %>
+          <%= custom_checkbox 'subjects', subject, @tutor.has_subject?(subject) %>
+      <% end  %>
+    </div>
+    <div class="form-group">
+      <%= f.label :price, 'Hourly Price (USD): This is the price students will pay. You will get 80% of it deposited to your bank account every week.' %><br>
+      <%= f.select :price, (20..100).step(5).to_a, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :bio, 'Profile (150 characters or less)' %><br>
+      <%= f.text_area :bio, class: "form-control", maxlength: 150 %>
+    </div>
+    <div class="form-group">
+      <%= f.label :long_bio, 'Profile (1000 characters or less)' %><br>
+      <%= f.text_area :long_bio, class: "form-control", maxlength: 1000 %>
+    </div>
+    <div class="form-group">
+      <%= f.label :skype_id, 'Skype ID' %><br>
+      <%= f.text_field :skype_id, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :gmail_address %><br>
+      <%= f.email_field :gmail_address, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="">Languages</label>
+      <% Tutor::LANGUAGES.each do |language| %>
+          <%= custom_checkbox 'languages', language, @tutor.has_language?(language) %>
+      <% end  %>
+    </div>
     <div class="form-group">
       <%= f.label :routing_number, 'Routing Number (US only)' %><br>
       <%= f.text_field :routing_number, class: "form-control" %>
@@ -75,7 +80,21 @@
       <%= f.label :account_number, 'Account Number (US only)' %><br>
       <%= f.text_field :account_number, class: "form-control" %>
     </div>
-  <div class="actions">
-    <%= f.submit "Update My Profile", class: "btn btn-primary" %>
-  </div>
+    <div class="actions">
+      <%= f.submit "Update My Profile", class: "btn btn-primary" %>
+    </div>
 <% end %>
+
+<script>
+    $(document).ready(function(){
+        $('#undergraduate-institution').change(function(){
+            $other = $('#other-undergraduate-institution');
+            if($(this).val() == 'Other'){
+                $other.removeClass('hide');
+                $other.find('input').val('');
+            }else{
+                $other.addClass('hide');
+            }
+        });
+    });
+</script>
