@@ -14,115 +14,119 @@
         <li><%= @tutor.undergraduate_major %>, <%= @tutor.undergraduate_institution %></li>
         <li><%= @tutor.graduate_study_field %>, <%= @tutor.graduate_institution %></li>
       </ul>
+      <%= @tutor.subject %>
+      <%= number_to_currency @tutor.price %>
     </div>
   </div>
 </header>
-<section class="flex sm">
-  <div class="bg-white full-width content-pad">
-    <div id="notice"><%= notice %></div>
-    <p class="lead rm-bottom">
-      <%= @tutor.long_bio %>
-    </p>    
-  </div>
-</section>
-<section class="flex space-between tutor-content md">
+<% if current_user.try(:profile) == @tutor %>
+  <section class="flex sm">
+    <div class="bg-white full-width content-pad">
+      <div id="notice"><%= notice %></div>
+      <p class="lead rm-bottom">
+        <%= @tutor.long_bio %>
+      </p>    
+    </div>
+  </section>
+  <section class="flex space-between tutor-content md">
 
-  <div class="flex f-column relative">
-    <div class="flex f-auto f-column relative bg-skype">
-      <div class="flex f-auto relative tutor-icon">
-        <div class="flex f-center f-center-jtd f-vertical centerblock">
-          <div class="relative">
-            <figure>
-              <img src="/assets/skype-logo.png" width="75" height="75">
-            </figure>
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-skype">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/skype-logo.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.skype_id %>
           </div>
         </div>
       </div>
-      <div class="f-center f-row flex tutor-value full-width">
-        <div class="centerblock text-center">
-          <%= @tutor.skype_id %>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="flex f-column relative">
-    <div class="flex f-auto f-column relative bg-gmail">
-      <div class="flex f-auto relative tutor-icon">
-        <div class="flex f-center f-center-jtd f-vertical centerblock">
-          <div class="relative">
-            <figure>
-              <img src="/assets/gmail-logo.png" width="75" height="75">
-            </figure>
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-gmail">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/gmail-logo.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.gmail_address %>
           </div>
         </div>
       </div>
-      <div class="f-center f-row flex tutor-value full-width">
-        <div class="centerblock text-center">
-          <%= @tutor.gmail_address %>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="flex f-column relative">
-    <div class="flex f-auto f-column relative bg-lang">
-      <div class="flex f-auto relative tutor-icon">
-        <div class="flex f-center f-center-jtd f-vertical centerblock">
-          <div class="relative">
-            <figure>
-              <img src="/assets/language.png" width="75" height="75">
-            </figure>
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-lang">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/language.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.languages %>
           </div>
         </div>
       </div>
-      <div class="f-center f-row flex tutor-value full-width">
-        <div class="centerblock text-center">
-          <%= @tutor.languages %>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="flex f-column relative">
-    <div class="flex f-auto f-column relative bg-routing">
-      <div class="flex f-auto relative tutor-icon">
-        <div class="flex f-center f-center-jtd f-vertical centerblock">
-          <div class="relative">
-            <figure>
-              <img src="/assets/routing.png" width="75" height="75">
-            </figure>
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-routing">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/routing.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.routing_number %>
           </div>
         </div>
       </div>
-      <div class="f-center f-row flex tutor-value full-width">
-        <div class="centerblock text-center">
-          <%= @tutor.routing_number %>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="flex f-column relative">
-    <div class="flex f-auto f-column relative bg-account">
-      <div class="flex f-auto relative tutor-icon">
-        <div class="flex f-center f-center-jtd f-vertical centerblock">
-          <div class="relative">
-            <figure>
-              <img src="/assets/account.png" width="75" height="75">
-            </figure>
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-account">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <img src="/assets/account.png" width="75" height="75">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.account_number %>
           </div>
         </div>
       </div>
-      <div class="f-center f-row flex tutor-value full-width">
-        <div class="centerblock text-center">
-          <%= @tutor.account_number %>
-        </div>
-      </div>
     </div>
-  </div>
 
-</section>
+  </section>
+<% end %>
 <section class="flex sm">
   <div class="bg-white full-width content-pad">
     <div>
