@@ -43,7 +43,7 @@
   </div>
   <div class="form-group">
     <%= f.label :price, 'Hourly Price (USD): This is the price students will pay. You will get 80% of it deposited to your bank account every week.' %><br>
-    <%= f.select :price, [20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100], class: "form-control" %>
+    <%= f.select :price, (20..100).step(5).to_a, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :bio, 'Profile (150 characters or less)' %><br>
