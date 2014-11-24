@@ -6,6 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
       NotificationMailer.welcome_tutor(resource).deliver
       edit_tutor_path(resource.profile)
     else
+      NotificationMailer.welcome_student(resource).deliver
       edit_student_path(resource.profile)
     end
   end

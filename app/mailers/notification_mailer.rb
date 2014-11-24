@@ -12,4 +12,8 @@ class NotificationMailer < ActionMailer::Base
   def welcome_tutor(user)
     mail(to: user.email, subject: 'Thank you for signing up for Belluga!')
   end
+
+  def welcome_student(user)
+    mail(to: user.email, subject: 'Thank you for signing up for Belluga!')
+  end
 end
