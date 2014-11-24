@@ -19,10 +19,10 @@ class Tutor < ActiveRecord::Base
   scope :completed, ->{ where(completed_profile: true) }
 
   def has_language?(language)
-    self.languages.split(', ').include?(language)
+    self.languages.split(', ').include?(language) if self.languages.present?
   end
 
   def has_subject?(subject)
-    self.subject.split(', ').include?(subject)
+    self.subject.split(', ').include?(subject) if self.subject.present?
   end
 end
