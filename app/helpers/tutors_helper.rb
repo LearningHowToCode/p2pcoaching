@@ -28,7 +28,7 @@ module TutorsHelper
   end
 
   def other_graduate_institution_class(tutor)
-    if Tutor::INSTITUTIONS.include? tutor.undergraduate_institution
+    if Tutor::INSTITUTIONS.include? tutor.graduate_institution
       'hide'
     end
   end

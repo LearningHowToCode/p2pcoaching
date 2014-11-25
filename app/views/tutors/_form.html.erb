@@ -89,27 +89,3 @@
       <%= f.submit "Update My Profile", class: "btn btn-primary" %>
     </div>
 <% end %>
-
-<script>
-    $(document).ready(function(){
-        $('#undergraduate-institution').change(function(){
-            $other = $('#other-undergraduate-institution');
-            if($(this).val() == 'Other'){
-                $other.removeClass('hide');
-                $other.find('input').val('');
-            }else{
-                $other.addClass('hide');
-            }
-        });
-
-        $('#graduate-institution').change(function(){
-            $other = $('#other-graduate-institution');
-            if($(this).val() == 'Other'){
-                $other.removeClass('hide');
-                $other.find('input').val('');
-            }else{
-                $other.addClass('hide');
-            }
-        });
-    });
-</script>
