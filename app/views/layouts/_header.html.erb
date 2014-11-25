@@ -17,8 +17,8 @@
         <ul class="nav navbar-nav">
           <li><%= link_to "Search Tutors", tutors_path %></li>
           <li><%= link_to "How it Works", how_it_works_path %></li>
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
+          <li><%= link_to "About", root_path(anchor: 'more') %></li>
+          <li><%= link_to "Contact", root_path(anchor: 'more') %></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
           <% if user_signed_in?  %>
