@@ -19,17 +19,23 @@ module TutorsHelper
     end
   end
 
+  def other_graduate_institution_class(tutor)
+    if Tutor::INSTITUTIONS.include? tutor.graduate_institution
+      'hide'
+    end
+  end
+
+  def other_subject_class(tutor)
+    unless tutor.subject.include? 'Other'
+      'hide'
+    end
+  end
+
   def selected_institution(tutor)
     if Tutor::INSTITUTIONS.include? tutor.undergraduate_institution
       tutor.graduate_institution
     else
       'Other'
-    end
-  end
-
-  def other_graduate_institution_class(tutor)
-    if Tutor::INSTITUTIONS.include? tutor.graduate_institution
-      'hide'
     end
   end
 

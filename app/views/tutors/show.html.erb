@@ -14,7 +14,7 @@
         <li><%= @tutor.undergraduate_major %>, <%= @tutor.undergraduate_institution %></li>
         <li><%= @tutor.graduate_study_field %>, <%= @tutor.graduate_institution %></li>
       </ul>
-      <%= @tutor.subject %>
+      <%= @tutor.display_subjects %>
       <%= number_to_currency @tutor.price %>
     </div>
   </div>

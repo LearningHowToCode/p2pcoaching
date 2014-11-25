@@ -47,8 +47,9 @@ class TutorsController < ApplicationController
   def normalized_tutor_params
     subjects = languages = {}
     attrs = tutor_params
-    subjects = params[:tutor][:subjects].keys.join(', ') if params[:tutor][:subjects]
-    languages = params[:tutor][:languages].keys.join(', ') if params[:tutor][:languages]
+
+    subjects = params[:tutor][:subjects].values.reject(&:blank?).join(', ') if params[:tutor][:subjects]
+    languages = params[:tutor][:languages].values.join(', ') if params[:tutor][:languages]
 
     if params[:tutor][:undergraduate_institution] == 'Other'
       attrs = attrs.merge(undergraduate_institution: params[:tutor][:other_undergraduate_institution])

@@ -1,4 +1,4 @@
-$(document).on 'page:load', ->
+ready = ->
   $("#undergraduate-institution").change ->
     $other = $("#other-undergraduate-institution")
     if $(this).val() is "Other"
@@ -17,4 +17,15 @@ $(document).on 'page:load', ->
       $other.addClass "hide"
     return
 
+  $('#tutor_subjects_Other').change ->
+    $other = $("#other-subject")
+    $other.find("input").val ""
+    if $(this).is(':checked')
+      $other.removeClass "hide"
+    else
+      $other.addClass "hide"
+    return
   return
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

@@ -1,7 +1,7 @@
 class Tutor < ActiveRecord::Base
 
   SUBJECTS = ['English', 'Business English', 'TOEFL', 'SAT', 'GRE', 'GMAT',
-              'Essay Editing', 'General Admissions Advice']
+              'Essay Editing', 'General Admissions Advice', 'Other']
   LANGUAGES = ['English', 'Chinese', 'Japanese', 'Korean', 'Spanish']
   INSTITUTIONS = ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other']
 
@@ -25,5 +25,13 @@ class Tutor < ActiveRecord::Base
 
   def has_subject?(subject)
     self.subject.split(', ').include?(subject) if self.subject.present?
+  end
+
+  def other_subject
+    self.subject.split(',').last if self.subject.present?
+  end
+
+  def display_subjects
+    self.subject.sub('Other, ', '')
   end
 end

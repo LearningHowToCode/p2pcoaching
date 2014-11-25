@@ -51,6 +51,11 @@
           <%= custom_checkbox 'subjects', subject, @tutor.has_subject?(subject) %>
       <% end  %>
     </div>
+    <div class="form-group <%= other_subject_class(@tutor) %>" id='other-subject'>
+      <%= label_tag :other_subject, 'Which one?' %><br>
+      <%= text_field_tag 'tutor[subjects][other_subject]',
+                         @tutor.other_subject, class: "form-control" %>
+    </div>
     <div class="form-group">
       <%= f.label :price, 'Hourly Price (USD): This is the price students will pay. You will get 80% of it deposited to your bank account every week.' %><br>
       <%= f.select :price, (20..100).step(5).to_a, class: "form-control" %>
