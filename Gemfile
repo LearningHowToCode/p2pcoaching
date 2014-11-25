@@ -17,6 +17,7 @@ gem 'stripe'
 gem 'rest-client'
 gem 'country_select'
 gem 'unicorn'
+gem 'fog'
 
 group :development do
   gem 'letter_opener'
