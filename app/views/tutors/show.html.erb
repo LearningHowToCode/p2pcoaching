@@ -109,14 +109,16 @@
     </div>
   </section>
 <% end %>
-<section class="flex sm">
+<section class="flex md f-column">
+  <div>
+    <h1>Lessons</h1>
+  </div>
   <div class="bg-white full-width content-pad">
-    <div>
-      <h1 class='pull-left'>
-        Lessons
-      </h1>
-    </div>
-    <%= render 'lessons/lessons_list' %>
+    <% unless @lessons.count.zero? %>
+      <%= render 'lessons/lessons_list' %>
+    <% else %>
+      Here goes the blank slate
+    <% end %>
 
     <% if (@tutor.is_the?(current_user)) && @tutor.completed_profile? %>
         <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
