@@ -6,7 +6,8 @@ class NotificationMailer < ActionMailer::Base
     @tutor = @order.seller
     @student = @order.buyer
 
-    mail(to: @student.user.email, subject: 'Your Pairbis lesson (confirmed)')
+    mail(to: @student.user.email, bcc: 'pairbis@gmail.com',
+         subject: 'Your Pairbis lesson (confirmed)')
   end
 
   def lesson_confirmation_to_tutor(order)
@@ -14,7 +15,8 @@ class NotificationMailer < ActionMailer::Base
     @tutor = @order.seller
     @student = @order.buyer
 
-    mail(to: @tutor.email, subject: 'Your Pairbis lesson (confirmed)')
+    mail(to: @tutor.email, bcc: 'pairbis@gmail.com',
+         subject: 'Your Pairbis lesson (confirmed)')
   end
 
   def welcome_tutor(user)
