@@ -1,5 +1,5 @@
 class NotificationMailer < ActionMailer::Base
-  default from: 'contact_belluga@gmail.com'
+  default from: 'pairbis@gmail.com'
 
   def lesson_confirmation_to_student(order)
     @order = order
