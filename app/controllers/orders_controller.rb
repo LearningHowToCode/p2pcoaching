@@ -50,7 +50,7 @@ class OrdersController < ApplicationController
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
-    binding.pry
+    
     respond_to do |format|
       if @order.save
         @lesson.student_id = current_user.profile.id
