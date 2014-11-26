@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121211545) do
+ActiveRecord::Schema.define(version: 20141126173355) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20141121211545) do
     t.boolean  "completed_profile",         default: false
     t.string   "routing_number"
     t.string   "account_number"
+    t.string   "paypal_account"
   end
 
   create_table "users", force: true do |t|

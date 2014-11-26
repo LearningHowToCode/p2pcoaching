@@ -14,7 +14,7 @@ class Tutor < ActiveRecord::Base
   validates_presence_of  'name', 'price', 'bio', 'image',
                          'undergraduate_institution', 'undergraduate_major',
                          'subject', 'long_bio', 'skype_id','gmail_address',
-                         'languages', on: :update
+                         'languages', 'paypal_account', on: :update
 
   scope :completed, ->{ where(completed_profile: true) }
   delegate :email, to: :user

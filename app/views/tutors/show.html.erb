@@ -88,6 +88,25 @@
         </div>
       </div>
     </div>
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-paypal">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <%= image_tag 'paypal.png', width: 75, height: 75 %>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width">
+          <div class="centerblock text-center">
+            <%= @tutor.paypal_account %>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 <% end %>
 <section class="flex sm">
