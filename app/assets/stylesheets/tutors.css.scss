@@ -33,7 +33,7 @@
 	margin-top: 24px;
 }
 .tutor-content > .flex{
-	width: calc(100% / 5 - 16px);
+	width: calc(100% / 4 - 16px);
 	height: 150px;
 	float: left;
 	vertical-align: top;
@@ -56,20 +56,17 @@
 }
 .tutor-content .tutor-value{
 	height: 50px;
-	background-color: #ffffff;
+	color: white;
 }
 .bg-skype{
-	background-color: #D0EDFD;
+	background-color: #00ADEF;
 }
 .bg-gmail{
-	background-color: #F2CCCC;
+	background-color: #B2392F;
 }
 .bg-lang{
-	background-color: #F2DFCC;
+	background-color: #408B62;
 }
-.bg-routing{
-	background-color: #E0F2CC;
-}
-.bg-account{
-	background-color: #CCF1DB;
+.bg-paypal{
+	background-color: #003087;
 }

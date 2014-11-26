@@ -33,26 +33,7 @@
   <section class="flex space-between tutor-content md">
 
     <div class="flex f-column relative">
-      <div class="flex f-auto f-column relative bg-skype">
-        <div class="flex f-auto relative tutor-icon">
-          <div class="flex f-center f-center-jtd f-vertical centerblock">
-            <div class="relative">
-              <figure>
-                <%= image_tag 'skype-logo.png', width: 75, height: 75 %>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="f-center f-row flex tutor-value full-width">
-          <div class="centerblock text-center">
-            <%= @tutor.skype_id %>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex f-column relative">
-      <div class="flex f-auto f-column relative bg-gmail">
+      <div class="flex f-auto f-column relative bg-white">
         <div class="flex f-auto relative tutor-icon">
           <div class="flex f-center f-center-jtd f-vertical centerblock">
             <div class="relative">
@@ -62,7 +43,7 @@
             </div>
           </div>
         </div>
-        <div class="f-center f-row flex tutor-value full-width">
+        <div class="f-center f-row flex tutor-value full-width bg-gmail">
           <div class="centerblock text-center">
             <%= @tutor.gmail_address %>
           </div>
@@ -71,7 +52,7 @@
     </div>
 
     <div class="flex f-column relative">
-      <div class="flex f-auto f-column relative bg-lang">
+      <div class="flex f-auto f-column relative bg-white">
         <div class="flex f-auto relative tutor-icon">
           <div class="flex f-center f-center-jtd f-vertical centerblock">
             <div class="relative">
@@ -81,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="f-center f-row flex tutor-value full-width">
+        <div class="f-center f-row flex tutor-value full-width bg-lang">
           <div class="centerblock text-center">
             <%= @tutor.languages %>
           </div>
@@ -90,17 +71,36 @@
     </div>
 
     <div class="flex f-column relative">
-      <div class="flex f-auto f-column relative bg-paypal">
+      <div class="flex f-auto f-column relative bg-white">
         <div class="flex f-auto relative tutor-icon">
           <div class="flex f-center f-center-jtd f-vertical centerblock">
             <div class="relative">
               <figure>
-                <%= image_tag 'paypal.png', width: 75, height: 75 %>
+                <%= image_tag 'skype-logo.png', width: 75, height: 75 %>
               </figure>
             </div>
           </div>
         </div>
-        <div class="f-center f-row flex tutor-value full-width">
+        <div class="f-center f-row flex tutor-value full-width bg-skype">
+          <div class="centerblock text-center">
+            <%= @tutor.skype_id %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex f-column relative">
+      <div class="flex f-auto f-column relative bg-white">
+        <div class="flex f-auto relative tutor-icon">
+          <div class="flex f-center f-center-jtd f-vertical centerblock">
+            <div class="relative">
+              <figure>
+                <%= image_tag 'paypal-logo.png', width: 75, height: 75 %>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="f-center f-row flex tutor-value full-width bg-paypal">
           <div class="centerblock text-center">
             <%= @tutor.paypal_account %>
           </div>
