@@ -13,6 +13,10 @@ class Lesson < ActiveRecord::Base
     self.status == 'reserved'
   end
 
+  def available?
+    self.status == 'available'
+  end
+
   # November 25th, 4:00-5:00pm
   def date_and_time
     end_time = self.start_time + 30.minutes
