@@ -82,14 +82,6 @@
           <%= custom_checkbox 'languages', language, @tutor.has_language?(language) %>
       <% end  %>
     </div>
-    <div class="form-group">
-      <%= f.label :routing_number, 'Routing Number (US only)' %><br>
-      <%= f.text_field :routing_number, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :account_number, 'Account Number (US only)' %><br>
-      <%= f.text_field :account_number, class: "form-control" %>
-    </div>
     <div class="actions">
       <%= f.submit "Update My Profile", class: "btn btn-primary" %>
     </div>
