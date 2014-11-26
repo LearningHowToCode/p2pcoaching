@@ -117,7 +117,7 @@
     <% unless @lessons.count.zero? %>
       <%= render 'lessons/lessons_list' %>
     <% else %>
-      Here goes the blank slate
+      You haven't created any lessons yet. Click in New Lesson to create one now.
     <% end %>
 
     <% if (@tutor.is_the?(current_user)) && @tutor.completed_profile? %>
