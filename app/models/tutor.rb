@@ -19,6 +19,10 @@ class Tutor < ActiveRecord::Base
   scope :completed, ->{ where(completed_profile: true) }
   delegate :email, to: :user
 
+  def is_the?(current_user)
+    current_user == self.user
+  end
+
   def has_language?(language)
     self.languages.split(', ').include?(language) if self.languages.present?
   end

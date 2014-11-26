@@ -3,9 +3,11 @@
     <div class="pull-left">
       <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
     </div>
-    <div class="pull-right">
-      <%= link_to 'Edit Profile', edit_tutor_path(@tutor), class: "btn btn-primary" %>
-    </div>
+    <% if @tutor.is_the?(current_user) %>
+        <div class="pull-right">
+          <%= link_to 'Edit Profile', edit_tutor_path(@tutor), class: "btn btn-primary" %>
+        </div>
+    <% end %>
     <div class="media-body">
       <h1>
         <%= @tutor.name %>
@@ -19,7 +21,7 @@
     </div>
   </div>
 </header>
-<% if current_user.try(:profile) == @tutor %>
+<% if @tutor.is_the?(current_user) %>
   <section class="flex sm">
     <div class="bg-white full-width content-pad">
       <div id="notice"><%= notice %></div>
@@ -136,7 +138,7 @@
     </div>
     <%= render 'lessons/lessons_list' %>
 
-    <% if (current_user.try(:profile) == @tutor) && @tutor.completed_profile? %>
+    <% if (@tutor.is_the?(current_user)) && @tutor.completed_profile? %>
         <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
     <% end  %>
   </div>
