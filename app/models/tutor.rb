@@ -36,6 +36,6 @@ class Tutor < ActiveRecord::Base
   end
 
   def display_subjects
-    self.subject.sub('Other, ', '')
+    self.subject.sub(/Other, |, Other/, '')
   end
 end

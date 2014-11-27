@@ -20,6 +20,7 @@ ready = ->
   $('#tutor_subjects_Other').change ->
     $other = $("#other-subject")
     $other.find("input").val ""
+    $other.attr('value', '')
     if $(this).is(':checked')
       $other.removeClass "hide"
     else
