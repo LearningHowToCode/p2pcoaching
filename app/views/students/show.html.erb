@@ -1,26 +1,35 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @student.country_name %>
-</p>
-<p>
-  <strong>Skype ID:</strong>
-  <%= @student.skype_id %>
-</p>
-<p>
-  <strong>Gmail address:</strong>
-  <%= @student.gmail_address %>
-</p>
-<p>
-  <strong>Preference:</strong>
-  <%= @student.preference %>
-</p>
-
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
+<header class="bg-green flex reg-header">
+  <div class="media full-width tutor-header">
+    <div class="pull-left">
+      <!--%= image_tag @student.image, class: 'tutor-img' % -->
+    </div>
+    <div class="pull-right">
+      <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-primary' %>
+    </div>
+    <div class="media-body">
+      <h2 class="half-top">
+        <%= @student.name %>
+      </h2>
+      <ul class="list-inline">
+        <li><%= @student.country_name %></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<section class="flex sm">
+  <div class="bg-white full-width content-pad">
+    <p>
+      <strong>Skype ID:</strong>
+      <%= @student.skype_id %>
+    </p>
+    <p>
+      <strong>Gmail address:</strong>
+      <%= @student.gmail_address %>
+    </p>
+    <p>
+      <strong>Preference:</strong>
+      <%= @student.preference %>
+    </p>
+  </div>
+</section>
