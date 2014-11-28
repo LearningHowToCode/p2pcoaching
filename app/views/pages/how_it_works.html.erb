@@ -1,7 +1,7 @@
-<header class="how-it-works-banner">
+<header>
 	<h1 class="text-center">HOW IT WORKS</h1>
 </header>
-<section class="flex space-between flex-no-wrap bg-gray how-it-works">
+<section class="flex space-between sm flex-no-wrap bg-gray how-it-works">
 	<div class="how-item for-students">
 		<header>
 			<h3>For Students</h3>
@@ -39,6 +39,12 @@
 				<p> Your tutor will send you a contact request via Skype a day before the lesson. Please log into Skype at least 10 minutes before the lesson. Enjoy your lesson! </p>
 			</div>
 		</div>
+		<% unless user_signed_in?  %>
+			<div class="media text-center">
+				<%= link_to "Sign Up as a Student now", new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
+			</div>
+			<br>
+		<% end %>
 	</div>
 	<div class="how-item for-tutors">
 		<header>
@@ -77,5 +83,11 @@
 				<p> Send your student a Skype contact request at least a day before the lesson. Find a quiet place and sign into Skype at least 20 minutes before the lesson.</p>
 			</div>
 		</div>
+		<% unless user_signed_in?  %>
+			<div class="media text-center">
+				<%= link_to "Sign Up as a Tutor now", new_registration_path('tutor'), class: 'btn btn-primary btn-lg' %>
+			</div>
+			<br>
+		<% end %>
 	</div>
 </section>
