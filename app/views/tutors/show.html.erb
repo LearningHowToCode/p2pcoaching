@@ -9,14 +9,16 @@
         </div>
     <% end %>
     <div class="media-body">
-      <h1>
+      <h2 class="rm-top">
         <%= @tutor.name %>
-      </h1>
+      </h2>
       <ul class="list-inline">
         <li><%= @tutor.undergraduate_major %>, <%= @tutor.undergraduate_institution %></li>
         <li><%= @tutor.graduate_study_field %>, <%= @tutor.graduate_institution %></li>
       </ul>
-      <%= @tutor.display_subjects %>
+      <% @tutor.display_subjects.split(', ').each do |subject| %>
+        <span class="label label-info"><%= subject %></span>
+      <% end %>
       <%= number_to_currency @tutor.price %>
     </div>
   </div>

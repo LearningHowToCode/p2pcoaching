@@ -13,11 +13,22 @@ $jumbotron-bg: white;
 .center {
 	text-align: center;
 }
-
-.navbar-brand {
-	font-weight: bold;
+.navbar-header{
+	width: 146px;
 }
-
+.navbar-brand{
+	padding: 4px;
+}
+.navbar-brand img{
+	width: 125px;
+	height: 36px;
+}
+.navbar-center{
+	width: calc(100% - 393px);
+}
+.navbar-right{
+	width: 247px;
+}
 h3 {
 	color: #c0392b;
 }
@@ -40,6 +51,9 @@ section.md{
 
 section.sm{
 	padding: 6px 36px;
+}
+.rm-top{
+	margin-top: 0px;
 }
 .rm-bottom{
 	margin-bottom: 0px;
@@ -187,6 +201,12 @@ section.sm{
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	.flex{
 		flex-direction: column;
+	}
+	.navbar-right{
+		display: none;
+	}
+	.navbar-header{
+		width: auto;
 	}
 }
 

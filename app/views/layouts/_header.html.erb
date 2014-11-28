@@ -1,6 +1,6 @@
 <nav class="navbar navbar-static-top navbar-default" role="navigation">
-  <div class="container">
-    <div class="container-fluid">
+  <section class="sm">
+    <div class="flex">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -9,22 +9,29 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to 'Pairbis', root_path, class: "navbar-brand" %>
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag 'pairbis-logo.png' %>
+        <% end %>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><%= link_to "Search Tutors", tutors_path %></li>
           <li><%= link_to "How it Works", how_it_works_path %></li>
           <li><%= link_to "About", root_path(anchor: 'more') %></li>
           <li><%= link_to "Contact", root_path(anchor: 'more') %></li>
         </ul>
-        <ul class="nav navbar-nav pull-right">
+      </div>
+      <div class="navbar-right">
+        <ul class="nav navbar-nav">
           <% if user_signed_in?  %>
               <li><%= link_to_my_profile %></li>
               <li><%= link_to_my_schedule %></li>
-              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to destroy_user_session_path, method: :delete do %>
+                  <span class="glyphicon glyphicon-log-out visible-sm-inline" aria-hidden="true"></span>
+                <% end %>
+              </li>
           <% else  %>
               <li><%= link_to "Log In", new_user_session_path %></li>
               <li><%= link_to "Tutor Sign Up", new_registration_path('tutor') %><li>
@@ -33,5 +40,5 @@
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </nav>
