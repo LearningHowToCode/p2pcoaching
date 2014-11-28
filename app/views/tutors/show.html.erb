@@ -19,6 +19,12 @@
       <% @tutor.display_subjects.split(', ').each do |subject| %>
         <span class="label label-info"><%= subject %></span>
       <% end %>
+      <% unless @tutor.is_the?(current_user) %>
+        <% @tutor.languages.split(', ').each do |language| %>
+          <span class="label label-info"><%= language %></span>
+        <% end %>
+      <% end %>
+
       <%= number_to_currency @tutor.price %>
     </div>
   </div>
@@ -126,3 +132,4 @@
     <% end  %>
   </div>
 </section>
+<br>
