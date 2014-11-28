@@ -1,31 +1,30 @@
 <header class="bg-green flex reg-header">
   <div class="media full-width tutor-header">
     <div class="pull-left">
-      <%= image_tag @tutor.image, width: '100', class: 'img-circle' %>
+      <%= image_tag @tutor.image, class: 'tutor-img' %>
     </div>
-    <% if @tutor.is_the?(current_user) %>
-        <div class="pull-right">
-          <%= link_to 'Edit Profile', edit_tutor_path(@tutor), class: "btn btn-primary" %>
-        </div>
-    <% end %>
+    <div class="pull-right">
+      <% if @tutor.is_the?(current_user) %>
+        <%= link_to edit_tutor_path(@tutor), class: 'btn btn-primary' do %>
+          Edit profile
+        <% end %>
+      <% end %>
+    </div>
     <div class="media-body">
-      <h2 class="rm-top">
+      <h2 class="half-top">
         <%= @tutor.name %>
       </h2>
       <ul class="list-inline">
-        <li><%= @tutor.undergraduate_major %>, <%= @tutor.undergraduate_institution %></li>
-        <li><%= @tutor.graduate_study_field %>, <%= @tutor.graduate_institution %></li>
+        <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
+        <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
       </ul>
       <% @tutor.display_subjects.split(', ').each do |subject| %>
           <span class="label label-info"><%= subject %></span>
       <% end %>
-      <% unless @tutor.is_the?(current_user) %>
-          <% @tutor.languages.split(', ').each do |language| %>
-              <span class="label label-info"><%= language %></span>
-          <% end %>
+      <% @tutor.languages.split(', ').each do |language| %>
+        <span class="label label-success"><%= language %></span>
       <% end %>
-
-      <%= number_to_currency @tutor.price %>
+      <h4>USD <%= number_to_currency @tutor.price %>/hr</h4>
     </div>
   </div>
 </header>
@@ -118,7 +117,14 @@
 <% end %>
 <section class="flex md f-column">
   <div>
-    <h1>Lessons</h1>
+    <h1>
+      <div class="pull-right">
+        <% if (@tutor.is_the?(current_user)) && @tutor.completed_profile? %>
+          <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
+      <% end  %>
+      </div>
+      Lessons
+    </h1>
   </div>
   <div class="bg-white full-width content-pad">
     <% if @lessons.count.zero? %>
@@ -126,9 +132,6 @@
     <% else %>
         <%= render 'lessons/lessons_list' %>
     <% end %>
-    <% if (@tutor.is_the?(current_user)) && @tutor.completed_profile? %>
-        <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
-    <% end  %>
   </div>
 </section>
 <br>
