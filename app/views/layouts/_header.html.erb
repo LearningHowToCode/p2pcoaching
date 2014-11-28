@@ -23,14 +23,12 @@
           <li><%= link_to "Contact", root_path(anchor: 'more') %></li>
         </ul>
       </div>
-      <div class="navbar-right">
+      <div class="navbar-right text-right">
         <ul class="nav navbar-nav">
           <% if user_signed_in?  %>
               <li><%= link_to_my_profile %></li>
               <li><%= link_to_my_schedule %></li>
-              <li><%= link_to destroy_user_session_path, method: :delete do %>
-                  <span class="glyphicon glyphicon-log-out visible-sm-inline" aria-hidden="true"></span>
-                <% end %>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %>
               </li>
           <% else  %>
               <li><%= link_to "Log In", new_user_session_path %></li>
