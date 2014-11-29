@@ -33,7 +33,7 @@
       <td><%= order.lesson.day %></td>
       <td><%= order.lesson.start_time %></td>
       <td><%= order.lesson.duration %></td>
-      <td><%= order.lesson.status %></td>
+      <td><%= order.lesson.status.capitalize %></td>
       <td><%= order.lesson.tutor.try(:name) %></td>
     </tr>
   <% end %>
