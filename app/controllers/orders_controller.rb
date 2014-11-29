@@ -44,7 +44,8 @@ class OrdersController < ApplicationController
       Stripe::Charge.create(
           :amount => (@lesson.price * 100).floor,
           :currency => "usd",
-          :card => params[:stripeToken]
+          :card => params[:stripeToken],
+          :description => "Tutor's PayPal Address: #{@lesson.tutor.paypal_account}"
       )
       flash[:notice] = "Thanks for ordering!"
     rescue Stripe::CardError => e
