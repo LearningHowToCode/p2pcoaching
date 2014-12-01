@@ -15,13 +15,13 @@ ActiveRecord::Schema.define(version: 20141126173355) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
-    t.time     "start_time", limit: 255
-    t.string   "status",                 default: "available"
+    t.time     "start_time"
+    t.integer  "duration"
+    t.string   "status",     default: "available"
     t.integer  "tutor_id"
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "duration"
   end
 
   create_table "orders", force: true do |t|

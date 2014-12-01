@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 ruby '2.0.0'
 
 gem 'devise'
@@ -15,7 +15,6 @@ gem 'figaro'
 gem 'stripe'
 gem 'rest-client'
 gem 'country_select'
-gem 'unicorn'
 gem 'fog'
 
 group :development do
@@ -31,6 +30,7 @@ end
 group :production do
      gem 'pg'
      gem 'rails_12factor'
+     gem 'unicorn'
 end
 
 group :doc do
