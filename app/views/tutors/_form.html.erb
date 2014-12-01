@@ -57,7 +57,7 @@
                          @tutor.other_subject, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :price, 'Hourly Price (USD): This is the price students will pay. You will get 80% of it deposited to your PayPal account after a lesson is completed.' %><br>
+      <%= f.label :price, 'Hourly Price (USD)*: This is the price students will pay. You will get 80% of it deposited to your PayPal account after a lesson is completed.' %><br>
       <%= f.select :price, (20..100).step(5).to_a, { selected: @tutor.price.to_i }, {class: "form-control"} %>
     </div>
     <div class="form-group">
