@@ -15,6 +15,7 @@ Belluga2::Application.routes.draw do
   get 'sales', to: "orders#sales"
   get 'purchases', to: "orders#purchases"
   get 'how_it_works', to: 'pages#how_it_works'
+  get 'faqs', to: 'pages#faqs'
 
   root "pages#home"
 end
