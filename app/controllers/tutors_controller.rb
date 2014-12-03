@@ -37,11 +37,11 @@ class TutorsController < ApplicationController
   end
 
   def tutor_params
-    params.require(:tutor).permit(:name, :image, :price, :bio,
+    params.require(:tutor).permit(:name, :price, :bio,
                                   :undergraduate_institution, :undergraduate_major,
                                   :graduate_institution, :graduate_study_field,
                                   :subject, :long_bio, :skype_id, :gmail_address,
-                                  :languages, :paypal_account)
+                                  :languages)
   end
 
   def normalized_tutor_params

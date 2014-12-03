@@ -11,10 +11,10 @@ class Tutor < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  validates_presence_of  'name', 'price', 'bio', 'image',
+  validates_presence_of  'name', 'price', 'bio',
                          'undergraduate_institution', 'undergraduate_major',
                          'subject', 'long_bio', 'skype_id','gmail_address',
-                         'languages', 'paypal_account', on: :update
+                         'languages', on: :update
 
   scope :completed, ->{ where(completed_profile: true) }
   delegate :email, to: :user
