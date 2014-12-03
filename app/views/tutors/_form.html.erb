@@ -8,12 +8,13 @@
           </ul>
         </div>
     <% end %>
+    <p>You can skip optional fields and come back later. The whole process should take just a few minutes!</p>
     <div class="form-group">
       <%= f.label :name, 'Your Name (e.g., John S.)*' %><br>
       <%= f.text_field :name, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :image, 'Picture*' %><br>
+      <%= f.label :image, 'Picture: Not required but recommended. You can upload it later' %><br>
       <%= f.file_field :image, class: "form-control" %>
     </div>
     <div class="form-group">
@@ -31,7 +32,7 @@
       <%= f.text_field :undergraduate_major, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :graduate_institution, 'Graduate School' %><br>
+      <%= f.label :graduate_institution, 'Graduate School (optional)' %><br>
       <%= f.select :graduate_institution, Tutor::INSTITUTIONS,
                    { selected: selected_graduate_institution(@tutor), include_blank: true },
                    { class: "form-control", id: 'graduate-institution' } %>
@@ -42,7 +43,7 @@
                          @tutor.graduate_institution, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :graduate_study_field, 'Field of Study' %><br>
+      <%= f.label :graduate_study_field, 'Field of Study (optional)' %><br>
       <%= f.text_field :graduate_study_field, class: "form-control" %>
     </div>
     <div class="form-group">
@@ -57,33 +58,33 @@
                          @tutor.other_subject, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :price, 'Hourly Price (USD)*: This is the price students will pay. You will get 80% of it deposited to your PayPal account after a lesson is completed.' %><br>
+      <%= f.label :price, 'Hourly Price (USD)*: This is the price students will pay. You will get 80% of it deposited to your PayPal account immediately after a lesson is completed' %><br>
       <%= f.select :price, (20..100).step(5).to_a, { selected: @tutor.price.to_i }, {class: "form-control"} %>
     </div>
     <div class="form-group">
-      <%= f.label :bio, 'Profile (150 characters or less)*' %><br>
+      <%= f.label :bio, 'Profile (150 characters or less)*: This will show up on tutor search page' %><br>
       <%= f.text_area :bio, class: "form-control", maxlength: 150 %>
     </div>
     <div class="form-group">
-      <%= f.label :long_bio, 'Profile (1000 characters or less)*' %><br>
+      <%= f.label :long_bio, 'Profile (1,000 characters or less)*: This will show up on your public profile page. You can just copy paste the same profile as above if you like' %><br>
       <%= f.text_area :long_bio, class: "form-control", maxlength: 1000 %>
     </div>
     <div class="form-group">
-      <%= f.label :skype_id, 'Skype ID*' %><br>
+      <%= f.label :skype_id, 'Skype ID*: This is visible only to the student who has a comfirmed lesson with you' %><br>
       <%= f.text_field :skype_id, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :gmail_address, 'Gmail Address (for Hangouts)*' %><br>
+      <%= f.label :gmail_address, 'Gmail Address (for Hangouts)*: This is visible only to the student who has a comfirmed lesson with you' %><br>
       <%= f.email_field :gmail_address, class: "form-control" %>
     </div>
     <div class="form-group">
-      <label for="">Languages</label>
+      <label for="">Languages You Speak*</label>
       <% Tutor::LANGUAGES.each do |language| %>
           <%= custom_checkbox 'languages', language, @tutor.has_language?(language) %>
     <% end  %>
     </div>
     <div class="form-group">
-      <%= f.label :paypal_account, 'PayPal Account (which is an email address)*: This will be used to transfer your money.*' %><br>
+      <%= f.label :paypal_account, 'PayPal Email Address: This will be used to transfer your money. You can skip it for now. Write your email address with (Venmo) if you prefer Venmo' %><br>
       <%= f.email_field :paypal_account, class: "form-control" %>
     </div>
     <div class="actions">
