@@ -1,7 +1,16 @@
 ja:
   search_tutors: "先生を検索"
-  
-  date:
+  ivy_league_tutors: "ハーバード大学生らが講師"
+  ivy_league_tutors_description: "ハーバードやイェールなどアメリカトップの大学から講師を選べます"
+  welcome_to_pairbis: "ペアビスへようこそ!"
+  we_will_help: "スカイプを通して、アメリカのトップ大学生から学ぼう"
+  pay_per_lesson: "レッスン毎のお支払い"
+  pay_per_lesson_description: "受講するレッスンのみのお支払いなので、1レッスンから気軽に始められます"
+  flexible_schedule: "自由なスケジューリング"
+  flexible_schedule_description: "スカイプでのレッスンなので、好きな時間に好きな場所でレッスンを受けられます"
+
+
+  date: 
     abbr_day_names:
     - 日
     - 月
