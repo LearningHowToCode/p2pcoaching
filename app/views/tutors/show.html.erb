@@ -127,10 +127,14 @@
     </h1>
   </div>
   <div class="bg-white full-width content-pad">
-    <% if @lessons.count.zero? %>
-        You haven't created any lessons yet. Click in New Lesson to create one now.
-    <% else %>
+    <% if @tutor.is_the?(current_user) %>
+      <% if @lessons.count.zero? %>
+          You haven't created open lessons yet. Click "New Lesson" to create one now!
+      <% else %> 
         <%= render 'lessons/lessons_list' %>
+      <% end %>
+    <% else %>
+      The tutor doesn't have open lessons at the moment. Please email us at pairbis@gmai.com if you want us to ask this tutor to create open lessons.
     <% end %>
   </div>
 </section>
