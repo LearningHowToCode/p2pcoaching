@@ -1,5 +1,5 @@
 ja:
-  search_tutors: "先生を検索"
+  search_tutors: "先生を探す"
   ivy_league_tutors: "ハーバード大学生らが講師"
   ivy_league_tutors_description: "ハーバードやイェールなどアメリカトップの大学から講師を選べます"
   welcome_to_pairbis: "ペアビスへようこそ!"
@@ -8,7 +8,15 @@ ja:
   pay_per_lesson_description: "受講するレッスンのみのお支払いなので、1レッスンから気軽に始められます"
   flexible_schedule: "自由なスケジューリング"
   flexible_schedule_description: "スカイプでのレッスンなので、好きな時間に好きな場所でレッスンを受けられます"
-
+  how_it_works: "仕組み"
+  faqs: "よくある質問"
+  contact: "連絡先"
+  log_in: "ログイン"
+  tutor_sign_up: "登録（先生）"
+  student_sign_up: "登録（生徒）"
+  about_description: "ハーバードビジネススクールの日本人学生が創始したサービスです。"
+  contact_description: "24時間以内にメール返信いたします。日本語でお気軽にご連絡ください。"
+  about: "Pairbisについて"
 
   date: 
     abbr_day_names:

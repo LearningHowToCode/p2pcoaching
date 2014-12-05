@@ -17,11 +17,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Search Tutors", tutors_path %></li>
-          <li><%= link_to "How It Works", how_it_works_path %></li>
-          <li><%= link_to "FAQs", faqs_path %></li>
-          <li><%= link_to "About", root_path(anchor: 'more') %></li>
-          <li><%= link_to "Contact", root_path(anchor: 'more') %></li>
+          <li><%= link_to t('search_tutors'), tutors_path %></li>
+          <li><%= link_to t('how_it_works'), how_it_works_path %></li>
+          <li><%= link_to t('faqs'), faqs_path %></li>
+          <li><%= link_to t('about'), root_path(anchor: 'more') %></li>
+          <li><%= link_to t('contact'), root_path(anchor: 'more') %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Languages<b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -39,9 +39,9 @@
               <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %>
               </li>
           <% else  %>
-              <li><%= link_to "Log In", new_user_session_path %></li>
-              <li><%= link_to "Tutor Sign Up", new_registration_path('tutor') %><li>
-              <li><%= link_to "Student Sign Up", new_registration_path('student') %><li>
+              <li><%= link_to t('log_in'), new_user_session_path %></li>
+              <li><%= link_to t('tutor_sign_up'), new_registration_path('tutor') %><li>
+              <li><%= link_to t('student_sign_up'), new_registration_path('student') %><li>
           <% end %>
         </ul>
       </div>

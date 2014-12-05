@@ -29,5 +29,14 @@ en:
   pay_per_lesson_description: "You pay only for the lessons you take. You can start from just one lesson and see how it goes."
   flexible_schedule: Flexible Schedule
   flexible_schedule_description: "All lessons take place over Skype, so you can choose a convenient time and a location for you."
+  how_it_works: "How It Works"
+  faqs: "FAQs"
+  contact: "contact"
+  log_in: "Log In"
+  tutor_sign_up: "Tutor Sign Up"
+  student_sign_up: "Student Sign Up"
+  about_description: "We are a group of Harvard students who want to make it easy for students from around the world to speak with tutors via Skype."
+  contact_description: "We will respond within 24 hours (often much faster)"
+  about: "About"
 
 
