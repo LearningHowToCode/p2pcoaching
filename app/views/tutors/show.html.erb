@@ -134,10 +134,10 @@
         <%= render 'lessons/lessons_list' %>
       <% end %>
     <% else %>
-      <% if @lessons.count.zero? %>
-        The tutor doesn't have open lessons at the moment. Please email us at pairbis@gmai.com if you want us to ask this tutor to create open lessons.
+      <% if @lessons.count.zero? %><%=t :please_email_us %>
       <% else %> 
         <%= render 'lessons/lessons_list' %>
+        <%=t :if_none_of %>
       <% end %>
     <% end %>
   </div>

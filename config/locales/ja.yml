@@ -1,13 +1,13 @@
 ja:
   search_tutors: "先生を探す"
   ivy_league_tutors: "ハーバード大学生らが講師"
-  ivy_league_tutors_description: "ハーバードやイェールなどアメリカトップの大学から講師を選べます"
+  ivy_league_tutors_description: "講師はハーバードなどアメリカトップの大学生・卒業生。大学留学支援（SAT・GMAT・エッセイ添削）、英会話レッスン、または先生の専門分野に関するご質問など、ご要望に沿ったレッスンをしていただけます。"
   welcome_to_pairbis: "Pairbis（ペアビス）へようこそ!"
-  we_will_help: "スカイプを通して、アメリカのトップ大学生から学ぼう"
+  we_will_help: "スカイプを通して、アメリカのトップ大学生から学ぼう！"
   pay_per_lesson: "レッスン毎のお支払い"
-  pay_per_lesson_description: "受講するレッスンのみのお支払いなので、1レッスンから気軽に始められます"
+  pay_per_lesson_description: "入会金、月会費など一切なし。受講するレッスンのみのお支払いなので、1レッスンからお気軽に始められます。"
   flexible_schedule: "自由なスケジューリング"
-  flexible_schedule_description: "スカイプでのレッスンなので、好きな時間に好きな場所でレッスンを受けられます"
+  flexible_schedule_description: "スカイプでのレッスンなので、好きな時間に好きな場所でレッスンを受けていただけます。"
   how_it_works: "ご利用方法"
   faqs: "よくある質問"
   contact: "お問合せ"
@@ -18,6 +18,8 @@ ja:
   contact_description: "24時間以内にメール返信いたします。日本語でお気軽にご連絡ください。"
   about: "Pairbisについて"
   tutors: "先生を探す"
+  please_email_us: "先生とレッスンをしたい場合は、お気軽にpairbis@gmail.comまでご連絡ください。"
+  if_none_of: "もしご都合が合わない場合は、お気軽にpairbis@gmail.comまでご連絡ください。"
 
   date: 
     abbr_day_names:
