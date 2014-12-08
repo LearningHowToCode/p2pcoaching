@@ -13,8 +13,8 @@
 				</div>
 			</div>
 			<div class="media-body">
-				<h4>Find a Tutor</h4>
-				<p>Browse our list of Ivy League tutors and their available times. </p>
+				<h4><%=t :find_a_tutor %></h4>
+				<p><%=t :browse_our_list %></p>
 			</div>
 		</div>
 		<div class="media">
@@ -24,8 +24,8 @@
 				</div>
 			</div>
 			<div class="media-body">
-				<h4>Request a Lesson... Or Send Us An Email</h4>
-				<p> Once you find your tutor, check whether the tutor has listed a time that works for you. If he/she has, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, just send us an email at pairbis@gmail.com. We will get in touch with the tutor to ask whether you can schedule a lesson with him/her.</p>
+				<h4><%=t :request_a_lesson_or %></h4>
+				<p><%=t :once_you_find_a_tutor %></p>
 			</div>
 		</div>
 		<div class="media">
@@ -35,13 +35,13 @@
 				</div>
 			</div>
 			<div class="media-body">
-				<h4>Enjoy Your Lesson</h4>
-				<p>Your tutor will send you a short message via Skype or Google Hangouts a day before the lesson. Please make sure to be online at least 10 minutes before the lesson. Enjoy your lesson!</p>
+				<h4><%=t :enjoy_your_lesson %></h4>
+				<p><%=t :your_tutor_will_send_you %></p>
 			</div>
 		</div>
 		<% unless user_signed_in?  %>
 			<div class="media text-center">
-				<%= link_to "Sign Up As A Student Now", new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
+				<%= link_to t('sign_up_as_a_student_now'), new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
 			</div>
 			<br>
 		<% end %>

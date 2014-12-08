@@ -20,8 +20,15 @@ ja:
   tutors: "先生を探す"
   please_email_us: "先生とレッスンをしたい場合は、お気軽にpairbis@gmail.comまでご連絡ください。"
   if_none_of: "もしご都合が合わない場合は、お気軽にpairbis@gmail.comまでご連絡ください。"
-  for_students: "学生の方"
+  for_students: "生徒の方"
   for_tutors: "先生の方"
+  find_a_tutor: "先生を探す"
+  browse_our_list: "先生のリストをご覧になって、ご自分のニーズに合った先生を見つけましょう。"
+  request_a_lesson_or: "レッスンを申し込む"
+  once_you_find_a_tutor: "先生が見つかったら、先生のプロフィール画面に、空いている時間が載っているか確認してください。もし空いている時間が載っているようでしたら、オンラインでお申し込みいただき、レッスン確定となります。もし空いている時間が載っていない場合は、ご希望の先生の名前を、pairbis@gmail.comまでお気軽にご連絡ください。我々の方で先生に連絡をいたします。"
+  enjoy_your_lesson: "レッスンを楽しむ"
+  your_tutor_will_send_you: "先生の連絡先は、レッスンお申し込み時に自動でメールでお送りいたします。レッスン前日までに先生と、SkypeまたはGoogle Hangoutsの連絡先を交換し、念のためレッスン開始10分前までに静かなお部屋でインターネットの接続をご確認ください。"
+  sign_up_as_a_student_now: "生徒としてご登録する"
 
   date: 
     abbr_day_names:
