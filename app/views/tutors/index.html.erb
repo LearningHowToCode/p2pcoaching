@@ -19,6 +19,11 @@
             <li>
               <%= tutor.graduate_institution %> <%= tutor.graduate_study_field %>
             </li>
+            <li>
+              <% tutor.display_subjects.split(', ').each do |subject| %>
+                <span class="label label-info"><%= subject %></span>
+              <% end %>
+            </li>
           </ul>
           <p><%= tutor.bio %></p>
         </div>
