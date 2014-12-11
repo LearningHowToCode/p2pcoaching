@@ -21,9 +21,11 @@
       <% @tutor.display_subjects.split(', ').each do |subject| %>
           <span class="label label-info"><%= subject %></span>
       <% end %>
+      <h5>
       <% @tutor.languages.split(', ').each do |language| %>
         <span class="label label-success"><%= language %></span>
       <% end %>
+      <h5>
       <h4>USD <%= number_to_currency @tutor.price %>/hr</h4>
     </div>
   </div>
