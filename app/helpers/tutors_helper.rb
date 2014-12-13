@@ -33,7 +33,7 @@ module TutorsHelper
 
   def selected_institution(tutor)
     if Tutor::INSTITUTIONS.include? tutor.undergraduate_institution
-      tutor.graduate_institution
+      tutor.undergraduate_institution
     else
       'Other'
     end

@@ -48,7 +48,7 @@ class TutorsController < ApplicationController
     subjects = languages = {}
     attrs = tutor_params
 
-    subjects = params[:tutor][:subjects].values.reject(&:blank?).join(', ') if params[:tutor][:subjects]
+    subjects = NormalizeSubjects.new(params[:tutor][:subjects]).call if params[:tutor][:subjects]
     languages = params[:tutor][:languages].values.join(', ') if params[:tutor][:languages]
 
     if params[:tutor][:undergraduate_institution] == 'Other'
