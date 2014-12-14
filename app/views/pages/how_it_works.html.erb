@@ -57,8 +57,8 @@
 				</div>
 			</div>
 			<div class="media-body">
-				<h4>Create Your Account</h4>
-				<p>Sign up as a tutor and create your own account. All you have to do is to spend 2-3 minutes to write a little bit about yourself. You can also set your own price.</p>
+				<h4><%=t :create_your_account %></h4>
+				<p><%=t :create_your_account_description %></p>
 			</div>
 		</div>
 		<div class="media">
@@ -85,7 +85,7 @@
 		</div>
 		<% unless user_signed_in?  %>
 			<div class="media text-center">
-				<%= link_to "Sign Up As A Tutor Now", new_registration_path('tutor'), class: 'btn btn-primary btn-lg' %>
+				<%= link_to t('sign_up_as_a_tutor_now'), new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
 			</div>
 			<br>
 		<% end %>
