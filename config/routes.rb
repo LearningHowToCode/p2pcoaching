@@ -1,6 +1,6 @@
 Belluga2::Application.routes.draw do
 
-  scope "(:locale)", locale: /en|ja/ do
+  scope "(:locale)", locale: /en|cn|ja|kn/ do
 
     resources :lessons, except: [:index, :show] do
       resources :orders
