@@ -39,6 +39,16 @@
 
 <br>
 
+<%= will_paginate @listings, renderer: BootstrapPagination::Rails %>
+
+<br>
+
+<div class="center">
+  <div class="fb-like" data-href="https://pairbis.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
+  </div>
+</div>
+<br>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,9 +59,3 @@
   ga('send', 'pageview');
 
 </script>
-
-<div class="center">
-  <div class="fb-like" data-href="https://pairbis.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
-  </div>
-</div>
-<br>

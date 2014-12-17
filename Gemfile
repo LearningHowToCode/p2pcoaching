@@ -16,6 +16,8 @@ gem 'stripe'
 gem 'rest-client'
 gem 'country_select'
 gem 'fog'
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 group :development do
   gem 'letter_opener'
