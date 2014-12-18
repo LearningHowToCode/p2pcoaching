@@ -26,7 +26,7 @@
         <span class="label label-success"><%= language %></span>
       <% end %>
       <h5>
-      <h4>USD <%= number_to_currency @tutor.price %>/hr</h4>
+      <h4><%=t :hourly_price %> <%= number_to_currency @tutor.price %></h4>
     </div>
   </div>
 </header>
@@ -125,7 +125,7 @@
           <%= link_to 'New Lesson', new_lesson_path, class: 'btn btn-primary pull-right' %>
       <% end  %>
       </div>
-      Lessons
+      <%=t :lessons %>
     </h1>
   </div>
   <div class="bg-white full-width content-pad">

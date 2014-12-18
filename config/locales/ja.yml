@@ -2,7 +2,7 @@ ja:
   search_tutors: "先生を探す"
   ivy_league_tutors: "ハーバード大学生が講師"
   ivy_league_tutors_description: "ハーバードやイェールなどアメリカトップの大学から講師を選べます。"
-  welcome_to_pairbis: "Pairbis（ペアビス）へようこそ!"
+  welcome_to_pairbis: "ペアビスへようこそ!"
   we_will_help: "ハーバード大学生からオンラインで学びましょう！まずはお気軽にPairbis@gmail.comまで個別相談ください。"
   pay_per_lesson: "レッスン毎のお支払い"
   pay_per_lesson_description: "受講するレッスン毎のお支払いなので、1レッスンからお気軽に始められます。"
@@ -60,7 +60,7 @@ ja:
   conduct_your_lesson: "レッスンを実施する"
   send_your_student: "生徒の連絡先は、レッスン確定時にメールでお送りします。レッスン当日は、念のため開始15分前までに、静かなお部屋でスカイプまたはGoogle Hangoutsにログインしておきましょう。"
   you_are_welcome_to_choose_any: "好きな教材を使っていただけます。先生にも同じ書籍を使ってもらいたい場合は、先生の書籍代をご負担いただくことになります。（書籍代はレッスン代に追加されます）他にも、Paribisがオススメするウェブサイトや書籍のリストもございますので、レッスン確認確定メールのリンクよりご確認ください。"
-  your_name: "お名前 (例： John S.)*"
+  your_name: "Your Name (e.g., John S.)*"
   yes_both_students_and_graduates: "はい、学生の方、既卒の方、どちらも登録いただけます。"
   do_i_need_to_be_an_ivy: "先生として登録するのに、アイビーリーグの学歴は必要ですか？"
   at_this_point_we_are: "現時点では、アイビーリーグ、MITまたはスタンフォード大学の方を対象としております。ただし、過去のご経験（チューター歴等）によっては、個別にご相談させていただきますので、メールにてお問い合わせください。"
@@ -71,6 +71,9 @@ ja:
   you_get_to_set_your_own_price: "自分のプロフィール編集ページにて、ご自由に時給を設定・変更することが可能です。"
   how_can_i_cancel_my_lesson_tutor: "レッスンをキャンセルするにはどうすればいいですか？"
   if_you_need_to_cancel_tutor: "キャンセルされる場合は、わかった時点でメールにてご連絡ください。レッスン開始の24時間前であれば、ペナルティなしでキャンセルできます。24時間前を過ぎてしまった場合は、50%割引で次回レッスンをしていただくことになります。"
+  hourly_price: "一時間当たりのお値段："
+  lessons: "先生のレッスン"
+  log_in_page: "ログイン"
 
   date: 
     abbr_day_names:

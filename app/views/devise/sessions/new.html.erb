@@ -1,7 +1,7 @@
 <div class="flex full-width full-height home-banner">
   <div class="centerblock">
     <div class="login">
-      <h2 class="text-center">Log In</h2>
+      <h2 class="text-center"><%=t :log_in_page %></h2>
       <!-- h4>Log in below if you have already created an account with us.</h4 -->
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -29,10 +29,10 @@
       
       <ul class="list-inline">
         <li>
-          <%= link_to 'Tutor Sign Up', new_registration_path('tutor') %>
+          <%= link_to t('tutor_sign_up'), new_registration_path('tutor') %>
         </li>
         <li class="pull-right">
-          <%= link_to 'Student Sign Up', new_registration_path('student') %>
+          <%= link_to t('student_sign_up'), new_registration_path('student') %>
         </li>
       </ul>
     </div>
