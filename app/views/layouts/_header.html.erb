@@ -56,8 +56,8 @@
               </li>
           <% else  %>
               <li><%= link_to t('log_in'), new_user_session_path %></li>
-              <li><%= link_to t('tutor_sign_up'), new_registration_path('tutor') %><li>
               <li><%= link_to t('student_sign_up'), new_registration_path('student') %><li>
+              <li><%= link_to t('tutor_sign_up'), new_registration_path('tutor') %><li>
           <% end %>
         </ul>
       </div>
