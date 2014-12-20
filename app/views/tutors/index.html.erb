@@ -1,6 +1,9 @@
 <header class="how-it-works-banner">
   <h1 class="text-center"><%=t :tutors %></h1>
 </header>
+
+<%= will_paginate @tutors %>
+
 <section class="flex">
   <div class="bg-white full-width tutors">
     <% @tutors.each do |tutor| %>

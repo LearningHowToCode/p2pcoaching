@@ -16,6 +16,7 @@ gem 'stripe'
 gem 'rest-client'
 gem 'country_select'
 gem 'fog'
+gem 'will_paginate', '~> 3.0.5'
 
 
 group :development do
