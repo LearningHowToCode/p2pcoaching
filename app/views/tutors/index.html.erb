@@ -2,8 +2,11 @@
   <h1 class="text-center"><%=t :tutors %></h1>
 </header>
 
-<h4 class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></h4>
+<br>
 
+<div class="center">
+  <div><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
+</div>
 
 <section class="flex">
   <div class="bg-white full-width tutors">
@@ -41,11 +44,8 @@
   </div>
 </section>
 
-
-<h4 class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></h4>
-
-
 <div class="center">
+  <div><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
   <div class="fb-like" data-href="https://pairbis.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
   </div>
 </div>
