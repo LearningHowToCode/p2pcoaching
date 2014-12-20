@@ -17,7 +17,7 @@ gem 'rest-client'
 gem 'country_select'
 gem 'fog'
 gem 'will_paginate', '~> 3.0.5'
-gem 'will_paginate-bootstrap', '~> 1.0.0'
+
 
 
 group :development do
