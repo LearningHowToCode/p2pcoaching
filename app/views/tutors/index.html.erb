@@ -2,7 +2,7 @@
   <h1 class="text-center"><%=t :tutors %></h1>
 </header>
 
-<h4 class="center"><%= will_paginate @tutors %></h4>
+<h4 class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></h4>
 
 
 <section class="flex">
