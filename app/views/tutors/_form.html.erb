@@ -58,7 +58,7 @@
                          @tutor.other_subject, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :price, 'Hourly Price USD* (This is the price students will pay. You will get 80% of it deposited to your PayPal account immediately after a lesson is completed.)' %><br>
+      <%= f.label :price, 'Hourly Price USD* (This is the price students will pay. You will get 80% of it deposited to your PayPal or Venmo immediately after a lesson is completed.)' %><br>
       <%= f.select :price, (20..100).step(5).to_a, { selected: @tutor.price.to_i }, {class: "form-control"} %>
     </div>
     <div class="form-group">
@@ -84,7 +84,7 @@
     <% end  %>
     </div>
     <div class="form-group">
-      <%= f.label :paypal_account, 'PayPal Email Address (Used to transfer your money. You can skip it for now. Write your phone number if you prefer Venmo)' %><br>
+      <%= f.label :paypal_account, 'PayPal or Venmo (Email address for PayPal, or phone number for Venmo. Visible only to you. You can also skip it for now.)' %><br>
       <%= f.email_field :paypal_account, class: "form-control" %>
     </div>
     <div class="actions">
