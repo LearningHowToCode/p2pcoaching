@@ -1,0 +1,23 @@
+<%= form_tag contact_path do %>
+  <%= hidden_field_tag :tutor_id, @tutor.id %>
+  <div class="form-group">
+    <%= label_tag 'First name*'  %>
+    <%= text_field_tag :first_name, nil, class: 'form-control'  %>
+  </div>
+  <div class="form-group">
+    <%= label_tag 'Email*'  %>
+    <%= email_field_tag :email, nil, class: 'form-control'  %>
+  </div>
+  <div class="form-group">
+    <%= label_tag 'Category*'  %>
+    <%= select_tag :category, options_for_select(["Can I schedule a lesson with you?", "Other questions"]),
+                   class: 'form-control'  %>
+  </div>
+  <div class="form-group">
+    <%= label_tag 'Message'  %>
+    <%= text_area_tag :message, nil, class: 'form-control'  %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Send", class: "btn btn-primary" %>
+  </div>
+<% end %>

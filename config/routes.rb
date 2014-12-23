@@ -19,6 +19,8 @@ Belluga2::Application.routes.draw do
     get 'how_it_works', to: 'pages#how_it_works'
     get 'faqs', to: 'pages#faqs'
 
+    post 'contact', to: 'messages#contact', as: :contact
+
     root "pages#home"
   end
 end

@@ -1,0 +1,7 @@
+<%= @info.first_name %> sent a message to <%= link_to @tutor.name, tutor_url(I18n.locale, @tutor.id) %>
+<br/>
+Email: <%= @info.email %>
+<br/>
+Category: <%= @info.category %>
+<br/>
+Message: <%= @info.message %>

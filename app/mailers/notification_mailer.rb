@@ -24,4 +24,11 @@ class NotificationMailer < ActionMailer::Base
   def welcome_student(user)
     mail(to: user.email, subject: 'Thank you for signing up for Pairbis!')
   end
+
+  def contact_tutor(tutor, info)
+    @tutor = tutor
+    @info = info
+
+    mail(to: 'pairbis@gmail.com', subject: 'A student has messaged a tutor!')
+  end
 end

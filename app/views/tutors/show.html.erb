@@ -1,43 +1,54 @@
-<header class="bg-green flex reg-header">
-  <div class="media full-width tutor-header">
-    <div class="pull-left">
-      <%= image_tag @tutor.image, class: 'tutor-img' %>
-    </div>
-    <div class="pull-right">
-      <% if @tutor.is_the?(current_user) %>
-        <%= link_to edit_tutor_path(@tutor), class: 'btn btn-primary' do %>
-          Edit profile
-        <% end %>
-      <% end %>
-    </div>
-    <div class="media-body">
-      <h2 class="half-top">
-        <%= @tutor.name %>
-      </h2>
-      <ul class="list-inline">
-        <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
-        <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
-      </ul>
-      <% @tutor.display_subjects.split(', ').each do |subject| %>
-          <span class="label label-info"><%= subject %></span>
-      <% end %>
-      <h5>
-      <% @tutor.languages.split(', ').each do |language| %>
-        <span class="label label-success"><%= language %></span>
-      <% end %>
-      <h5>
-      <h4><%=t :hourly_price %> <%= number_to_currency @tutor.price %></h4>
-    </div>
+<section class="row">
+  <div class="<%= 'col-md-9' unless @tutor.is_the?(current_user) %>">
+    <header class="bg-green flex reg-header">
+      <div class="media full-width tutor-header">
+        <div class="pull-left">
+          <%= image_tag @tutor.image, class: 'tutor-img' %>
+        </div>
+        <div class="pull-right">
+          <% if @tutor.is_the?(current_user) %>
+            <%= link_to edit_tutor_path(@tutor), class: 'btn btn-primary' do %>
+              Edit profile
+            <% end %>
+          <% end %>
+        </div>
+        <div class="media-body">
+          <h2 class="half-top">
+            <%= @tutor.name %>
+          </h2>
+          <ul class="list-inline">
+            <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
+            <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
+          </ul>
+          <% @tutor.display_subjects.split(', ').each do |subject| %>
+            <span class="label label-info"><%= subject %></span>
+          <% end %>
+          <h5>
+            <% @tutor.languages.split(', ').each do |language| %>
+              <span class="label label-success"><%= language %></span>
+            <% end %>
+          </h5>
+          <h4><%=t :hourly_price %> <%= number_to_currency @tutor.price %></h4>
+        </div>
+      </div>
+    </header>
+    <section class="flex sm">
+      <div class="bg-white full-width content-pad">
+        <div id="notice"><%= notice %></div>
+        <p class="lead rm-bottom">
+          <%= @tutor.long_bio %>
+        </p>
+      </div>
+    </section>
   </div>
-</header>
-<section class="flex sm">
-  <div class="bg-white full-width content-pad">
-    <div id="notice"><%= notice %></div>
-    <p class="lead rm-bottom">
-      <%= @tutor.long_bio %>
-    </p>
-  </div>
+  <% unless @tutor.is_the?(current_user) %>
+    <div class="col-md-3">
+      <h4>Message tutor</h4>
+      <%= render 'messages/contact_form' %>
+    </div>
+  <% end %>
 </section>
+
 <% if @tutor.is_the?(current_user) %>
     <section class="flex space-between tutor-content md">
       <div class="flex f-column relative">
