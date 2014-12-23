@@ -8,6 +8,6 @@ class MessagesController < ApplicationController
                                 message: params[:message])
 
     NotificationMailer.contact_tutor(tutor, email_info).deliver
-    redirect_to :back, notice: 'Message sent.'
+    redirect_to :back, notice: 'Your Message Was Successfully Sent.'
   end
 end

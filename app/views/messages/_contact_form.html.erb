@@ -1,16 +1,16 @@
 <%= form_tag contact_path do %>
   <%= hidden_field_tag :tutor_id, @tutor.id %>
   <div class="form-group">
-    <%= label_tag 'First name*'  %>
+    <%= label_tag 'First Name*'  %>
     <%= text_field_tag :first_name, nil, class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag 'Email*'  %>
+    <%= label_tag 'Email Address*'  %>
     <%= email_field_tag :email, nil, class: 'form-control'  %>
   </div>
   <div class="form-group">
     <%= label_tag 'Category*'  %>
-    <%= select_tag :category, options_for_select(["Can I schedule a lesson with you?", "Other questions"]),
+    <%= select_tag :category, options_for_select(["Can I schedule a lesson with you? My schedule is...", "I have a question..."]),
                    class: 'form-control'  %>
   </div>
   <div class="form-group">

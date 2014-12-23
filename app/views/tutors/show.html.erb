@@ -43,7 +43,7 @@
   </div>
   <% unless @tutor.is_the?(current_user) %>
     <div class="col-md-3">
-      <h4>Message tutor</h4>
+      <h4>Message <%= @tutor.name %></h4>
       <%= render 'messages/contact_form' %>
     </div>
   <% end %>
