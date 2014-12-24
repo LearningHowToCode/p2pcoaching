@@ -44,8 +44,8 @@
   <% unless @tutor.is_the?(current_user) %>
     <div class="col-md-3 bg-white">
       <br>
-      <h3>Message <%= @tutor.name %></h3>
-      <h5>Send a message directly to <%= @tutor.name %> or contact Pairbis customer support!</h5>
+      <h3><%=t :message %> <%= @tutor.name %> <%=t :message2 %></h3>
+      <h5><%=t :send_message_directly_to %> <%= @tutor.name %> <%=t :or_contact_pairbis_customer_support %></h5>
       <%= render 'messages/contact_form' %>
       <br>
     </div>

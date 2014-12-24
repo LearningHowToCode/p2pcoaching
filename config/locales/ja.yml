@@ -18,8 +18,8 @@ ja:
   contact_description: "留学の準備のお悩み・ニーズに合った先生のご紹介など、まずはお気軽に日本語でご相談ください。"
   about: "Pairbisについて"
   tutors: "先生を探す"
-  please_email_us: "先生とレッスンをしたい場合は、お気軽先生に直接ご連絡ください。または、pairbis@gmail.comまでご連絡いただければ、私たちがスケジュールを調整させていただきます。"
-  if_none_of: "もしご都合が合わない場合は、お気軽に先生に直接ご連絡ください。または、pairbis@gmail.comまでご連絡いただければ、私たちがスケジュールを調整させていただきます。"
+  please_email_us: "レッスンのお申込み・ご質問は、上記のフォームをご使用ください。先生に直接ご連絡いただけます。またスタッフにご連絡いただければ、日本語・英語で対応、スケジュールを調整させていただきます。。"
+  if_none_of: "もしご都合が合わない場合は、上記のフォームよりお気軽に先生に直接ご連絡ください。またスタッフにご連絡いただければ、日本語・英語で対応、スケジュールを調整させていただきます。"
   for_students: "教わりたい方"
   for_tutors: "教えたい方"
   find_a_tutor: "先生を探す"
@@ -74,6 +74,20 @@ ja:
   hourly_price: "一時間当たりのお値段："
   lessons: "先生のレッスン"
   log_in_page: "ログイン"
+  your_name_message: 'お名前*'
+  email_address_message: 'メールアドレス*'
+  send_message_to: 'メッセージを送る相手'
+  pairbis_customer_support: 'Pairbisのスタッフ'
+  subject_message: '件名*'
+  send_message: '送信'
+  message_message: 'メッセージ（先生に直接ご連絡なさる場合は、先生の話せる言語でご記入ください。スタッフは英語・日本語ともに対応いたしております。）'
+  i_want_to_schedule_a_lesson_message: "レッスンを申し込みたいです"
+  i_have_a_question: "質問をさせてください"
+  message: ''
+  message2: 'さんに連絡する'
+  send_message_directly_to: 'レッスンのお申込み・ご質問は、'
+  or_contact_pairbis_customer_support: 'さん、またはPairbisのスタッフまで、ご気軽にご連絡ください。'
+
 
   date: 
     abbr_day_names:

@@ -96,3 +96,16 @@ en:
   hourly_price: "Hourly Price:"
   lessons: "Lessons"
   log_in_page: "Log In"
+  your_name_message: 'Your Name*'
+  email_address_message: 'Email Address*'
+  send_message_to: 'Send Message To?*'
+  pairbis_customer_support: 'Pairbis Customer Support'
+  subject_message: 'Subject*'
+  send_message: 'Send'
+  message_message: 'Message'
+  i_want_to_schedule_a_lesson_message: 'I want to schedule a lesson'
+  i_have_a_question: 'I have a question'
+  message: 'Message'
+  message2: ''
+  send_message_directly_to: 'Send a message directly to'
+  or_contact_pairbis_customer_support: 'or contact Pairbis customer support!'

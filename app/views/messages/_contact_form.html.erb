@@ -1,28 +1,28 @@
 <%= form_tag contact_path do %>
   <%= hidden_field_tag :tutor_id, @tutor.id %>
   <div class="form-group">
-    <%= label_tag 'Your Name*'  %>
+    <%= label_tag t(:your_name_message) %>
     <%= text_field_tag :first_name, nil, class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag 'Email Address*'  %>
+    <%= label_tag t(:email_address_message) %>
     <%= email_field_tag :email, nil, class: 'form-control'  %>
   </div>
 <div class="form-group">
-    <%= label_tag 'Send Message To?*'  %>
-    <%= select_tag :whom, options_for_select([@tutor.name, "Pairbis Customer Support"]),
+    <%= label_tag t(:send_message_to) %>
+    <%= select_tag :whom, options_for_select([@tutor.name, t(:pairbis_customer_support)]),
                    class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag 'Subject*'  %>
-    <%= select_tag :category, options_for_select(["I want to schedule a lesson", "I have a question"]),
+    <%= label_tag t(:subject_message) %>
+    <%= select_tag :category, options_for_select([t(:i_want_to_schedule_a_lesson_message), t(:i_have_a_question)]),
                    class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag 'Message'  %>
+    <%= label_tag t(:message_message) %>
     <%= text_area_tag :message, nil, class: 'form-control'  %>
   </div>
   <div class="actions">
-    <%= submit_tag "Send", class: "btn btn-primary" %>
+    <%= submit_tag t(:send_message), class: "btn btn-primary" %>
   </div>
 <% end %>
