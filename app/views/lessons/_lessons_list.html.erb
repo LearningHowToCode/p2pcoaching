@@ -22,7 +22,7 @@
             <%= link_to 'Cancel', lesson, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'%>
         <% end %>
         <% if lesson.available? && (!user_signed_in? || current_user.try(:student?)) %>
-            <%= link_to 'Request a lesson', new_lesson_order_path(lesson), class: 'btn btn-sm btn-success', data: { no_turbolink: true } %>
+            <%= link_to 'Reserve this lesson', new_lesson_order_path(lesson), class: 'btn btn-sm btn-success', data: { no_turbolink: true } %>
         <% end %>
       </td>
     </tr>
