@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
     tutor = Tutor.find(params[:tutor_id])
     email_info = OpenStruct.new(first_name: params[:first_name],
                                 email: params[:email],
+                                whom: params[:whom],
                                 category: params[:category],
                                 message: params[:message])
 
