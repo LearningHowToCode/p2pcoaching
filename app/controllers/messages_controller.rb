@@ -12,3 +12,4 @@ class MessagesController < ApplicationController
     redirect_to :back, notice: 'Your Message Was Successfully Sent.'
   end
 end
+

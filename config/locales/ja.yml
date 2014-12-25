@@ -76,7 +76,7 @@ ja:
   log_in_page: "ログイン"
   your_name_message: 'お名前*'
   email_address_message: 'メールアドレス*'
-  send_message_to: 'メッセージを送る相手'
+  send_message_to: 'メッセージを送る相手*'
   pairbis_customer_support: 'Pairbisのスタッフ'
   subject_message: '件名*'
   send_message: '送信'
