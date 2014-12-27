@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def faqs
   end
+
+  def prepare
+  end
 end

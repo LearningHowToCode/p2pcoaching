@@ -18,6 +18,7 @@ Belluga2::Application.routes.draw do
     get 'purchases', to: "orders#purchases"
     get 'how_it_works', to: 'pages#how_it_works'
     get 'faqs', to: 'pages#faqs'
+    get 'prepare', to: 'pages#prepare'
 
     post 'contact', to: 'messages#contact', as: :contact
 
