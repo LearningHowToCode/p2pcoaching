@@ -5,7 +5,7 @@ class TutorsController < ApplicationController
   respond_to :html
 
   def index
-    @tutors = Tutor.all.completed.paginate(:page => params[:page], :per_page => 10)
+    @tutors = Tutor.all.completed.order("price ASC").paginate(:page => params[:page], :per_page => 10)
     respond_with(@tutors)
   end
 
