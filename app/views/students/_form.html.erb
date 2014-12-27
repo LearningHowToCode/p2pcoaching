@@ -12,31 +12,31 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :name %><br>
+    <%= f.label :name, t(:name_student) %><br>
     <%= f.text_field :name, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :country %><br>
+    <%= f.label :country, t(:country_student) %><br>
     <%= country_select "student", "country",
                        { priority_countries: ['US', 'CN', 'JP', 'KR', 'TW'] },
                        { class: "form-control" } %>
   </div>
   <div class="form-group">
-    <%= f.label :skype_id, 'Skype ID' %><br>
+    <%= f.label :skype_id, t(:skype_id_student) %><br>
     <%= f.text_field :skype_id, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :gmail_address %><br>
+    <%= f.label :gmail_address, t(:gmail_address_student) %><br>
     <%= f.email_field :gmail_address, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :preference %><br>
+    <%= f.label :preference, t(:preference_student) %><br>
     <%= f.select :preference, ['Skype', 'Google Hangouts'], { selected: @student.preference },
                  { class: "form-control" } %>
   </div>
   <div class="actions">
-    <%= f.submit "Update My Profile", class: "btn btn-primary" %>
+    <%= f.submit t(:update_my_profile_student), class: "btn btn-primary" %>
   </div>
 <% end %>
 

@@ -87,6 +87,13 @@ ja:
   message2: 'さんに連絡する'
   send_message_directly_to: 'レッスンのお申込み・ご質問は、'
   or_contact_pairbis_customer_support: 'さん、またはPairbisのスタッフまで、ご気軽にご連絡ください。'
+  name_student: 'お名前（例：Takeru Nakahara）*'
+  country_student: '在住されている国*'
+  skype_id_student: 'Skype ID'
+  gmail_address_student: 'Gmailアドレス（先生との通話のため、Skype IDまたはGoogle Hangoutsに必要なGmailアドレスのどちらかが必要となります）'
+  preference_student: 'お好みの通話方法*'
+  update_my_profile_student: '登録・更新'
+  my_profile_student: 'プロフィール'
 
 
   date: 
