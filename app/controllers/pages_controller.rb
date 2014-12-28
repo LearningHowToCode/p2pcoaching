@@ -13,4 +13,5 @@ class PagesController < ApplicationController
 
   def prepare
   end
+ 
 end
