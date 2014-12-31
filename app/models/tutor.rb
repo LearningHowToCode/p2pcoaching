@@ -3,7 +3,7 @@ class Tutor < ActiveRecord::Base
   SUBJECTS = ['English', 'Business English', 'TOEFL', 'SAT', 'GRE', 'GMAT',
               'Essay Editing', 'General Admissions Advice', 'Other']
   LANGUAGES = ['English', 'Chinese', 'Japanese', 'Korean', 'Spanish']
-  INSTITUTIONS = ['Harvard', 'MIT', 'Yale', 'Princeton', 'Stanford', 'Other']
+  INSTITUTIONS = ['Brown','Columbia','Cornell','Dartmouth','Harvard', 'MIT','Princeton', 'Stanford','UPenn', 'Yale', 'Other']
 
   has_one :user, as: :profile, dependent: :destroy
   has_many :lessons, dependent: :destroy
