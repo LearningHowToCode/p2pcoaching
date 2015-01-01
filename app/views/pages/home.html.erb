@@ -2,7 +2,11 @@
   <div class="text-center">
   	<h1><%=t :welcome_to_pairbis %></h1>
   	<h4><%=t :we_will_help %></h4>
-    <%= link_to t('search_tutors'), tutors_path, class: "btn btn-primary btn-lg" %>
+  
+    <%= link_to tutors_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>
+      <i class="glyphicon glyphicon-search"></i> <%=t :search_tutors %>
+    <% end %>
+
   </div>
 </section>
 
