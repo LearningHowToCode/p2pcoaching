@@ -29,19 +29,19 @@
           <li><%= link_to t('about'), root_path(anchor: 'more') %></li>
           <li><%= link_to t('contact'), root_path(anchor: 'more') %></li>
           <li><%= link_to root_path(locale: 'en') do %>
-                <%= image_tag 'English.png' %>
+                <%= image_tag 'English.png', :title => 'English' %>
               <% end %>
           </li>
           <li><%= link_to root_path(locale: 'cn') do %>
-                <%= image_tag 'Chinese.png' %>
+                <%= image_tag 'Chinese.png', :title => 'Chinese' %>
               <% end %>
           </li>
           <li><%= link_to root_path(locale: 'ja') do %>
-                <%= image_tag 'Japanese.png' %>
+                <%= image_tag 'Japanese.png', :title => 'Japanese' %>
               <% end %>
           </li>
           <li><%= link_to root_path(locale: 'kn') do %>
-                <%= image_tag 'Korean.png' %>
+                <%= image_tag 'Korean.png', :title => 'Korean' %>
               <% end %>
           </li>
      <!-- <li class="dropdown">
