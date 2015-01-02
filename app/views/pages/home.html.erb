@@ -4,85 +4,89 @@
     <meta name="keywords" content="Ivy League, Harvard, Yale, Princeton, SAT, TOEFL, GRE, GMAT, Online, Tutor, Tutoring, Admissions">
 <head>
 
-<section class="full-width height-two-thirds home-banner">
-  <div class="text-center">
-  	<h1><%=t :welcome_to_pairbis %></h1>
-  	<h4><%=t :we_will_help %></h4>
-  
-    <%= link_to tutors_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>
-      <i class="glyphicon glyphicon-search"></i> <%=t :search_tutors %>
-    <% end %>
+<body>
 
-  </div>
-</section>
+    <section class="full-width height-two-thirds home-banner">
+      <div class="text-center">
+      	<h1><%=t :welcome_to_pairbis %></h1>
+      	<h4><%=t :we_will_help %></h4>
+      
+        <%= link_to tutors_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>
+          <i class="glyphicon glyphicon-search"></i> <%=t :search_tutors %>
+        <% end %>
 
-<section class="flex bg-light-gray">
-    <div class="home-item">
-      <h3 class="text-center"><%=t :english_learning %></h3>
-      <h5 class="text-center"><%=t :english_learning_description %></h5>
-    </div>
-    <div class="home-item">
-      <h3 class="text-center"><%=t :school_support %></h3>
-      <h5 class="text-center"><%=t :high_school_eg %></h5>
-      <h5 class="text-center"><%=t :college_eg %></h5>
-    </div>
-    <div class="home-item">
-      <h3 class="text-center"><%=t :admissions_support %></h3>
-      <h5 class="text-center"><%=t :standardized_tests_eg %></h5>
-      <h5 class="text-center"><%=t :college_and_graduate %></h5>
-    </div>
-</section>
-
-<section class="flex bg-white">
-    <div class="home-item">
-      <div class='text-center'>
-        <%= image_tag 'badge-ivy.png', width: "100", height: "100" %>
       </div>
-      <h3 class="text-center"><%=t :ivy_league_tutors %></h3>
-      <h5 class="text-center"><%=t :ivy_league_tutors_description %></h5>
-    </div>
-    <div class="home-item">
-      <div class='text-center'>
-        <%= image_tag 'badge-pay.png', width: "100", height: "100" %>
-      </div>
-      <h3 class="text-center"><%=t :pay_per_lesson %></h3>
-      <h5 class="text-center"><%=t :pay_per_lesson_description %></h5>
-    </div>
-    <div class="home-item">
-      <div class='text-center'>
-        <%= image_tag 'badge-schedule.png', width: "100", height: "100" %>
-      </div>
-      <h3 class="text-center"><%=t :flexible_schedule %></h3>
-      <h5 class="text-center"><%=t :flexible_schedule_description %></h5>
-    </div>
-</section>
+    </section>
 
-<footer id="more" class="flex">
-    <div class="text-center home-footer">
-      <h2 class="text-center"><%=t :about %></h2>
-      <h4><%=t :about_description %></h4>
-      <h4><%=t :about_description2 %></h4>
-      <h4><%=t :about_description3 %></h4>
-      <a href="https://www.facebook.com/p
-      airbis?ref=hl" target="_blank">
-        <%= image_tag 'facebook.png', width: "30", height: "30" %> 
-      </a>
-      <a href="http://instagram.com/pairbis_ivy_league_tutoring" target="_blank">
-        <%= image_tag 'instagram.jpg', width: "30", height: "30" %> 
-      </a>
-      <br>
-      <%= image_tag 'about-us.png', width: "305", height: "305" %>
-    </div>
-    <div class="text-center bg-light-gray home-footer">
-      <h2 class="text-center"><%=t :contact %></h2>
-      <h4 class="text-center"><%=t :contact_description %>
-        <br>
-        <a href="mailto:pairbis@gmail.com">pairbis@gmail.com</a>
-      </h4>
-      <br>
-      <%= image_tag 'contact.png', width: "305", height: "305" %>
-    </div>
-</footer> 
+    <section class="flex bg-light-gray">
+        <div class="home-item">
+          <h3 class="text-center"><%=t :english_learning %></h3>
+          <h5 class="text-center"><%=t :english_learning_description %></h5>
+        </div>
+        <div class="home-item">
+          <h3 class="text-center"><%=t :school_support %></h3>
+          <h5 class="text-center"><%=t :high_school_eg %></h5>
+          <h5 class="text-center"><%=t :college_eg %></h5>
+        </div>
+        <div class="home-item">
+          <h3 class="text-center"><%=t :admissions_support %></h3>
+          <h5 class="text-center"><%=t :standardized_tests_eg %></h5>
+          <h5 class="text-center"><%=t :college_and_graduate %></h5>
+        </div>
+    </section>
+
+    <section class="flex bg-white">
+        <div class="home-item">
+          <div class='text-center'>
+            <%= image_tag 'badge-ivy.png', width: "100", height: "100" %>
+          </div>
+          <h3 class="text-center"><%=t :ivy_league_tutors %></h3>
+          <h5 class="text-center"><%=t :ivy_league_tutors_description %></h5>
+        </div>
+        <div class="home-item">
+          <div class='text-center'>
+            <%= image_tag 'badge-pay.png', width: "100", height: "100" %>
+          </div>
+          <h3 class="text-center"><%=t :pay_per_lesson %></h3>
+          <h5 class="text-center"><%=t :pay_per_lesson_description %></h5>
+        </div>
+        <div class="home-item">
+          <div class='text-center'>
+            <%= image_tag 'badge-schedule.png', width: "100", height: "100" %>
+          </div>
+          <h3 class="text-center"><%=t :flexible_schedule %></h3>
+          <h5 class="text-center"><%=t :flexible_schedule_description %></h5>
+        </div>
+    </section>
+
+    <footer id="more" class="flex">
+        <div class="text-center home-footer">
+          <h2 class="text-center"><%=t :about %></h2>
+          <h4><%=t :about_description %></h4>
+          <h4><%=t :about_description2 %></h4>
+          <h4><%=t :about_description3 %></h4>
+          <a href="https://www.facebook.com/p
+          airbis?ref=hl" target="_blank">
+            <%= image_tag 'facebook.png', width: "30", height: "30" %> 
+          </a>
+          <a href="http://instagram.com/pairbis_ivy_league_tutoring" target="_blank">
+            <%= image_tag 'instagram.jpg', width: "30", height: "30" %> 
+          </a>
+          <br>
+          <%= image_tag 'about-us.png', width: "305", height: "305" %>
+        </div>
+        <div class="text-center bg-light-gray home-footer">
+          <h2 class="text-center"><%=t :contact %></h2>
+          <h4 class="text-center"><%=t :contact_description %>
+            <br>
+            <a href="mailto:pairbis@gmail.com">pairbis@gmail.com</a>
+          </h4>
+          <br>
+          <%= image_tag 'contact.png', width: "305", height: "305" %>
+        </div>
+    </footer> 
+
+</body>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
