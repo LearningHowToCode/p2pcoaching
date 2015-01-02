@@ -24,7 +24,7 @@ en:
   ivy_league_tutors: "Ivy League Tutors"
   ivy_league_tutors_description: "You can choose from tutors from Harvard, Yale, Princeton, and other top universities."
   welcome_to_pairbis: "Welcome to Pairbis!"
-  we_will_help: "Find an Ivy-League Tutor for Online Lessons!"
+  we_will_help: "Find an Ivy League Tutor for Online Lessons!"
   pay_per_lesson: "Pay-per-Lesson"
   pay_per_lesson_description: "You pay securely with credit card for each lesson you take. You can start from just one lesson."
   flexible_schedule: Flexible Schedule
@@ -36,6 +36,8 @@ en:
   tutor_sign_up: "Tutor Signup"
   student_sign_up: "Student Signup"
   about_description: "We are Harvard Business School students who want to make it easy for people from around the world to connect with Ivy League tutors using online technology."
+  about_description2: ''
+  about_description3: ''
   contact_description: "We will help you find the right tutor for you. Feel free to email us!"
   about: "About"
   sign_up_email: "Email"
