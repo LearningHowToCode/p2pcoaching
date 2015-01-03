@@ -1,26 +1,28 @@
 cn:
   search_tutors: "Search Tutors"
   ivy_league_tutors: "Ivy League Tutors"
-  ivy_league_tutors_description: "You can choose from tutors from Harvard, Yale, and other top universities."
-  welcome_to_pairbis: "Welcome to Pairbis!"
-  we_will_help: "Find an Ivy-League Tutor for Online Lessons!"
+  ivy_league_tutors_description: "You can choose from tutors from Harvard, Yale, Princeton, and other top universities."
+  welcome_to_pairbis: "Ivy League Tutors For Online Lessons"
+  we_will_help: "Pairbis will help you find an Ivy League tutor at an affordable price"
   pay_per_lesson: "Pay-per-Lesson"
-  pay_per_lesson_description: "You pay only for the lessons you take. You can start from just one lesson and see how it goes."
+  pay_per_lesson_description: "You pay securely with credit card for each lesson you take. You can start from just one lesson."
   flexible_schedule: Flexible Schedule
   flexible_schedule_description: "All lessons take place online, so you can choose a convenient time and a location for you."
   how_it_works: "How It Works"
   faqs: "FAQs"
   contact: "Contact"
   log_in: "Log In"
-  tutor_sign_up: "Tutor Sign Up"
-  student_sign_up: "Student Sign Up"
-  about_description: "We are a group of Harvard students who want to make it easy for students from around the world to speak with tutors using online technology."
-  contact_description: "We will respond within 24 hours (often much faster)."
+  tutor_sign_up: "Tutor Signup"
+  student_sign_up: "Student Signup"
+  about_description: "We are Harvard Business School students who want to make it easy for people from around the world to connect with Ivy League tutors using online technology."
+  about_description2: ''
+  about_description3: ''
+  contact_description: "We will help you find the right tutor for you. Feel free to email us!"
   about: "About"
   sign_up_email: "Email"
   tutors: "Tutors"
-  please_email_us: "Please email us at pairbis@gmail.com if you would like to request a lesson with this tutor!"
-  if_none_of: "If none of the times works for you, no worries. please email us at pairbis@gmail.com and we will ask the tutor to set up a lesson with you."
+  please_email_us: "Please message the tutor directly if you would like to request a lesson! You can also email us at Pairbis@gmail.com and we will help get started!"
+  if_none_of: "If none of the times works for you, don't wory. Please message the tutor directly, or email us at Pairbis@gmail.com and we will help you get started!"
   for_students: "For Students"
   for_tutors: "For tutors"
   find_a_tutor: "Find a Tutor"
@@ -38,7 +40,7 @@ cn:
   english_learning: "English Learning"
   english_learning_description: "Practical English, TOEFL, English in Specific Contexts such as Business, Science, and Literature"
   school_support: "School Support"
-  admissions:support: "Admissions Support"
+  admissions_support: "Admissions Support"
   student_do_i_need_to_commit: "Do I need to commit to do a certain number of lessons?"
   no_you_can_take_as_many: "No, you can take as many lessons as you like, starting from just one lesson. You pay only for the lessons you take, so you can try a lesson and see how it goes."
   can_i_change_my_tutor: "Can I change my tutor if I don’t like him/her?"
@@ -53,7 +55,7 @@ cn:
   the_tutor_didnt_show_up: "The tutor didn’t show up on Skype/Google Hangouts on time. Can I get a refund?"
   yes_certainly_please_email_us: "Yes, certainly. Please email us with a brief description of your situation. We will give you a partial refund in the case of a delay or a full refund in the case of a no-show."
   how_can_i_cancel: "How can I cancel my lession?"
-  if_you_need_to_cancel: "If you need to cancel a lesson, please email us at pairbis@gmail.com ASAP. If you email us at least 12 hours prior to the lesson start time, we will give you a full refund. If you email us between 12 hours and before the beginning of lesson, we will give you a 60% refund. If you don’t email us before the lesson satrt time, we cannot accommodate a refund in most circumstances."
+  if_you_need_to_cancel: "If you need to cancel a lesson, please email us at pairbis@gmail.com. If you email us at least 12 hours prior to the lesson start time, we will give you a full refund. If you email us at least 6 hours prior to the lesson start time, we will give you a 50% refund. If you don’t email us at least 6 hours in advance, we cannot accommodate a refund in most circumstances."
   i_am_a_graduate_of: "I am a graduate of an Ivy League school, but am no longer a student. Can I sign up?"
   how_much_do_i_earn: "How much do I earn?"
   list_your_lesson_or: "List Your Lessons... Or Just Wait"
@@ -61,4 +63,37 @@ cn:
   conduct_your_lesson: "Conduct Your Lesson"
   send_your_student: "Send your student a short message by Skype or Google Hangouts a day before the lesson. Find a quiet place and sign into Skype at least 15 minutes before the lesson."
   you_are_welcome_to_choose_any: "You are welcome to choose any material you like to use, as long as you agree with the tutor. We have a list of recommended material for you and the tutor to use, some of which are online and you can access for free, while some of which are books you can buy on Amazon.com. In case you agree with the tutor to purchase books, you would have to pay for the tutor’s book as well as you own. Please email us if you decide to buy a book for the tutor, so that we can follow up with you to help with the payment process. (We only help transfer the money to the tutor and don’t charge for books you buy.)"
-  
+  your_name: "Your Name (e.g., John S.)*"
+  yes_both_students_and_graduates: "Yes, both students and graduate are welcome to sign up. You are also welcome to sign up if you are a student or a graduate of an Ivy League graduate-degree program (e.g., Harvard college student, Harvard business school graduate, Yale English PhD student)."
+  do_i_need_to_be_an_ivy: "Do I need to be an Ivy League student or a graduate to become a tutor?"
+  at_this_point_we_are: "At this point, we are focusing our service on a select number of top universities, specifically Ivy League schools, MIT, and Stanford. However, if you feel confident that your qualification is just as good as students from those schools, please send us an email."
+  i_dont_know_what: "I don't know what to teach. Is there a list of recommended material to use for the lessons?"
+  yes_we_do_we: "Yes, we do. We will send out our list of recommended material and a lessons guide to you a few days before your first lesson, so that you can quickly go over it to prepare. Ultimately, it is up to you and the student to decide the format and style of your lessons, so please feel free to conduct the lessons in your own style if you prefer."
+  do_i_need_to_commit_tutor: "Do I need to commit to do a certain number of lessons?"
+  no_you_are_encouraged: "No, you are encouraged to list specific times that work for you, say, Nov 20th 3-4pm. In addition, you are welcome to list as few or as many lessons as you like. However, please make your expectations clear with your student during the first lesson, as some students are looking for long-term mentorship."
+  you_get_to_set_your_own_price: "You get to set your own price and the corresponding payment when you edit your profile. You can also change your price at a late stage."
+  how_can_i_cancel_my_lesson_tutor: "How can I cancel my lesson?"
+  if_you_need_to_cancel_tutor: "If you need to cancel a lesson, please email us at pairbis@gmail.com ASAP. If you email us at least 24 hours prior to the lesson start time, you can cancel your lesson without any penalty. If it is within 24 hours, please email us and also send a brief apology message to the student directly via Skype or Google Hangouts. In the latter case, we ask you to give a 50% discount to the same student for your next lesson as a courtesy. (We will refund 50% of the student price the next time.)"
+  hourly_price: "Hourly Price:"
+  lessons: "Lessons"
+  log_in_page: "Log In"
+  your_name_message: 'Your Name*'
+  email_address_message: 'Email Address*'
+  send_message_to: 'Send Message To?*'
+  pairbis_customer_support: 'Pairbis Customer Support'
+  subject_message: 'Subject*'
+  send_message: 'Send'
+  message_message: 'Message'
+  i_want_to_schedule_a_lesson_message: 'I want to schedule a lesson'
+  i_have_a_question: 'I have a question'
+  message: 'Message'
+  message2: ''
+  send_message_directly_to: 'Send a message directly to'
+  or_contact_pairbis_customer_support: 'or contact Pairbis customer support!'
+  name_student: 'John Smith*'
+  country_student: 'Country*'
+  skype_id_student: 'Skype ID'
+  gmail_address_student: 'Gmail Address'
+  preference_student: 'Preference for Online Technology*'
+  update_my_profile_student: 'Update my Profile'
+  my_profile_student: 'My Profile'
