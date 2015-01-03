@@ -19,7 +19,6 @@ Belluga2::Application.routes.draw do
     get 'how_it_works', to: 'pages#how_it_works'
     get 'faqs', to: 'pages#faqs'
     get 'prepare', to: 'pages#prepare'
-    get 'google23c79685e766a48e', to: 'pages#google23c79685e766a48e'
 
     post 'contact', to: 'messages#contact', as: :contact
 
