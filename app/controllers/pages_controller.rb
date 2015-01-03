@@ -14,4 +14,7 @@ class PagesController < ApplicationController
   def prepare
   end
 
+  def google23c79685e766a48e
+  end
+
 end
