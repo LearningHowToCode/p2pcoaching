@@ -49,7 +49,7 @@ en:
   find_a_tutor: "Find a Tutor"
   browse_our_list: "Browse our list of Ivy League tutors."
   request_a_lesson_or: "Request a Lesson"
-  once_you_find_a_tutor: "check whether the tutor has listed a time that works for you. If you find a good time, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, send a short message to the tutor or to us and we will get in touch with you shortly."
+  once_you_find_a_tutor: "Check whether the tutor has listed a time that works for you. If you find a good time, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, send a short message to the tutor or to us and we will get in touch with you shortly."
   enjoy_your_lesson: "Enjoy Your Lesson"
   your_tutor_will_send_you: "Please make sure to be online at least 10 minutes before the lesson. Enjoy your lesson!"
   sign_up_as_a_student_now: "Sign Up As A Student Now"
@@ -120,4 +120,5 @@ en:
   my_profile_student: 'My Profile'
   how_can_i_pay: 'How can I pay for lessons?'
   we_accept_payment: 'We accept payment by credit or debit card. The payment is powered by Stripe and most major cards (i.e., Visa, MasterCard, American Express, JCB, Discover, and Diners Club) are accepted.'
-   
+  how_does_the_money_transfer: 'How does the money transfer occur?'
+  we_will_transfer_funds: 'We will transfer funds to you by PayPal or Venmo, whichever is more convenient for you, right after each lesson.'

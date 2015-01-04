@@ -98,7 +98,8 @@ ja:
   my_profile_student: 'プロフィール'
   how_can_i_pay: 'レッスンの支払い方法は何ですか？'
   we_accept_payment: 'クレジットカードでのお支払いとなります。Visa、MasterCard、American Express、JCB、Discover、Diners Clubなど、主要なカードは全て受け付けております。また、支払いは、Stripeというシステムを利用しており、我々はクレジットカードの個人情報は一切保持いたしませんので、安心してご利用いただけます。'
-  
+  how_does_the_money_transfer: 'お金はどのように支払われますか？'
+  we_will_transfer_funds: 'PayPalまたはVenmoでレッスン直後に送金しております。'
 
 
   date: 

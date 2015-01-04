@@ -24,17 +24,17 @@ kn:
   please_email_us: "Please message the tutor directly if you would like to request a lesson! You can also email us at Pairbis@gmail.com and we will help get started!"
   if_none_of: "If none of the times works for you, don't wory. Please message the tutor directly, or email us at Pairbis@gmail.com and we will help you get started!"
   for_students: "For Students"
-  for_tutors: "For tutors"
+  for_tutors: "For Tutors"
   find_a_tutor: "Find a Tutor"
-  browse_our_list: "Browse our list of Ivy League tutors and their available times."
-  request_a_lesson_or: "Request a Lesson... Or Send Us An Email"
-  once_you_find_a_tutor: "Once you find your tutor, check whether the tutor has listed a time that works for you. If he/she has, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, just send us an email at pairbis@gmail.com. We will get in touch with the tutor to ask whether you can schedule a lesson with him/her."
+  browse_our_list: "Browse our list of Ivy League tutors."
+  request_a_lesson_or: "Request a Lesson"
+  once_you_find_a_tutor: "Check whether the tutor has listed a time that works for you. If you find a good time, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, send a short message to the tutor or to us and we will get in touch with you shortly."
   enjoy_your_lesson: "Enjoy Your Lesson"
-  your_tutor_will_send_you: "Your tutor will send you a short message via Skype or Google Hangouts a day before the lesson. Please make sure to be online at least 10 minutes before the lesson. Enjoy your lesson!"
+  your_tutor_will_send_you: "Please make sure to be online at least 10 minutes before the lesson. Enjoy your lesson!"
   sign_up_as_a_student_now: "Sign Up As A Student Now"
   sign_up_as_a_tutor_now: "Sign Up As A Tutor Now"
   how_does_your_service_work: "How does your service work?"
-  there_are_three_simple_steps: "There are three simple steps. First, you browse our list of Ivy League tutors and their available times. Second, once you find your tutor, check whether the tutor has listed a time that works for you. If he/she has, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, just send us an email at pairbis@gmail.com. We will get in touch with the tutor to ask whether you can schedule a lesson with him/her. Finally, you connect with your tutor online and do a lesson."
+  there_are_three_simple_steps: "There are two simple steps. First, browse our list of Ivy League tutors. Second, check whether the tutor has listed a time that works for you. If you find a good time, you can simply reserve that time and your lesson is comfirmed. If the tutor hasn't listed a time, send a short message to the tutor or to us and we will get in touch with you shortly."
   how_much_do_i_pay: "How much do I pay for a lesson?"
   the_price_is_set_by: "The price is set by the tutor, and you can choose any tutor you like depending on the tutor’s price and his/her qualifications. Please feel free to search for tutors and choose any tutor who suits your needs."
   english_learning: "English Learning"
@@ -58,10 +58,10 @@ kn:
   if_you_need_to_cancel: "If you need to cancel a lesson, please email us at pairbis@gmail.com. If you email us at least 12 hours prior to the lesson start time, we will give you a full refund. If you email us at least 6 hours prior to the lesson start time, we will give you a 50% refund. If you don’t email us at least 6 hours in advance, we cannot accommodate a refund in most circumstances."
   i_am_a_graduate_of: "I am a graduate of an Ivy League school, but am no longer a student. Can I sign up?"
   how_much_do_i_earn: "How much do I earn?"
-  list_your_lesson_or: "List Your Lessons... Or Just Wait"
-  choose_a_time_that: "Choose a time that will definitely work for you, say, Nov. 25th 7-8pm, and list it under your profile. Your lesson will be comfirmed when a student chooses your time slot and you get a confirmation email. Alternatively, we may send you an email when a student has expressed interest in doing a lesson and set up a time with you."
+  list_your_lesson_or: "List Your Lessons (Or Wait For a Message)"
+  choose_a_time_that: "Choose a time that will definitely work for you, say, Nov. 25th 7-8pm, and list it under your profile. Your lesson will be comfirmed when a student chooses your time slot. Alternatively, a student may contact you directly via the messaging system."
   conduct_your_lesson: "Conduct Your Lesson"
-  send_your_student: "Send your student a short message by Skype or Google Hangouts a day before the lesson. Find a quiet place and sign into Skype at least 15 minutes before the lesson."
+  send_your_student: "Send your student a short message by Skype or Google Hangouts a day before the lesson. Find a quiet place and make sure to be online at least 15 minutes before the lesson."
   you_are_welcome_to_choose_any: "You are welcome to choose any material you like to use, as long as you agree with the tutor. We have a list of recommended material for you and the tutor to use, some of which are online and you can access for free, while some of which are books you can buy on Amazon.com. In case you agree with the tutor to purchase books, you would have to pay for the tutor’s book as well as you own. Please email us if you decide to buy a book for the tutor, so that we can follow up with you to help with the payment process. (We only help transfer the money to the tutor and don’t charge for books you buy.)"
   your_name: "Your Name (e.g., John S.)*"
   yes_both_students_and_graduates: "Yes, both students and graduate are welcome to sign up. You are also welcome to sign up if you are a student or a graduate of an Ivy League graduate-degree program (e.g., Harvard college student, Harvard business school graduate, Yale English PhD student)."
@@ -97,3 +97,7 @@ kn:
   preference_student: 'Preference for Online Technology*'
   update_my_profile_student: 'Update my Profile'
   my_profile_student: 'My Profile'
+  how_can_i_pay: 'How can I pay for lessons?'
+  we_accept_payment: 'We accept payment by credit or debit card. The payment is powered by Stripe and most major cards (i.e., Visa, MasterCard, American Express, JCB, Discover, and Diners Club) are accepted.'
+  how_does_the_money_transfer: 'How does the money transfer occur?'
+  we_will_transfer_funds: 'We will transfer funds to you by PayPal or Venmo, whichever is more convenient for you, right after each lesson.'
