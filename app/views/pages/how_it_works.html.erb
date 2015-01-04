@@ -85,7 +85,7 @@
 		</div>
 		<% unless user_signed_in?  %>
 			<div class="media text-center">
-				<%= link_to t('sign_up_as_a_tutor_now'), new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
+				<%= link_to t('sign_up_as_a_tutor_now'), new_registration_path('tutor'), class: 'btn btn-primary btn-lg' %>
 			</div>
 			<br>
 		<% end %>
