@@ -55,6 +55,7 @@ cn:
   contact: "Contact"
   contact_description1: "We will help you find the right tutor for you. Feel free to email us!"
   contact_description2: ""
+  contact_description3: ""
   student_do_i_need_to_commit: "Do I need to commit to do a certain number of lessons?"
   no_you_can_take_as_many: "No, you can take as many lessons as you like, starting from just one lesson. You pay only for the lessons you take, so you can try a lesson and see how it goes."
   can_i_change_my_tutor: "Can I change my tutor if I don’t like him/her?"
