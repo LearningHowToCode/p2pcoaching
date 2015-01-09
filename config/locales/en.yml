@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  english_test: "Eng"
   search_tutors: "Search Tutors"
   welcome_to_pairbis: "Ivy League Tutors For Online Lessons"
   we_will_help: "Pairbis will help you find an Ivy League tutor at an affordable price"
