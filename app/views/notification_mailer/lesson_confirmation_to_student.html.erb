@@ -1,21 +1,21 @@
 <p>
-  Thank you for using Pairbis! Your lesson has been confirmed:
+  <%=t :student_lesson_confirmation_email_description1 %>
 </p>
 <ul>
-  <li>Tutor: <%= @tutor.name %></li>
-  <li>Time: <%= @order.lesson.date_and_time %></li>
-  <li>Tutor Skype Name: <%= @tutor.skype_id %></li>
-  <li>Tutor Gmail Address (for Google Hangouts): <a href="<%= @tutor.gmail_address %>"><%= @tutor.gmail_address %></a></li>
+  <li><%=t :student_lesson_confirmation_email_description2 %><%= @tutor.name %></li>
+  <li><%=t :student_lesson_confirmation_email_description3 %><%= @order.lesson.date_and_time %></li>
+  <li><%=t :student_lesson_confirmation_email_description4 %><%= @tutor.skype_id %></li>
+  <li><%=t :student_lesson_confirmation_email_description5 %><a href="<%= @tutor.gmail_address %>"><%= @tutor.gmail_address %></a></li>
 </ul>
 <p>
-  Cancellation Policy: If you need to cancel a lesson, please email us at
-  <a href="mailto:pairbis@gmail.com.">pairbis@gmail.com</a>. If you email us at least 12 hours prior to the lesson start time, we will give you a full refund. If you email us at least 6 hours prior to the lesson start time, we will give you a 50% refund. If you don’t email us before at least 6 hours in advance, we cannot accommodate a refund in most circumstances.
+  <%=t :student_lesson_confirmation_email_description6 %>
+  <a href="mailto:pairbis@gmail.com.">pairbis@gmail.com</a><%=t :student_lesson_confirmation_email_description7 %>
 </p>
 <p>
-  If you have any questions, feel free to email us at <a href="mailto:pairbis@gmail.com.">pairbis@gmail.com.</a>
+  <%=t :student_lesson_confirmation_email_description8 %><a href="mailto:pairbis@gmail.com.">pairbis@gmail.com.</a>
 </p>
 <p>
-  Pairbis Customer Support Team
+  <%=t :student_lesson_confirmation_email_description9 %>
 </p>
 
 
