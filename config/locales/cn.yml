@@ -111,6 +111,7 @@ cn:
   how_can_i_cancel_my_lesson_tutor: "How can I cancel my lesson?"
   if_you_need_to_cancel_tutor: "If you need to cancel a lesson, please email us at pairbis@gmail.com ASAP. If you email us at least 24 hours prior to the lesson start time, you can cancel your lesson without any penalty. If it is within 24 hours, please email us and also send a brief apology message to the student directly via Skype or Google Hangouts. In the latter case, we ask you to give a 50% discount to the same student for your next lesson as a courtesy. (We will refund 50% of the student price the next time.)"
   hourly_price: "Hourly Price:"
+  hourly_price2: "(You can choose 30 minutes or 60 minutes.)"
   lessons: "Lessons"
   log_in_page: "Log In"
   your_name_message: 'Your Name*'
