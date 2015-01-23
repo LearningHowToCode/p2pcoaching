@@ -19,6 +19,7 @@ Belluga2::Application.routes.draw do
     get 'how_it_works', to: 'pages#how_it_works'
     get 'faqs', to: 'pages#faqs'
     get 'prepare', to: 'pages#prepare'
+    get 'english', to: 'pages#english'
 
     post 'contact', to: 'messages#contact', as: :contact
 
