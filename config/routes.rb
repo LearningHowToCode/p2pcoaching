@@ -22,6 +22,7 @@ Belluga2::Application.routes.draw do
     get 'english', to: 'pages#english'
 
     post 'contact', to: 'messages#contact', as: :contact
+    post 'contact_us', to: 'messages#contact_us', as: :contact_us
 
     root "pages#home"
   end

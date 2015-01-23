@@ -31,4 +31,10 @@ class NotificationMailer < ActionMailer::Base
 
     mail(to: 'pairbis@gmail.com', subject: 'A student has messaged a tutor!')
   end
+
+  def contact_us(info)
+    @info = info
+
+    mail(to: 'pairbis@gmail.com', subject: 'A student has signed up on the ESL page!')
+  end
 end
