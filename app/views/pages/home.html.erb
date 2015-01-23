@@ -16,7 +16,13 @@
         </div>
     </section>
 
-
+    <% if I18n.locale == :ja %>
+    <section class="flex bg-white">
+        <center class="free-lesson-center">
+            <%= image_tag 'Free_Lessons.png', width: "455", height: "80" %>
+        </center>
+    </section>
+    <% end %>
     
     <section class="flex bg-white">
         <div class="home-item">
@@ -31,7 +37,12 @@
             <h5 class="text-center"><%=t :purpose1_description3 %></h5>
             <h5 class="text-center"><%=t :purpose1_description4 %></h5>
             <h5 class="text-center"><%=t :purpose1_description5 %></h5>
-            
+            <div class="button">
+                <% if I18n.locale == :ja %>
+                    <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %> 
+                <% end %>
+            </div>
         </div>
         <div class="home-item">
             <% if I18n.locale == :ja %>
@@ -45,7 +56,12 @@
             <h5 class="text-center"><%=t :purpose2_description3 %></h5>
             <h5 class="text-center"><%=t :purpose2_description4 %></h5>
             <h5 class="text-center"><%=t :purpose2_description5 %></h5>
-            
+            <div class="button">
+                <% if I18n.locale == :ja %>
+                    <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %> 
+                <% end %>
+            </div>
         </div>
         <div class="home-item">
             <% if I18n.locale == :ja %>
@@ -59,7 +75,12 @@
             <h5 class="text-center"><%=t :purpose3_description3 %></h5>
             <h5 class="text-center"><%=t :purpose3_description4 %></h5>
             <h5 class="text-center"><%=t :purpose3_description5 %></h5>
-           
+            <div class="button">
+                <% if I18n.locale == :ja %>
+                    <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %> 
+                <% end %>
+            </div>
         </div>
     </section>
      
