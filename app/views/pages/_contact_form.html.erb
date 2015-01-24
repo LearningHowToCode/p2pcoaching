@@ -1,19 +1,19 @@
 <%= form_tag contact_us_path do %>
   <div class="form-group">
-    <%= label_tag t(:your_name_message) %>
+    <%= label_tag "お名前（必須）" %>
     <%= text_field_tag :first_name, nil, class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag t(:email_address_message) %>
+    <%= label_tag "メールアドレス（必須）" %>
     <%= email_field_tag :email, nil, class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag t(:subject_message) %>
-    <%= select_tag :category, options_for_select([t(:i_want_to_schedule_a_lesson_message), t(:i_have_a_question)]),
+    <%= label_tag "お問合せ内容（必須）" %>
+    <%= select_tag :category, options_for_select(["1. [無料体験] 英会話-日常英会話レッスンを体験したい", "2. [無料体験] 英会話-ビジネス英会話レッスンを体験したい", "3. [無料体験] 英会話-ディスカッション英会話レッスンを体験したい", "4. [無料体験] 大学留学サポートレッスンを体験したい", "5. [無料体験] 大学院（MBA含）留学サポートレッスンをを体験したい", "6. [無料相談] サービスについて相談したい"]),
                    class: 'form-control'  %>
   </div>
   <div class="form-group">
-    <%= label_tag t(:message_message) %>
+    <%= label_tag "ご用件（任意）　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　" %>
     <%= text_area_tag :message, nil, class: 'form-control'  %>
   </div>
   <div class="actions">

@@ -19,7 +19,15 @@
         </div>
     </section>
 
-
+    <% if I18n.locale == :ja %>
+    <section class="flex bg-white">
+        <center class="free-lesson-center">
+            <%= link_to root_path(anchor: 'free-lesson') do %>
+                <%= image_tag 'Free_Lessons.png', width: "455", height: "80", :title => 'Free Lesson' %>
+              <% end %>
+        </center>
+    </section>
+    <% end %>
     
     <section class="flex bg-white">
         <div class="home-item">
@@ -35,7 +43,10 @@
             <h5 class="text-center"><%=t :purpose1_description4 %></h5>
             <h5 class="text-center"><%=t :purpose1_description5 %></h5>
             <div class="button">
- 
+                <% if I18n.locale == :ja %>
+                    <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %> 
+                <% end %>
             </div>
         </div>
         <div class="home-item">
@@ -51,7 +62,10 @@
             <h5 class="text-center"><%=t :purpose2_description4 %></h5>
             <h5 class="text-center"><%=t :purpose2_description5 %></h5>
             <div class="button">
- 
+                <% if I18n.locale == :ja %>
+                    <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>作成中（まずは無料相談から！）
+                    <% end %> 
+                <% end %>
             </div>
         </div>
         <div class="home-item">
@@ -67,7 +81,10 @@
             <h5 class="text-center"><%=t :purpose3_description4 %></h5>
             <h5 class="text-center"><%=t :purpose3_description5 %></h5>
             <div class="button">
-
+                <% if I18n.locale == :ja %>
+                    <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>作成中（まずは無料相談から！）
+                    <% end %> 
+                <% end %>
             </div>
         </div>
     </section>
@@ -99,7 +116,26 @@
         </div>
     </section>
 
-    <section class="bg-white" id="contact">
+<% if I18n.locale == :ja %>
+    <section class="bg-white" id="free-lesson">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <center>
+                    <h3>まずは無料相談・無料体験レッスンから！</h3>
+                    <h5>Pairbisチームが24時間以内のご返信いたします。</h5>
+                </center>
+                <%= render 'contact_form'  %>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+         <br>
+    </section>
+<% end %>
+
+    <section class="bg-gray" id="contact">
         <div class="row">
             <div class="col-md-2">
             </div>
@@ -120,7 +156,7 @@
         </div>
     </section>
 
-    <section class="bg-grey" id="about">
+    <section class="bg-white" id="about">
         <div class="row">
             <div class="col-md-2">
             </div>

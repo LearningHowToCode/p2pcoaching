@@ -17,4 +17,7 @@ class PagesController < ApplicationController
   def english
   end
 
+  def free_lesson_confirmation
+  end
+
 end

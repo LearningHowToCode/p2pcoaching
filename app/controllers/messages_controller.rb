@@ -19,6 +19,6 @@ class MessagesController < ApplicationController
                                 message: params[:message])
 
     NotificationMailer.contact_us(email_info).deliver
-    redirect_to root_path
+    redirect_to free_lesson_confirmation_path
   end
 end
