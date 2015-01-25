@@ -24,10 +24,10 @@
           <li><%= link_to t('faqs'), faqs_path %></li>
           <li><%= link_to t('about'), root_path(anchor: 'about') %></li>
           <li><%= link_to t('contact'), root_path(anchor: 'contact') %></li>
-          <li><%= link_to root_path(locale: 'en') do %>
-                <%= image_tag 'English.png', :title => 'English' %>
-              <% end %>
-          </li>
+          <li><%= link_to "English", root_path(locale: 'en') %></li>
+          <li><%= link_to "日本語", root_path(locale: 'ja') %></li>
+          <li><%= link_to "中文", root_path(locale: 'cn') %></li>
+          <!-- <li class="dropdown">
           <li><%= link_to root_path(locale: 'cn') do %>
                 <%= image_tag 'Chinese.png', :title => 'Chinese' %>
               <% end %>
