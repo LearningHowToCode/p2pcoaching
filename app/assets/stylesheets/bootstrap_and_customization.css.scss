@@ -23,9 +23,6 @@ $jumbotron-bg: white;
 	width: 125px;
 	height: 36px;
 }
-.navbar-center{
-	width: calc(100% - 476px);
-}
 .navbar-right{
 	width: 330px;
 }
@@ -193,6 +190,7 @@ section.sm{
 	background-color: transparent;
 }
 
+
 .login{
 	width: 320px;
 	padding: 24px;
@@ -220,21 +218,11 @@ section.sm{
 	.flex{
 		flex-direction: column;
 	}
-	.navbar-right{
-		display: none;
-	}
+
 	.navbar-header{
 		width: auto;
 	}
 }
 
-@media only screen and (min-width: 768px){
-	.height-one-third{
-		height: calc(100% / 3);
-	}
 
-	.height-two-thirds{
-		height: calc(100% / 3 * 2 - 55px);
-	}
-}
 
