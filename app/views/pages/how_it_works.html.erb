@@ -1,94 +1,101 @@
 <header class="how-it-works-banner">
 	<h1 class="text-center"><%=t :how_it_works %></h1>
 </header>
-<section class="flex space-between flex-no-wrap bg-gray how-it-works">
-	<div class="how-item for-students">
-		<header>
-			<h3><%=t :for_students %></h3>
-		</header>
-		<div class="media">
-			<div class="pull-left">
-				<div class="circle-num bg-gray">
-					1
+
+<section class="flex space-between flex-no-wrap bg-gray how-it-works">	
+	<div class="row">
+		<div class="col-md-6">
+			<div class="how-item for-students">
+				<header>
+					<h3><%=t :for_students %></h3>
+				</header>
+				<div class="media">
+					<div class="pull-left">
+						<div class="circle-num bg-gray">
+							1
+						</div>
+					</div>
+					<div class="media-body">
+						<h4><%=t :find_a_tutor %></h4>
+						<p><%=t :browse_our_list %></p>
+					</div>
 				</div>
-			</div>
-			<div class="media-body">
-				<h4><%=t :find_a_tutor %></h4>
-				<p><%=t :browse_our_list %></p>
+				<div class="media">
+					<div class="pull-left">
+						<div class="circle-num bg-gray">
+							2
+						</div>
+					</div>
+					<div class="media-body">
+						<h4><%=t :request_a_lesson_or %></h4>
+						<p><%=t :once_you_find_a_tutor %></p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="pull-left">
+						<div class="circle-num bg-gray">
+							3
+						</div>
+					</div>
+					<div class="media-body">
+						<h4><%=t :enjoy_your_lesson %></h4>
+						<p><%=t :your_tutor_will_send_you %></p>
+					</div>
+				</div>
+				<% unless user_signed_in?  %>
+					<div class="media text-center">
+						<%= link_to t('sign_up_as_a_student_now'), new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
+					</div>
+					<br>
+				<% end %>
 			</div>
 		</div>
-		<div class="media">
-			<div class="pull-left">
-				<div class="circle-num bg-gray">
-					2
+		<div class="col-md-6">
+			<div class="how-item for-students">
+				<header>
+					<h3><%=t :for_tutors %></h3>
+				</header>
+				<div class="media">
+					<div class="pull-left">
+						<div class="circle-num bg-gray">
+							1
+						</div>
+					</div>
+					<div class="media-body">
+						<h4><%=t :create_your_account %></h4>
+						<p><%=t :create_your_account_description %></p>
+					</div>
 				</div>
-			</div>
-			<div class="media-body">
-				<h4><%=t :request_a_lesson_or %></h4>
-				<p><%=t :once_you_find_a_tutor %></p>
+				<div class="media">
+					<div class="pull-left">
+						<div class="circle-num bg-gray">
+							2
+						</div>
+					</div>
+					<div class="media-body">
+						<h4><%=t :list_your_lesson_or %></h4>
+						<p><%=t :choose_a_time_that %></p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="pull-left">
+						<div class="circle-num bg-gray">
+							3
+						</div>
+					</div>
+					<div class="media-body">
+						<h4><%=t :conduct_your_lesson %></h4>
+						<p><%=t :send_your_student %></p>
+					</div>
+				</div>
+				<% unless user_signed_in?  %>
+					<div class="media text-center">
+						<%= link_to t('sign_up_as_a_tutor_now'), new_registration_path('tutor'), class: 'btn btn-primary btn-lg' %>
+					</div>
+					<br>
+				<% end %>
 			</div>
 		</div>
-		<div class="media">
-			<div class="pull-left">
-				<div class="circle-num bg-gray">
-					3
-				</div>
-			</div>
-			<div class="media-body">
-				<h4><%=t :enjoy_your_lesson %></h4>
-				<p><%=t :your_tutor_will_send_you %></p>
-			</div>
-		</div>
-		<% unless user_signed_in?  %>
-			<div class="media text-center">
-				<%= link_to t('sign_up_as_a_student_now'), new_registration_path('student'), class: 'btn btn-primary btn-lg' %>
-			</div>
-			<br>
-		<% end %>
-	</div>
-	<div class="how-item for-tutors">
-		<header>
-			<h3><%=t :for_tutors %></h3>
-		</header>
-		<div class="media">
-			<div class="pull-left">
-				<div class="circle-num bg-gray">
-					1
-				</div>
-			</div>
-			<div class="media-body">
-				<h4><%=t :create_your_account %></h4>
-				<p><%=t :create_your_account_description %></p>
-			</div>
-		</div>
-		<div class="media">
-			<div class="pull-left">
-				<div class="circle-num bg-gray">
-					2
-				</div>
-			</div>
-			<div class="media-body">
-				<h4><%=t :list_your_lesson_or %></h4>
-				<p><%=t :choose_a_time_that %></p>
-			</div>
-		</div>
-		<div class="media">
-			<div class="pull-left">
-				<div class="circle-num bg-gray">
-					3
-				</div>
-			</div>
-			<div class="media-body">
-				<h4><%=t :conduct_your_lesson %></h4>
-				<p><%=t :send_your_student %></p>
-			</div>
-		</div>
-		<% unless user_signed_in?  %>
-			<div class="media text-center">
-				<%= link_to t('sign_up_as_a_tutor_now'), new_registration_path('tutor'), class: 'btn btn-primary btn-lg' %>
-			</div>
-			<br>
-		<% end %>
 	</div>
 </section>
 
