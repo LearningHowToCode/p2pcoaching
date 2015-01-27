@@ -1,22 +1,21 @@
 <%= form_tag contact_us_path do %>
-  <div class="form-group">
-    <%= label_tag "お名前（必須）" %>
+    <div class="form-group">
+        <%= label_tag "お名前（必須）" %>
     <%= text_field_tag :first_name, nil, class: 'form-control'  %>
-  </div>
-  <div class="form-group">
-    <%= label_tag "メールアドレス（必須）" %>
-    <%= email_field_tag :email, nil, class: 'form-control'  %>
-  </div>
-  <div class="form-group">
-    <%= label_tag "お問合せ内容（必須）" %>
-    <%= select_tag :category, options_for_select(["1. [無料体験] 英会話-日常英会話レッスンを体験したい", "2. [無料体験] 英会話-ビジネス英会話レッスンを体験したい", "3. [無料体験] 英会話-ディスカッション英会話レッスンを体験したい", "4. [無料体験] 大学留学サポートレッスンを体験したい", "5. [無料体験] 大学院（MBA含）留学サポートレッスンをを体験したい", "6. [無料相談] サービスについて相談したい"]),
-                   class: 'form-control'  %>
-  </div>
-  <div class="form-group">
-    <%= label_tag "ご用件（任意）　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　" %>
-    <%= text_area_tag :message, nil, class: 'form-control'  %>
-  </div>
-  <div class="actions">
-    <%= submit_tag t(:send_message), class: "btn btn-primary" %>
-  </div>
+    </div>
+    <div class="form-group">
+        <%= label_tag "メールアドレス（必須）" %>
+        <%= email_field_tag :email, nil, class: 'form-control'  %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "お問合せ内容（必須）" %>
+        <%= select_tag :category, options_for_select(["1. [無料体験] 英会話-日常英会話レッスンを体験したい", "2. [無料体験] 英会話-ビジネス英会話レッスンを体験したい", "3. [無料体験] 英会話-ディスカッション英会話レッスンを体験したい", "4. [無料体験] 大学留学サポートレッスンを体験したい", "5. [無料体験] 大学院（MBA含）留学サポートレッスンをを体験したい", "6. [無料相談] サービスについて相談したい"]),　class: 'form-control'  %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "ご用件（ご希望日時、先生日本語対応のご希望、その他ご相談されたいことなど）　　　　　　　　　　　　" %>
+        <%= text_area_tag :message, nil, class: 'form-control'  %>
+    </div>
+    <div class="actions">
+        <%= submit_tag t(:send_message), class: "btn btn-primary" %>
+    </div>
 <% end %>
