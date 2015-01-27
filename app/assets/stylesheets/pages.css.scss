@@ -9,7 +9,8 @@
 }
 
 .home-banner{
-	background: image-url('bg-homepage.png') no-repeat bottom center;
+	background: image-url('bg-homepage.png') bottom center;
+	background-repeat:no-repeat;
 	background-size: cover;
 }
 
