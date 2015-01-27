@@ -1,11 +1,10 @@
 <header class="how-it-works-banner">
-  <h1 class="text-center"><%=t :tutors %></h1>
+    <h1 class="text-center"><%=t :tutors %></h1>
 </header>
 
 <div class="center">
-  <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
+    <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
 </div>
-
 
 <section class="flex">
   <div class="bg-white full-width tutors">
