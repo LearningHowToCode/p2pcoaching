@@ -20,6 +20,8 @@ Belluga2::Application.routes.draw do
     get 'faqs', to: 'pages#faqs'
     get 'prepare', to: 'pages#prepare'
     get 'english', to: 'pages#english'
+    get "college" => "pages#college"
+    get "graduate_school" => "pages#graduate_school"
     get "free_lesson_confirmation" => "pages#free_lesson_confirmation"
     get "lesson_confirmation" => "pages#lesson_confirmation"
     get "message_confirmation" => "pages#message_confirmation"

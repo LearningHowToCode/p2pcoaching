@@ -17,6 +17,12 @@ class PagesController < ApplicationController
   def english
   end
 
+  def college
+  end
+
+  def graduate_school
+  end
+
   def free_lesson_confirmation
   end
 
