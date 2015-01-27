@@ -3,6 +3,9 @@
         <div class="text-center">
             <br>
             <br>
+            <h1 class="homepage-description"><%=t :welcome_to_pairbis %></h1>
+            <h4 class="homepage-description"><%=t :we_will_help %></h4>
+            <h4 class="homepage-description"><%=t :we_will_help2 %></h4>
             <% if I18n.locale == :en %>
                 <%= link_to root_path(locale: 'ja') do %>
                         <%= image_tag 'jp.png', width: "45",　height: "30", :title => 'Japanese' %>
@@ -27,9 +30,6 @@
                         <%= image_tag 'jp.png', width: "45",　height: "30", :title => 'Japanese' %>
                 <% end %>
             <% end %>
-            <h1 class="homepage-description"><%=t :welcome_to_pairbis %></h1>
-            <h4 class="homepage-description"><%=t :we_will_help %></h4>
-            <h4 class="homepage-description"><%=t :we_will_help2 %></h4>
         </div>
     </section>
 

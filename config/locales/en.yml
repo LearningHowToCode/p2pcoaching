@@ -161,3 +161,9 @@ en:
   we_accept_payment: 'We accept payment by credit or debit card. The payment is powered by Stripe and most major cards (i.e., Visa, MasterCard, American Express, JCB, Discover, and Diners Club) are accepted.'
   how_does_the_money_transfer: 'How does the money transfer occur?'
   we_will_transfer_funds: 'We will transfer funds to you by PayPal or Venmo, whichever is more convenient for you, right after each lesson.'
+  lesson_comfirmation_site1: 'Thank you for making a lesson reservation.'
+  lesson_comfirmation_site2: "An email has been sent with the details for the lesson including your tutor's contact information."
+  lesson_comfirmation_site2: "Back to Homepage"
+  message_comfirmation_site1: 'Thank you for sending the message!'
+  message_comfirmation_site2: ''  
+  message_comfirmation_site3: 'Back to Homepage'

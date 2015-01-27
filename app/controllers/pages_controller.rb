@@ -20,4 +20,9 @@ class PagesController < ApplicationController
   def free_lesson_confirmation
   end
 
+  def lesson_confirmation
+  end
+
+  def message_confirmation
+  end
 end

@@ -139,8 +139,13 @@ ja:
   we_accept_payment: 'クレジットカードでのお支払いとなります。Visa、MasterCard、American Express、JCB、Discover、Diners Clubなど、主要なカードは全て受け付けております。また、支払いは、Stripeというシステムを利用しており、我々はクレジットカードの個人情報は一切保持いたしませんので、安心してご利用いただけます。'
   how_does_the_money_transfer: 'お金はどのように支払われますか？'
   we_will_transfer_funds: 'PayPalまたはVenmoでレッスン直後に送金しております。'
-
-
+  lesson_comfirmation_site1: 'レッスンをご予約いただきまして、ありがとうございました。'
+  lesson_comfirmation_site2: '先生の連絡先・レッスン時間など、レッスンの詳細はメールにてお送りいたしておりますので、ご確認ください。'  
+  lesson_comfirmation_site3: 'ホームに戻る'
+  message_comfirmation_site1: 'メッセージをお送りいただきましてありがとうございました。'
+  message_comfirmation_site2: ''  
+  message_comfirmation_site3: 'ホームに戻る'
+  
   date: 
     abbr_day_names:
     - 日

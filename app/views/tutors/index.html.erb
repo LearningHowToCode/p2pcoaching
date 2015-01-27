@@ -10,48 +10,48 @@
 <section class="flex">
   <div class="bg-white full-width tutors">
     <% @tutors.each do |tutor| %>
-      <div class="tutor flex">
-        <div class="tutor-img">
-          <%= image_tag tutor.image, class: 'tutor-img' %>
+        <div class="tutor flex">
+            <div class="tutor-img">
+                <%= image_tag tutor.image, class: 'tutor-img' %>
+            </div>
+            <div class="tutor-info">
+                <h3>
+                    <%= link_to tutor.name, tutor %>
+                </h3>
+                <ul class="list-inline">
+                    <li>
+                        <%= tutor.undergraduate_institution %> <%= tutor.undergraduate_major %>
+                    </li>
+                    <li>
+                    <%= tutor.graduate_institution %> <%= tutor.graduate_study_field %>
+                    </li>
+                </ul>
+                <h5>
+                    <% tutor.display_subjects.split(', ').each do |subject| %>
+                        <span class="label label-info"><%= subject %></span>
+                    <% end %>
+                </h5>
+                <h5>
+                    <% tutor.languages.split(', ').each do |language| %>
+                        <span class="label label-success"><%= language %></span>
+                    <% end %>
+                </h5>
+                <p><%= tutor.bio %></p>
+            </div>
+            <div class="tutor-rate flex flex-center">
+                <div>
+                    <%= number_to_currency tutor.price %>
+                </div>
+            </div>
         </div>
-        <div class="tutor-info">
-          <h3>
-            <%= link_to tutor.name, tutor %>
-          </h3>
-          <ul class="list-inline">
-            <li>
-              <%= tutor.undergraduate_institution %> <%= tutor.undergraduate_major %>
-            </li>
-            <li>
-              <%= tutor.graduate_institution %> <%= tutor.graduate_study_field %>
-            </li>
-          </ul>
-          <h5>
-            <% tutor.display_subjects.split(', ').each do |subject| %>
-              <span class="label label-info"><%= subject %></span>
-            <% end %>
-          </h5>
-          <h5>
-            <% tutor.languages.split(', ').each do |language| %>
-              <span class="label label-success"><%= language %></span>
-            <% end %>
-          </h5>
-          <p><%= tutor.bio %></p>
-        </div>
-        <div class="tutor-rate flex flex-center">
-          <div>
-            <%= number_to_currency tutor.price %>
-          </div>
-        </div>
-      </div>
     <% end %>
-  </div>
 </section>
 
 <div class="center">
-  <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
-  <div class="fb-like" data-href="https://pairbis.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
-  </div>
+    <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %>
+    </div>
+    <div class="fb-like" data-href="https://pairbis.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
+    </div>
 </div>
 
 <br>

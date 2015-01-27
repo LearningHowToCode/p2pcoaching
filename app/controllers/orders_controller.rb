@@ -47,7 +47,6 @@ class OrdersController < ApplicationController
           :card => params[:stripeToken],
           :description => "Tutor's PayPal Address: #{@lesson.tutor.paypal_account}"
       )
-      flash[:notice] = "Thanks for ordering!"
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
@@ -60,7 +59,7 @@ class OrdersController < ApplicationController
 
         NotificationMailer.lesson_confirmation_to_student(@order).deliver
         NotificationMailer.lesson_confirmation_to_tutor(@order).deliver
-        format.html { redirect_to root_path, notice: 'Thank you for making a reservation' }
+        format.html { redirect_to lesson_confirmation_path }
       else
         render :new
       end
