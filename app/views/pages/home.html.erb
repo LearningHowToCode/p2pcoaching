@@ -6,28 +6,29 @@
             <h1 class="homepage-description"><%=t :welcome_to_pairbis %></h1>
             <h4 class="homepage-description"><%=t :we_will_help %></h4>
             <h4 class="homepage-description"><%=t :we_will_help2 %></h4>
+            
             <% if I18n.locale == :en %>
                 <%= link_to root_path(locale: 'ja') do %>
-                        <%= image_tag 'jp.png', width: "45",　height: "30", :title => 'Japanese' %>
+                    <h5 class="black">日本語(独自の内容ご用意しております)</h5>
                 <% end %>
                 <%= link_to root_path(locale: 'cn') do %>
-                        <%= image_tag 'cn.png', width: "45",　height: "30", :title => 'Chinese' %>
+                    <h5 class="black">中文</h5>
                 <% end %>
             <% end %>
             <% if I18n.locale == :ja %>
                 <%= link_to root_path(locale: 'en') do %>
-                        <%= image_tag 'en.png', width: "45",　height: "30", :title => 'English' %>
+                    <h5 class="black">English</h5>
                 <% end %>
                 <%= link_to root_path(locale: 'cn') do %>
-                        <%= image_tag 'cn.png', width: "45",　height: "30", :title => 'Chinese' %>
+                    <h5 class="black">中文</h5>
                 <% end %>
             <% end %>
             <% if I18n.locale == :cn %>
                 <%= link_to root_path(locale: 'en') do %>
-                        <%= image_tag 'en.png', width: "45",　height: "30", :title => 'English' %>
+                    <h5 class="black">English</h5>
                 <% end %>
                 <%= link_to root_path(locale: 'ja') do %>
-                        <%= image_tag 'jp.png', width: "45",　height: "30", :title => 'Japanese' %>
+                    <h5 class="black">日本語(独自の内容ご用意しております)</h5>
                 <% end %>
             <% end %>
         </div>
