@@ -27,7 +27,7 @@
             <div class="col-md-2">
             </div>    
             <div class="col-md-6">
-                <h3>1. 出願サポート（出願準備・エッセイ添削など）レッスン</h3>
+                <h3>出願サポート（出願準備・エッセイ添削など）レッスン</h3>
                 <h5>アメリカ大学院の選考では、TOEFLやGMATの点数のみならず、</h5>
                 <h5>エッセイやインタビューなどが総合的に評価されます。</h5>
                 <h5>Pairbisには、実際にビジネススクールに在学する先生はもちろんのこと、</h5>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-md-3">
                 <center>
-	        		<%= image_tag 'English_Conversation.jpg', height: "160", :title => '日常英会話レッスン' %>
+	        		<%= image_tag 'Baker.png', height: "168", :title => '日常英会話レッスン' %>
 				</center>	
             </div>
             <div class="col-md-1">
@@ -77,7 +77,38 @@
         <br>
     </section>
 
-    <section class="bg-white">
+    <section class="bg-white text-center">
+        <h5>アメリカ大学院(特にビジネススクール)の授業は、ケースメソッドなどのディスカッション形式で行われます。</h5>
+        <h5>議論の内容を把握して、いかに的を得た回答をできるかが問われる世界。</h5>
+        <h5>入学した日本人の多くが、授業に馴染むまでに苦労しています。</h5>
+        <h5>Pairbisでは、ビジネスケースや多種多様なディスカッショントピックを用いて、</h5>
+        <h5>ハーバードの学生とディスカッションをすることが可能。</h5>
+        <h5>既に合格が決まって入学の準備をされている方から、留学の準備をされている方まで、</h5>
+        <h5>実際に授業で使える英語力を鍛えていただけます。</h5>
+        <h5>内容としては、以下の3つのコースをご用意しております。</h5>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="text-center">アカデミック・ディスカッション英会話</h3>
+                <h5 class="text-center">マイケル・サンデル教授の授業「Justice（正義）」のテーマを用いたレッスンを通して、自分の考え・意見を的確に表現できるようになりましょう。</h5>
+                <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                <% end %>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center">ビジネス交渉英会話</h3>
+                <h5 class="text-center">ハーバードビジネススクールのクラスをベースに作られた交渉の教材を通して、海外の人とビジネスをするスキルを身につけましょう。</h5>
+                <%= link_to business_path(anchor: '1'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                <% end %>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center">ビジネスケース・ディスカッション英会話</h3>
+                <h5 class="text-center">コンサルティングファームの面接などに使われるケースを通して、的確にビジネスコンセプトを英語で表現する能力を磨きましょう。</h5>
+                <%= link_to business_path(anchor: '2'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                <% end %>
+            </div>    
+    </section>
+
+    <!-- <section class="bg-white">
         <br>
         <div class="row">
             <div class="col-md-2">
@@ -131,7 +162,7 @@
         <br>
         <br>
         <br>
-    </section>
+    </section>-->
 
     <section class="bg-gray">
         <div class="row">

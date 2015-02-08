@@ -45,6 +45,78 @@
     </section>
     <% end %>
 
+
+<% if I18n.locale == :en %>
+    <section class="flex bg-white">
+        <div class="row">
+            <div class="col-md-4">
+                <% if I18n.locale == :ja %>
+                    <div class='text-center'>
+                        <%= image_tag 'ESL.png', width: "270", height: "168", :title => '英会話' %>
+                    </div>
+                <% end %> 
+                <h3 class="text-center"><%=t :purpose1 %></h3>
+                <h5 class="text-center"><%=t :purpose1_description1 %></h5>
+                <h5 class="text-center"><%=t :purpose1_description2 %></h5>
+                <h5 class="text-center"><%=t :purpose1_description3 %></h5>
+                <h5 class="text-center"><%=t :purpose1_description4 %></h5>
+                <h5 class="text-center"><%=t :purpose1_description5 %></h5>
+                <div class="button">
+                    <% if I18n.locale == :ja %>
+                        <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                        <% end %> 
+                    <% end %>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <% if I18n.locale == :ja %>
+                    <div class='text-center'>
+                        <%= image_tag 'High_School_Study_Abroad.png', width: "270", height: "168", :title => 'ハーバード大学留学' %>
+                    </div>
+                <% end %>
+                <h3 class="text-center"><%=t :purpose2 %></h3>
+                <h5 class="text-center"><%=t :purpose2_description1 %></h5>
+                <h5 class="text-center"><%=t :purpose2_description2 %></h5>
+                <h5 class="text-center"><%=t :purpose2_description3 %></h5>
+                <h5 class="text-center"><%=t :purpose2_description4 %></h5>
+                <h5 class="text-center"><%=t :purpose2_description5 %></h5>
+                <div class="button">
+                    <% if I18n.locale == :ja %>
+                        <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>まずは無料相談から！
+                        <% end %> 
+                    <% end %>
+                <br>
+                <br>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <% if I18n.locale == :ja %>
+                    <div class='text-center'>
+                        <%= image_tag 'Baker.png', width: "270", height: "168", :title => 'MBA留学' %>
+                    </div>
+                <% end %>
+                <h3 class="text-center"><%=t :purpose3 %></h3>
+                <h5 class="text-center"><%=t :purpose3_description1 %></h5>
+                <h5 class="text-center"><%=t :purpose3_description2 %></h5>
+                <h5 class="text-center"><%=t :purpose3_description3 %></h5>
+                <h5 class="text-center"><%=t :purpose3_description4 %></h5>
+                <h5 class="text-center"><%=t :purpose3_description5 %></h5>
+                <div class="button">
+                    <% if I18n.locale == :ja %>
+                        <%= link_to graduate_school_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                        <% end %> 
+                    <% end %>
+                <br>
+                <br>
+                </div>
+            </div>
+        </div>
+    </section>
+<% end %>
+
+<% if I18n.locale == :cn %>
     <section class="flex bg-white">
         <div class="row">
             <div class="col-md-4">
@@ -112,6 +184,94 @@
             </div>
         </div>
     </section>
+<% end %>
+
+<% if I18n.locale == :ja %>
+    <section class="flex bg-white">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <div class='text-center'>
+                    <%= image_tag 'Justice.jpg', width: "270", height: "168", :title => '白熱教室' %>
+                </div>
+                <h3 class="text-center">アカデミック・ディスカッション英会話</h3>
+                <h5 class="text-center">マイケル・サンデル教授の授業「Justice（正義）」のテーマを用いたハーバードの先生とのマンツーマンレッスンを通して、自分の考え・意見を的確に表現できるようになりましょう。</h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <div class="button">
+                    <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %> 
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class='text-center'>
+                    <%= image_tag 'Business.jpg', height: "168", :title => 'ハーバード大学留学' %>
+                </div>
+                <h3 class="text-center">ビジネス・ディスカッション英会話</h3>
+                <h5 class="text-center">ハーバード流の交渉ケース、コンサルティング・ファーム面接に使われるケースを用いたハーバードの先生とのマンツーマンレッスンを通して、実践的なビジネス英会話を学びましょう。</h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <div class="button">
+                    <%= link_to business_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %> 
+                <br>
+                <br>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </section>
+    <section class="flex bg-white">
+        <div class="row">
+            <div class="col-md-1"> 
+            </div>
+            <div class="col-md-5">
+                <div class='text-center'>
+                    <%= image_tag 'High_School_Study_Abroad.png', width: "270", height: "168", :title => 'ハーバード大学留学' %>
+                </div>
+                <h3 class="text-center">米国大学留学サポート</h3>
+                <h5 class="text-center">ハーバード大学に合格した先生に相談をして、受験のアドバイスをもらったり、エッセイの添削や出願準備を手伝ってもらいましょう。先生は日本人・アメリカ人両方ご用意いたしております。</h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <div class="button">
+                    <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>まずは無料相談から！
+                    <% end %> 
+                <br>
+                <br>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class='text-center'>
+                    <%= image_tag 'Baker.png', width: "270", height: "168", :title => 'ハーバードMBA留学' %>
+                </div>
+                <h3 class="text-center">米国大学院(MBAを含む)留学サポート</h3>
+                <h5 class="text-center">ハーバード大学院に合格した先生に相談をして、受験のアドバイスをもらったり、エッセイの添削や出願準備を手伝ってもらいましょう。先生は日本人・アメリカ人両方ご用意いたしております。</h5></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <h5 class="text-center"></h5>
+                <div class="button">
+                    <%= link_to graduate_school_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
+                    <% end %>
+                <br>
+                <br>
+                </div>
+            </div>
+            <div class="col-md-1"> 
+            </div>
+        </div>
+    </section>
+<% end %>
 
     <section class="flex bg-grey">
         <div class="row">

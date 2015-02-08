@@ -25,6 +25,7 @@ Belluga2::Application.routes.draw do
     get "free_lesson_confirmation" => "pages#free_lesson_confirmation"
     get "lesson_confirmation" => "pages#lesson_confirmation"
     get "message_confirmation" => "pages#message_confirmation"
+    get "business" => "pages#business"
 
     post 'contact', to: 'messages#contact', as: :contact
     post 'contact_us', to: 'messages#contact_us', as: :contact_us

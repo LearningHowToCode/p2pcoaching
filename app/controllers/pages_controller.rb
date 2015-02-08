@@ -31,4 +31,7 @@ class PagesController < ApplicationController
 
   def message_confirmation
   end
+
+  def business
+  end
 end
