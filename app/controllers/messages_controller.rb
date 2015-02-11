@@ -16,7 +16,10 @@ class MessagesController < ApplicationController
     email_info = OpenStruct.new(first_name: params[:first_name],
                                 email: params[:email],
                                 category: params[:category],
-                                message: params[:message])
+                                message: params[:message],
+                                preference1: params[:preference1],
+                                preference2: params[:preference2],
+                                preference3: params[:preference3])
 
     NotificationMailer.contact_us(email_info).deliver
     redirect_to free_lesson_confirmation_path
