@@ -260,7 +260,7 @@
                     <%= image_tag 'Baker.png', width: "270", height: "168", :title => 'ハーバードMBA留学' %>
                 </div>
                 <h3 class="text-center">米国大学院(MBAを含む)留学サポート</h3>
-                <h5 class="text-center">ハーバード大学院に合格した先生に相談をして、受験のアドバイスをもらったり、エッセイの添削や出願準備を手伝ってもらいましょう。先生は日本人・アメリカ人両方ご用意いたしております。</h5></h5>
+                <h5 class="text-center">ハーバード大学院に合格した先生に相談をして、受験のアドバイスをもらったり、エッセイの添削や出願準備を手伝ってもらいましょう。先生は日本人・アメリカ人両方ご用意いたしております。</h5>
                 <h5 class="text-center"></h5>
                 <h5 class="text-center"></h5>
                 <h5 class="text-center"></h5>
@@ -327,7 +327,63 @@
     </section>
 <% end %>
 
-    <section class="bg-gray" id="contact">
+<% if I18n.locale == :ja %>
+    <section class="bg-gray">
+        <div class="row">
+            <h2 class="bottom-margin text-center">お薦めの先生</h2>
+            <h4 class="text-center">先生は他にも多数在籍。ニーズに合った先生をお選びいただきます。</h4>
+            <br>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+                <div class='text-center'>
+                    <%= image_tag 'Jennifer.jpg', height: "100" %>
+                </div>
+                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/33">Jennifer 先生</a></h4>
+                <h5 class="text-center">ハーバード大学博士課程在校</h5>
+                <h5 class="text-center">アカデミック・ディスカッション</h5>
+                <h5 class="text-center">日本語対応可</h5>
+            </div>
+            <div class="col-md-2">
+                <div class='text-center'>
+                    <%= image_tag 'Ashley.jpg', height: "100" %>
+                </div>
+                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/56">Ashley 先生</a></h4>
+                <h5 class="text-center">ハーバード教育大学院在校</h5>
+                <h5 class="text-center">アカデミック・ディスカッション</h5>
+            </div> 
+            <div class="col-md-2">
+                <div class='text-center'>
+                    <%= image_tag 'Cornelius.jpg', height: "100" %>
+                </div>
+                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/38">Cornelius 先生</a></h4>
+                <h5 class="text-center">ハーバード教育大学院在校</h5>
+                <h5 class="text-center">アカデミック・ディスカッション</h5>
+            </div>
+            <div class="col-md-2">
+                <div class='text-center'>
+                    <%= image_tag 'Turker.png', height: "100" %>
+                </div>
+                 <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/13">Turker 先生</a></h4>
+                <h5 class="text-center">ハーバードビジネススクール(HBS)在校</h5>
+                <h5 class="text-center">ビジネス・ディスカッション</h5>
+            </div>
+            <div class="col-md-2">
+                <div class='text-center'>
+                    <%= image_tag 'Ota.jpg', height: "100" %>
+                </div>
+                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/2">Mitsu 先生</a></h4>
+                <h5 class="text-center">ハーバードビジネススクール(HBS)在校</h5>
+                <h5 class="text-center">MBA留学サポート</h5>
+                <h5 class="text-center">日本語対応可</h5>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </section>
+<% end %>
+
+    <section class="bg-white" id="contact">
         <div class="row">
             <div class="col-md-2">
             </div>
@@ -348,7 +404,7 @@
         </div>
     </section>
 
-    <section class="bg-white" id="about">
+    <section class="bg-gray" id="about">
         <div class="row">
             <div class="col-md-2">
             </div>
