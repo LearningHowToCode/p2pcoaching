@@ -309,21 +309,29 @@
     </section>
 
 <% if I18n.locale == :ja %>
-    <section class="bg-white" id="free-lesson">
+    <section class="bg-white">
         <div class="row">
             <div class="col-md-2">
             </div>
             <div class="col-md-8">
                 <center>
-                    <h3>まずは無料相談・無料体験レッスンから！</h3>
-                    <h5>Pairbisチームが24時間以内にご返信いたします。</h5>
+                    <h3>受講者の声</h3>
+                    <%= image_tag 'Review1.jpg', height: "180", :title => '受講者の声' %>
+                    <h5>オンラインでのレッスンということで、最初はちょっと不安でしたが、実際にレッスンをやってみると</h5>
+                    <h5>動画でお互いの顔を見ながらの会話だったので、とても話しやすかったです。</h5>
+                    <h5>また、レッスンの中では教材の内容だけでなく、お互いの価値観や国民性についても</h5>
+                    <h5>議論ができ、とても楽しく英語を学ぶことができました。</h5>
+                    <br>
+                    <h5>アカデミック・ディスカッション英会話受講者</h5>
+                    <h5>東京国立大学院生　K.K.さん</h5>
                 </center>
-                <%= render 'contact_form'  %>
             </div>
             <div class="col-md-2">
             </div>
         </div>
          <br>
+         <br>
+         <hr></hr>
     </section>
 <% end %>
 
@@ -340,7 +348,7 @@
                     <%= image_tag 'Jennifer.jpg', height: "100" %>
                 </div>
                 <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/33">Jennifer 先生</a></h4>
-                <h5 class="text-center">ハーバード大学博士課程在校</h5>
+                <h5 class="text-center">ハーバード大学博士課程在学</h5>
                 <h5 class="text-center">アカデミック・ディスカッション</h5>
                 <h5 class="text-center">日本語対応可</h5>
             </div>
@@ -349,7 +357,7 @@
                     <%= image_tag 'Ashley.jpg', height: "100" %>
                 </div>
                 <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/56">Ashley 先生</a></h4>
-                <h5 class="text-center">ハーバード教育大学院在校</h5>
+                <h5 class="text-center">ハーバード教育大学院在学</h5>
                 <h5 class="text-center">アカデミック・ディスカッション</h5>
             </div> 
             <div class="col-md-2">
@@ -357,7 +365,7 @@
                     <%= image_tag 'Cornelius.jpg', height: "100" %>
                 </div>
                 <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/38">Cornelius 先生</a></h4>
-                <h5 class="text-center">ハーバード教育大学院在校</h5>
+                <h5 class="text-center">ハーバード教育大学院在学</h5>
                 <h5 class="text-center">アカデミック・ディスカッション</h5>
             </div>
             <div class="col-md-2">
@@ -365,7 +373,7 @@
                     <%= image_tag 'Turker.png', height: "100" %>
                 </div>
                  <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/13">Turker 先生</a></h4>
-                <h5 class="text-center">ハーバードビジネススクール(HBS)在校</h5>
+                <h5 class="text-center">ハーバードビジネススクール(HBS)在学</h5>
                 <h5 class="text-center">ビジネス・ディスカッション</h5>
             </div>
             <div class="col-md-2">
@@ -373,13 +381,32 @@
                     <%= image_tag 'Ota.jpg', height: "100" %>
                 </div>
                 <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/2">Mitsu 先生</a></h4>
-                <h5 class="text-center">ハーバードビジネススクール(HBS)在校</h5>
+                <h5 class="text-center">ハーバードビジネススクール(HBS)在学</h5>
                 <h5 class="text-center">MBA留学サポート</h5>
                 <h5 class="text-center">日本語対応可</h5>
             </div>
             <div class="col-md-1">
             </div>
         </div>
+    </section>
+<% end %>
+
+<% if I18n.locale == :ja %>
+    <section class="bg-white" id="free-lesson">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <center>
+                    <h3>まずは無料相談・無料体験レッスンから！</h3>
+                    <h5>Pairbisチームが24時間以内にご返信いたします。</h5>
+                </center>
+                <%= render 'contact_form'  %>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+         <br>
     </section>
 <% end %>
 
