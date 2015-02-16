@@ -7,6 +7,15 @@
             <h4 class="homepage-description"><%=t :we_will_help %></h4>
             <h4 class="homepage-description"><%=t :we_will_help2 %></h4>
             
+            <% if I18n.locale == :ja %>
+            <center class="free-lesson-center">
+            <br>
+            <%= link_to root_path(anchor: 'free-lesson') do %>
+                <%= image_tag 'Free_Lessons2.png', width: "280", height: "49", :title => 'Free Lesson' %>
+            <% end %>
+            </center>
+            <% end %>
+
             <!-- <% if I18n.locale == :en %>
                 <%= link_to root_path(locale: 'ja') do %>
                     <h5 class="black">日本語(独自の内容ご用意しております)</h5>
@@ -35,7 +44,7 @@
         </div>
     </section>
 
-    <% if I18n.locale == :ja %>
+    <!--<% if I18n.locale == :ja %>
     <section class="flex bg-white">
         <center class="free-lesson-center">
             <br>
@@ -44,7 +53,7 @@
               <% end %>
         </center>
     </section>
-    <% end %>
+    <% end %>-->
 
 
 <% if I18n.locale == :en %>
@@ -190,9 +199,8 @@
 <% if I18n.locale == :ja %>
     <section class="flex bg-white">
         <div class="row">
-            <hr></hr>
             <br>
-            <h2 class="bottom-margin text-center">コースのご紹介</h2>
+            <h2 class="bottom-margin text-center">サービスのご紹介</h2>
             <br>
             <div class="col-md-1">
             </div>
