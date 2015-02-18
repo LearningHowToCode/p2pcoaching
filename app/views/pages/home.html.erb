@@ -55,9 +55,8 @@
     </section>
     <% end %>-->
 
-
 <% if I18n.locale == :en %>
-    <section class="flex bg-white">
+    <section class="flex bg-grey">
         <div class="row">
             <div class="col-md-4">
                 <% if I18n.locale == :ja %>
@@ -127,7 +126,7 @@
 <% end %>
 
 <% if I18n.locale == :cn %>
-    <section class="flex bg-white">
+    <section class="flex bg-grey">
         <div class="row">
             <div class="col-md-4">
                 <% if I18n.locale == :ja %>
@@ -196,11 +195,48 @@
     </section>
 <% end %>
 
-<% if I18n.locale == :ja %>
+
     <section class="flex bg-white">
         <div class="row">
+            <h2 class="bottom-margin text-center"><%=t :Pairbis_charatetertics %></h2>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="col-md-4">
+                    <div class='text-center'>
+                        <%= image_tag 'badge-ivy.png', width: "100", height: "100" %>
+                    </div>
+                    <h3 class="text-center"><%=t :ivy_league_tutors %></h3>
+                    <h5 class="text-center"><%=t :ivy_league_tutors_description1 %></h5>
+                    <h5 class="text-center"><%=t :ivy_league_tutors_description2 %></h5>
+                </div>
+                <div class="col-md-4">
+                    <div class='text-center'>
+                        <%= image_tag 'badge-pay.png', width: "100", height: "100" %>
+                    </div>
+                    <h3 class="text-center"><%=t :pay_per_lesson %></h3>
+                    <h5 class="text-center"><%=t :pay_per_lesson_description1 %></h5>
+                    <h5 class="text-center"><%=t :pay_per_lesson_description2 %></h5>
+                </div>
+                <div class="col-md-4">
+                    <div class='text-center'>
+                        <%= image_tag 'badge-schedule.png', width: "100", height: "100" %>
+                    </div>
+                    <h3 class="text-center"><%=t :online_lesson %></h3>
+                    <h5 class="text-center"><%=t :online_lesson_description1 %></h5>
+                    <h5 class="text-center"><%=t :online_lesson_description2 %></h5>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </section>
+
+<% if I18n.locale == :ja %>
+    <section class="flex bg-grey">
+        <div class="row">
             <br>
-            <h2 class="bottom-margin text-center">サービスのご紹介</h2>
+            <h2 class="bottom-margin text-center">レッスンを選ぶ</h2>
             <br>
             <div class="col-md-1">
             </div>
@@ -242,7 +278,7 @@
             </div>
         </div>
     </section>
-    <section class="flex bg-white">
+    <section class="flex bg-grey">
         <div class="row">
             <div class="col-md-1"> 
             </div>
@@ -285,42 +321,6 @@
         </div>
     </section>
 <% end %>
-
-    <section class="flex bg-grey">
-        <div class="row">
-            <h2 class="bottom-margin text-center"><%=t :Pairbis_charatetertics %></h2>
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <div class="col-md-4">
-                    <div class='text-center'>
-                        <%= image_tag 'badge-ivy.png', width: "100", height: "100" %>
-                    </div>
-                    <h3 class="text-center"><%=t :ivy_league_tutors %></h3>
-                    <h5 class="text-center"><%=t :ivy_league_tutors_description1 %></h5>
-                    <h5 class="text-center"><%=t :ivy_league_tutors_description2 %></h5>
-                </div>
-                <div class="col-md-4">
-                    <div class='text-center'>
-                        <%= image_tag 'badge-pay.png', width: "100", height: "100" %>
-                    </div>
-                    <h3 class="text-center"><%=t :pay_per_lesson %></h3>
-                    <h5 class="text-center"><%=t :pay_per_lesson_description1 %></h5>
-                    <h5 class="text-center"><%=t :pay_per_lesson_description2 %></h5>
-                </div>
-                <div class="col-md-4">
-                    <div class='text-center'>
-                        <%= image_tag 'badge-schedule.png', width: "100", height: "100" %>
-                    </div>
-                    <h3 class="text-center"><%=t :online_lesson %></h3>
-                    <h5 class="text-center"><%=t :online_lesson_description1 %></h5>
-                    <h5 class="text-center"><%=t :online_lesson_description2 %></h5>
-                </div>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
-    </section>
 
 <% if I18n.locale == :ja %>
     <section class="bg-white">
@@ -422,7 +422,7 @@
     </section>
 <% end %>
 
-    <section class="bg-white" id="contact">
+    <section class="bg-gray" id="contact">
         <div class="row">
             <div class="col-md-2">
             </div>
@@ -443,7 +443,7 @@
         </div>
     </section>
 
-    <section class="bg-gray" id="about">
+    <section class="bg-white" id="about">
         <div class="row">
             <div class="col-md-2">
             </div>
