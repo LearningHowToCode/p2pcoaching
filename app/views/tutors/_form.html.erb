@@ -87,6 +87,11 @@
       <%= f.label :paypal_account, 'PayPal　(email address) or Venmo (phone number). Visible only to you. You can also skip it for now.' %><br>
       <%= f.text_field :paypal_account, class: "form-control" %>
     </div>
+    <div class="form-group">
+      <%= f.label :timezone, t(:timezone) %><br>
+      <%= f.time_zone_select :timezone, timezones, {},
+                   { class: "form-control" } %>
+    </div>
     <div class="actions">
       <%= f.submit "Update My Profile", class: "btn btn-primary" %>
     </div>

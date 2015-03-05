@@ -23,4 +23,10 @@ module ApplicationHelper
   def format_time(time)
     time.strftime('%H:%M')
   end
+
+
+  def timezones
+    ActiveSupport::TimeZone.us_zones.reverse +
+      [ActiveSupport::TimeZone['Tokyo'], ActiveSupport::TimeZone['Beijing']]
+  end
 end

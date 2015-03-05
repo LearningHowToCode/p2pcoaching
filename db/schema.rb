@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126173355) do
+ActiveRecord::Schema.define(version: 20150305143134) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141126173355) do
     t.string   "skype_id"
     t.string   "gmail_address"
     t.string   "preference"
+    t.string   "timezone"
   end
 
   create_table "tutors", force: true do |t|
@@ -64,6 +65,7 @@ ActiveRecord::Schema.define(version: 20141126173355) do
     t.string   "routing_number"
     t.string   "account_number"
     t.string   "paypal_account"
+    t.string   "timezone"
   end
 
   create_table "users", force: true do |t|
