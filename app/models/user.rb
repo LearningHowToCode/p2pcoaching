@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   after_create :create_profile
+  delegate :timezone, to: :profile
 
   def student?
     self.profile_type == 'Student'

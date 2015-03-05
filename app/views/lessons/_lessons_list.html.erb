@@ -2,7 +2,7 @@
   <thead>
   <tr>
     <th>Day</th>
-    <th>Start Time (US Eastern Time)</th>
+    <th>Start Time (<%= user_zone_s %>)</th>
     <th>Duration</th>
     <th>Status</th>
     <th>Action</th>
@@ -12,8 +12,8 @@
   <tbody>
   <% @lessons.each do |lesson| %>
     <tr>
-      <td><%= lesson.day %></td>
-      <td><%= format_time lesson.start_time %></td>
+      <td><%= format_lesson_day lesson %></td>
+      <td><%= format_lesson_time lesson %></td>
       <td><%= "#{lesson.duration} minutes" %></td>
       <td><%= lesson.status.capitalize %></td>
       <td>
