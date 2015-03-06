@@ -6,6 +6,10 @@ class TutorsController < ApplicationController
 
   def index
     @tutors = Tutor.all.completed.order("price, id ASC").paginate(page: params[:page], per_page: 10)
+    @q = @tutors.ransack(params[:q])
+
+    @tutors = @q.result
+
     respond_with(@tutors)
   end
 
