@@ -46,4 +46,9 @@ module TutorsHelper
       'Other'
     end
   end
+
+  def price_filter(from, to)
+    link_to "#{number_to_currency from} - #{number_to_currency to}",
+      tutors_path(q: {price_gteq: from, price_lteq: to}), class: 'btn btn-info'
+  end
 end

@@ -6,23 +6,17 @@
     <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
 </div>
 <div class="container-fluid">
+  <br>
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <%= search_form_for(@q, html: {class: 'form-inline'}) do |f| %>
-        <div class="form-group">
-          <%= f.label 'Min. Price' %>
-          <%= f.search_field :price_gteq, class: 'form-control', style: 'width: auto' %>
-        </div>
-        <div class="form-group">
-          <%= f.label 'Max. Price' %>
-          <%= f.search_field :price_lteq, class: 'form-control', style: 'width: auto' %>
-        </div>
-        <%= f.submit 'Search', class: 'btn' %>
-      <% end %>
+    <div class="center">
+      <%= link_to t(:all), tutors_path, class: 'btn btn-info' %>
+      <%= price_filter 20, 30 %>
+      <%= price_filter 30, 50 %>
+      <%= price_filter 50, 75 %>
+      <%= price_filter 75, 100 %>
     </div>
   </div>
 </div>
-
 <section class="flex">
   <div class="bg-white full-width tutors">
     <% @tutors.to_a.uniq.each do |tutor| %>
