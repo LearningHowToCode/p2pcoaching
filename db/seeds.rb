@@ -36,3 +36,4 @@ end
 end
 puts 'Tutors created!'
 
+require_relative 'sample_data/lessons'

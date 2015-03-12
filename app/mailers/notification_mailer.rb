@@ -37,4 +37,11 @@ class NotificationMailer < ActionMailer::Base
 
     mail(to: 'pairbis@gmail.com', subject: 'A student has signed up on the ESL page!')
   end
+
+  def remind_review(lesson)
+    student = lesson.student
+    tutor   = lesson.tutor
+
+    mail(to: student.email, subject: 'Please review your tutor!')
+  end
 end

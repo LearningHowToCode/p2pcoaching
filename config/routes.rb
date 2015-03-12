@@ -2,8 +2,10 @@ Belluga2::Application.routes.draw do
 
   scope "(:locale)", locale: /en|cn|ja|kn/ do
 
+    resources :reviews # to save code in controller
     resources :lessons, except: [:index, :show] do
       resources :orders
+      resources :reviews
     end
     resources :students, except: [:new, :create, :index]
     resources :tutors, except: [:new, :create]
