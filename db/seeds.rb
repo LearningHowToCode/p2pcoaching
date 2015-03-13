@@ -17,7 +17,7 @@ def tutor_attrs
     "undergraduate_major" => "qwe",
     "graduate_institution" => "UPenn",
     "graduate_study_field" => "",
-    "subject" => "English, Business English",
+    "subject" => Tutor::SUBJECTS.sample(5).join(', '),
     "long_bio" => "d saf da fasf",
     "skype_id" => "fdafdsf",
     "gmail_address" => "sdfsf@fads.dsa",
@@ -36,4 +36,7 @@ end
 end
 puts 'Tutors created!'
 
+require_relative 'sample_data/students'
+require_relative 'sample_data/admin'
 require_relative 'sample_data/lessons'
+require_relative 'sample_data/reviews'

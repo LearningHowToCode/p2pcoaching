@@ -5,6 +5,27 @@
 <div class="center">
     <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
 </div>
+
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="center">
+      <%= search_form_for(@q, html: {class: 'form-inline'}) do |f| %>
+        <% Tutor::SUBJECTS.each do |subject| %>
+          <div class="form-group">
+            <label>
+              <% checked = subject.in?(params.try(:[], :q).try(:[], :subject_cont_any) || []) %>
+              <%= check_box_tag 'q[subject_cont_any][]', subject, checked %>
+              <%= subject %>
+            </label>
+          </div>
+        <% end %>
+        <%= f.submit 'Search', class: 'btn' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <div class="container-fluid">
   <br>
   <div class="row">
