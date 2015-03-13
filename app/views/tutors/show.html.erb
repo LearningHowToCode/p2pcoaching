@@ -210,8 +210,14 @@
     </div>
     <h1><%= t(:reviews) %></h1>
     <div class="bg-white full-width content-pad">
-      <%= render 'reviews/index', reviews: @tutor.lessons.reviews %>
+      <% reviews = @tutor.lessons.reviews %>
+      <% if reviews.present? %>
+          <%= render 'reviews/index', reviews: reviews %>
+      <% else %>
+        <%= t(:tutor_has_not_been_reviewed_yet) %>
+      <% end %>
     </div>
+
 </section>
 
 <br>

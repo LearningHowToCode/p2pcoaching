@@ -2,7 +2,7 @@ class Lesson < ActiveRecord::Base
 	belongs_to :student
 	belongs_to :tutor
   has_one :order
-  has_one :review
+  has_one :review, dependent: :destroy
 
   validates :duration, numericality: true
 

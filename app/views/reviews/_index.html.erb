@@ -4,7 +4,9 @@
     <th>Student</th>
     <th>Review</th>
     <th>Rating</th>
-    <th>Action</th>
+    <% if current_user.try(:admin?) %>
+      <th>Action</th>
+    <% end %>
   </tr>
   </thead>
 
@@ -14,8 +16,11 @@
       <td><%= review.lesson.student.name %></td>
       <td><%= review.review %></td>
       <td><%= review.rating %></td>
-      <td>
-      </td>
+      <% if current_user.try(:admin?) %>
+        <td>
+          <%= link_to 'Destroy', review, method: :delete, class: 'btn btn-danger',data: { confirm: 'Are you sure?' } %>
+        </td>
+      <% end %>
     </tr>
   <% end %>
   </tbody>
