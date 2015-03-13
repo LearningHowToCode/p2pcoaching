@@ -14,7 +14,8 @@ class Lesson < ActiveRecord::Base
   end
 
   def remind_review
-    NotificationMailer.remind_review self
+    NotificationMailer.remind_review(self).deliver
+    update_column :reminded, true
   end
 
   def price

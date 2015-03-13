@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311235850) do
+ActiveRecord::Schema.define(version: 20150313203515) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150311235850) do
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "reminded"
+    t.boolean  "reminded",   default: false
     t.datetime "end_time"
   end
 

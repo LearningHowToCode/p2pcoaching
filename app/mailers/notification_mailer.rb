@@ -39,9 +39,10 @@ class NotificationMailer < ActionMailer::Base
   end
 
   def remind_review(lesson)
-    student = lesson.student
-    tutor   = lesson.tutor
+    @lesson  = lesson
+    @student = lesson.student
+    @tutor   = lesson.tutor
 
-    mail(to: student.email, subject: 'Please review your tutor!')
+    mail(to: @student.email, subject: 'Please review your tutor!')
   end
 end
