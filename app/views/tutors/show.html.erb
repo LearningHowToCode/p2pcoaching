@@ -208,6 +208,10 @@
         <% end %>
         <% end %>
     </div>
+    <h1><%= t(:reviews) %></h1>
+    <div class="bg-white full-width content-pad">
+      <%= render 'reviews/index', reviews: @tutor.lessons.reviews %>
+    </div>
 </section>
 
 <br>

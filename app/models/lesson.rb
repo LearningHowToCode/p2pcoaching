@@ -9,6 +9,10 @@ class Lesson < ActiveRecord::Base
   before_save :set_end_time
   scope :to_remind, ->{ where{(end_time < Time.now) & (reminded == false)} }
 
+  def self.reviews
+    all.map(&:review).select(&:present?)
+  end
+
   def self.remind_reviews
     to_remind.each &:remind_review
   end
