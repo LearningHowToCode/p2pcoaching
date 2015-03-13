@@ -31,6 +31,7 @@
                                 <% end %>
                             </h5>
                             <h5><%=t :hourly_price %> <%= number_to_currency @tutor.price %> <%=t :hourly_price2 %></h5>
+                            <h5><%=t :average_rating %> <%= @tutor.rating %></h5>
                             <h5>Profile last updated in <%= @tutor.updated_at.strftime('%B %Y') %><h5>
                         </div>
                     </div>

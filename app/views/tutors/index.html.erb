@@ -49,10 +49,13 @@
                 <p><%= tutor.bio %></p>
             </div>
             <div class="tutor-rate flex flex-center">
-                <div>
-                    <%= number_to_currency tutor.price %>
-                </div>
+                <div> <%= number_to_currency tutor.price %> </div>
             </div>
+            <!-- remove to add rating
+            <div style='width: 10em'>
+                <%= (r = tutor.rating) ? r.round(1) : t(:not_rated) %>
+            </div>
+            -->
         </div>
     <% end %>
 </section>
