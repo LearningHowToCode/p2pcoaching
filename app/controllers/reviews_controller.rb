@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.lesson_id = params[:lesson_id]
     @review.save
-    redirect_to :back
+    redirect_to root_path
   end
 
   def update
@@ -34,7 +34,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    redirect_to :back
+    redirect_to root_path
   end
 
   private
