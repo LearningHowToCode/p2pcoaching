@@ -39,7 +39,8 @@ module ApplicationHelper
     time = date.strftime('%Y-%m-%d ') + time_part.strftime('%H:%M')
     time = Time.zone.parse time
 
-    tutor_offset   = ActiveSupport::TimeZone[lesson.tutor.timezone].try :utc_offset
+    tutor_zone_s   = lesson.tutor.try(:timezone) ? lesson.tutor.timezone : default_zone_abbr
+    tutor_offset   = ActiveSupport::TimeZone[tutor_zone_s].try :utc_offset
 
     viewer_zone_s  = viewer.try(:timezone) ? viewer.timezone : default_zone_abbr
     viewer_offset  = ActiveSupport::TimeZone[viewer_zone_s].try :utc_offset
