@@ -1,3 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2><%= t(:lesson_information) %></h2>
+      <b class="col-md-3"><%= t(:tutor) %></b>
+      <%= link_to @lesson.tutor.name, @lesson.tutor, target: '_blank' %><br/>
+      <b class="col-md-3"><%= t(:student) %></b>
+      <%= link_to @lesson.student.name, @lesson.student, target: '_blank' %><br/>
+      <b class="col-md-3"><%= t(:day) %></b>
+      <span><%= format_lesson_day @lesson %></span><br/>
+      <b class="col-md-3"><%= t(:start_time) %></b>
+      <span><%= format_lesson_time @lesson %></span><br/>
+      <b class="col-md-3"><%= t(:duration) %></b>
+      <span><%= "#{@lesson.duration} minutes" %></span><br/>
+    </div>
+  </div>
+</div>
+<br>
+
 <%= form_for([@lesson, @review]) do |f| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">
