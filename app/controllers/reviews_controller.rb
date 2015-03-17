@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   respond_to :html
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  rescue_from('ActiveRecord::RecordNotFound'){ |e| redirect_to root_path, notice: e.message }
 
   def index
     @reviews = Review.all
@@ -18,6 +19,7 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @lesson = @review.lesson
   end
 
   def create
