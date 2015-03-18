@@ -1,13 +1,16 @@
 class Tutor < ActiveRecord::Base
 
+  # Do not remove, needed for seeds, in case of needing more subjects add from admin interface
   SUBJECTS = ['English', 'Business English', 'TOEFL', 'SAT', 'GRE', 'GMAT',
               'Essay Editing', 'General Admissions Advice', 'Other']
+
   LANGUAGES = ['English', '中文', '日本語', '한국어', 'Español']
   INSTITUTIONS = ['Brown','Columbia','Cornell','Dartmouth','Harvard', 'MIT','Princeton', 'Stanford','UPenn', 'Yale', 'Other']
 
   has_one :user, as: :profile, dependent: :destroy
   has_many :lessons, dependent: :destroy
   has_many :sales, class_name: 'Order', foreign_key: 'seller_id', dependent: :destroy
+  has_and_belongs_to_many :subjects
 
   mount_uploader :image, ImageUploader
 

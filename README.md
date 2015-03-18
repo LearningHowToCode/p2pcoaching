@@ -15,6 +15,26 @@ Things you may want to cover:
 
 * Database initialization
 
+# Tutors Subjects Data Migration
+
+This migration is not a schema migration. Is intended to convert subjects from a column to a join table.
+
+For a new installation:
+
+1. `rake db:schema:load` to make sure schema is up to date.
+1. `rake db:migrate` to make sure schema is up to date.
+
+ONLY one of these:
+
+1. `rake db:seed` to add all seed data.
+1. `rails runner db/sample_data/subjects.rb` to create Subjects from Tutor::SUBJECTS.
+
+The next steps are for running installations and new ones:
+
+1. `rails runner db/data_migrations/subjects_tutors.rb` to convert what is in each tutor#subject to tutor#subjects.
+
+Notice data will be saved in join table.
+
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)

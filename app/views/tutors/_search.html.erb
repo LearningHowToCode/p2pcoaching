@@ -1,0 +1,11 @@
+<%= search_form_for(@q, html: {class: 'form-inline'}) do |f| %>
+  <%= render 'tutors/search/subjects', f: f %>
+  <%= render 'tutors/search/price', f: f %>
+  <br>
+  <div class="container-fluid">
+    <div class="row center">
+      <%= f.submit 'Search', class: 'btn' %>
+    </div>
+  </div>
+<% end %>
+

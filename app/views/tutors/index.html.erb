@@ -6,39 +6,8 @@
     <div class="center"><%= will_paginate @tutors, renderer: BootstrapPagination::Rails %></div>
 </div>
 
-<div class="container-fluid">
-  <br>
-  <div class="row">
-    <div class="center">
-      <%= search_form_for(@q, html: {class: 'form-inline'}) do |f| %>
-        <% Tutor::SUBJECTS.each do |subject| %>
-          <div class="form-group">
-            <label>
-              <% checked = subject.in?(params.try(:[], :q).try(:[], :subject_cont_any) || []) %>
-              <%= check_box_tag 'q[subject_cont_any][]', subject, checked %>
-              <%= subject %>
-            </label>
-          </div>
-        <% end %>
-        <%= f.submit 'Search', class: 'btn' %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render 'tutors/search' %>
 
-<div class="container-fluid">
-  <br>
-  <div class="row">
-    <div class="center">
-      <%= link_to t(:all), tutors_path, class: 'btn btn-info' %>
-      <%= price_filter 20, 30 %>
-      <%= price_filter 30, 50 %>
-      <%= price_filter 50, 75 %>
-      <%= price_filter 75, 100 %>
-    </div>
-  </div>
-</div>
-<%= render 'tutors/price_filter' %>
 <section class="flex">
   <div class="bg-white full-width tutors">
     <% @tutors.to_a.uniq.each do |tutor| %>
@@ -59,8 +28,8 @@
                     </li>
                 </ul>
                 <h5>
-                    <% tutor.display_subjects.split(', ').each do |subject| %>
-                        <span class="label label-info"><%= subject %></span>
+                    <% tutor.subjects.each do |subject| %>
+                        <span class="label label-info"><%= subject.name %></span>
                     <% end %>
                 </h5>
                 <h5>

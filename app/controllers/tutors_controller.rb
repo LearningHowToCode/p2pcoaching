@@ -5,7 +5,13 @@ class TutorsController < ApplicationController
   respond_to :html
 
   def index
-    @tutors = Tutor.all.completed.order("price, id ASC").paginate(page: params[:page], per_page: 10)
+    @tutors = Tutor
+      .all
+      .includes(:subjects)
+      .completed
+      .order("price, id ASC")
+      .paginate(page: params[:page], per_page: 10)
+
     @q = @tutors.ransack(params[:q])
 
     @tutors = @q.result
@@ -44,8 +50,8 @@ class TutorsController < ApplicationController
     params.require(:tutor).permit(:name, :price, :bio,
                                   :undergraduate_institution, :undergraduate_major,
                                   :graduate_institution, :graduate_study_field,
-                                  :subject, :long_bio, :skype_id, :gmail_address,
-                                  :languages, :image,:paypal_account, :timezone)
+                                  :long_bio, :skype_id, :gmail_address,
+                                  :languages, :image,:paypal_account, :timezone, subject_ids: [])
   end
 
   def normalized_tutor_params

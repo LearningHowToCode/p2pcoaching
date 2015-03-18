@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313215151) do
+ActiveRecord::Schema.define(version: 20150318203056) do
 
   create_table "lessons", force: true do |t|
     t.date     "day"
@@ -53,6 +53,20 @@ ActiveRecord::Schema.define(version: 20150313215151) do
     t.string   "preference"
     t.string   "timezone"
   end
+
+  create_table "subjects", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subjects_tutors", id: false, force: true do |t|
+    t.integer "subject_id", null: false
+    t.integer "tutor_id",   null: false
+  end
+
+  add_index "subjects_tutors", ["subject_id", "tutor_id"], name: "index_subjects_tutors_on_subject_id_and_tutor_id"
+  add_index "subjects_tutors", ["tutor_id", "subject_id"], name: "index_subjects_tutors_on_tutor_id_and_subject_id"
 
   create_table "tutors", force: true do |t|
     t.string   "name"

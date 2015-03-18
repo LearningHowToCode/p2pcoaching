@@ -1,4 +1,4 @@
-<%= form_for(@tutor) do |f| %>
+<%= simple_form_for(@tutor) do |f| %>
     <% if @tutor.errors.any? %>
         <div id="error_explanation">
           <ul>
@@ -47,10 +47,7 @@
       <%= f.text_field :graduate_study_field, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :subject, 'Subjects*' %><br>
-      <% Tutor::SUBJECTS.each do |subject| %>
-          <%= custom_checkbox 'subjects', subject, @tutor.has_subject?(subject) %>
-      <% end  %>
+      <%= f.association :subjects, as: :check_boxes %><br>
     </div>
     <div class="form-group <%= other_subject_class(@tutor) %>" id='other-subject'>
       <%= label_tag :other_subject, 'What subjects?' %><br>
