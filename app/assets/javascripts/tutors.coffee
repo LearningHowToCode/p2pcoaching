@@ -26,7 +26,12 @@ ready = ->
     else
       $other.addClass "hide"
     return
-  return
+
+  $('#price-buttons .btn').click ->
+    $form = $(@).closest('form')
+    $form.find('[name*=price_gteq]').val($(@).data('from'))
+    $form.find('[name*=price_lteq]').val($(@).data('to'))
+    $form.submit()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

@@ -47,8 +47,9 @@ module TutorsHelper
     end
   end
 
-  def price_filter(from, to)
-    link_to "#{number_to_currency from} - #{number_to_currency to}",
-      tutors_path(q: {price_gteq: from, price_lteq: to}), class: 'btn btn-info'
+  def price_button(from, to)
+    content_tag(:div, class: 'btn btn-info', data: {from: from, to: to}) do
+      "#{number_to_currency from} - #{number_to_currency to}"
+    end
   end
 end

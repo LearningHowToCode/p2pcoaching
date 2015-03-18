@@ -1,12 +1,13 @@
 <div class="container-fluid">
   <br>
   <div class="row">
-    <div class="center">
-      <%= link_to t(:all), tutors_path, class: 'btn btn-info' %>
-      <%= price_filter 20, 30 %>
-      <%= price_filter 30, 50 %>
-      <%= price_filter 50, 75 %>
-      <%= price_filter 75, 100 %>
+    <div class="center" id="price-buttons">
+      <% # When buttons are clicked they set inputs and submit form. See tutors.coffee %>
+      <div class="btn btn-info"><%= t(:all) %></div>
+      <%= price_button 20, 30 %>
+      <%= price_button 30, 50 %>
+      <%= price_button 50, 75 %>
+      <%= price_button 75, 100 %>
     </div>
   </div>
 </div>
