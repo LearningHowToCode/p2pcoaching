@@ -52,4 +52,8 @@ module TutorsHelper
       "#{number_to_currency from} - #{number_to_currency to}"
     end
   end
+
+  def tutor_rating(tutor)
+    tutor.rating ? tutor.rating.to_i : t(:not_rated)
+  end
 end
