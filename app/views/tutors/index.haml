@@ -28,9 +28,11 @@
         .tutor-rate
           .tutor-star-rating{ "data-score" => tutor.rating.try(:round) }
           = number_to_currency tutor.price
-.row.center
-  = will_paginate @tutors, renderer: BootstrapPagination::Rails
-  .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
+.row.add-bottom
+  .col-md-9.col-md-offset-3
+    .center= will_paginate @tutors, renderer: BootstrapPagination::Rails
+    .center
+      .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
 
 :javascript
     $(".tutor-star-rating").raty({
