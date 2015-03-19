@@ -1,7 +1,5 @@
 %header.how-it-works-banner
   %h1.text-center= t :tutors
-.row.center
-  = will_paginate @tutors, renderer: BootstrapPagination::Rails
 .row
   .col-md-3
     = render 'tutors/search'
