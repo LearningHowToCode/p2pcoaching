@@ -1,19 +1,16 @@
-%section
-  %ul.list-unstyled#price-buttons
+%section.no-top-pad
+  %h4= t(:price)
+  %ul.list-unstyled
     - # When buttons are clicked they set inputs and submit form. See tutors.coffee
     %li
-      .btn.btn-info= t(:any_price)
+      .btn-link{ 'data-selector' => 'price-filter' }= t(:any_price)
     %li= price_button 20, 30
     %li= price_button 30, 50
     %li= price_button 50, 75
     %li= price_button 75, 100
-.container-fluid
-  %br/
-  .row
-    .center
-      .form-group
-        = f.label 'Min. Price'
-        = f.search_field :price_gteq, class: 'form-control', style: 'width: auto'
-      .form-group
-        = f.label 'Max. Price'
-        = f.search_field :price_lteq, class: 'form-control', style: 'width: auto'
+  .form-inline
+    = f.label '$'
+    = f.search_field :price_gteq, class: 'form-control input-xsmall'
+    = f.label 'to $'
+    = f.search_field :price_lteq, class: 'form-control input-xsmall'
+    = f.submit t(:go), class: 'btn'

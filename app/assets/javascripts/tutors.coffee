@@ -27,7 +27,7 @@ ready = ->
       $other.addClass "hide"
     return
 
-  $('#price-buttons .btn').click ->
+  $('[data-selector="price-filter"]').click ->
     $form = $(@).closest('form')
     $form.find('[name*=price_gteq]').val($(@).data('from'))
     $form.find('[name*=price_lteq]').val($(@).data('to'))

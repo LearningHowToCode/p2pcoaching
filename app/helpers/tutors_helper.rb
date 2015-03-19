@@ -48,7 +48,8 @@ module TutorsHelper
   end
 
   def price_button(from, to)
-    content_tag(:div, class: 'btn btn-info', data: {from: from, to: to}) do
+    content_tag(:div, class: 'btn-link',
+                data: { selector: 'price-filter', from: from, to: to }) do
       "#{number_to_currency from} - #{number_to_currency to}"
     end
   end
