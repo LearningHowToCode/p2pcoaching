@@ -208,19 +208,9 @@
       <% end %>
     <% end %>
   </div>
-  <h1><%= t(:reviews) %></h1>
-  <div class="bg-white full-width content-pad">
-    <% reviews = @tutor.lessons.reviews %>
-    <% if reviews.present? %>
-      <%= render 'reviews/index', reviews: reviews %>
-    <% else %>
-      <%= t(:tutor_has_not_been_reviewed_yet) %>
-    <% end %>
-  </div>
-
 </section>
+<%= render 'reviews', reviews: @tutor.lessons.reviews %>
 
-<br>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

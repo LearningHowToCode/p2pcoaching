@@ -1,0 +1,7 @@
+%section.flex.md.f-column
+  %h1= t(:reviews)
+  .bg-white.full-width.content-pad
+    - if reviews.present?
+      = render 'reviews/index', reviews: reviews
+    - else
+      = t(:tutor_has_not_been_reviewed_yet)
