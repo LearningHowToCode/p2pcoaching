@@ -1,0 +1,49 @@
+%header.how-it-works-banner
+  %h1.text-center= t :tutors
+.center
+  .center= will_paginate @tutors, renderer: BootstrapPagination::Rails
+= render 'tutors/search'
+%section.flex
+  .bg-white.full-width.tutors
+    - @tutors.to_a.uniq.each do |tutor|
+      .tutor.flex
+        .tutor-img
+          = image_tag tutor.image, class: 'tutor-img'
+        .tutor-info
+          %h3
+            = link_to tutor.name, tutor
+          %ul.list-inline
+            %li
+              = tutor.undergraduate_institution
+              = tutor.undergraduate_major
+            %li
+              = tutor.graduate_institution
+              = tutor.graduate_study_field
+          %h5
+            - tutor.subjects.each do |subject|
+              %span.label.label-info= subject.name
+          %h5
+            - tutor.languages.split(', ').each do |language|
+              %span.label.label-success= language
+          %p= tutor.bio
+        .tutor-rate.flex.flex-center
+          %div
+            = number_to_currency tutor.price
+        /
+          remove to add rating
+          <div style='width: 10em'>
+          <haml_loud> (r = tutor.rating) ? r.round(1) : t(:not_rated) </haml_loud>
+          </div>
+.center
+  .center
+    = will_paginate @tutors, renderer: BootstrapPagination::Rails
+  .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
+
+:javascript
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57658580-1', 'auto');
+  ga('send', 'pageview');
