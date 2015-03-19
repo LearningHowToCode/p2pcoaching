@@ -1,10 +1,11 @@
 %header.how-it-works-banner
   %h1.text-center= t :tutors
-.center
-  .center= will_paginate @tutors, renderer: BootstrapPagination::Rails
-= render 'tutors/search'
-%section.flex
-  .bg-white.full-width.tutors
+.row.center
+  = will_paginate @tutors, renderer: BootstrapPagination::Rails
+.row
+  .col-md-3
+    = render 'tutors/search'
+  .col-md-9.bg-white.tutors
     - @tutors.to_a.uniq.each do |tutor|
       .tutor.flex
         .tutor-img
@@ -30,9 +31,8 @@
           %div
             = number_to_currency tutor.price
         = tutor_rating(tutor)
-.center
-  .center
-    = will_paginate @tutors, renderer: BootstrapPagination::Rails
+.row.center
+  = will_paginate @tutors, renderer: BootstrapPagination::Rails
   .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
 
 :javascript

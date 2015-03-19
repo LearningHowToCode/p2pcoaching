@@ -1,0 +1,8 @@
+%section.no-bottom-pad
+  %ul.list-unstyled
+    - Subject.all.each do |subject|
+      %li
+        %label{ "data-selector" => 'subject-filter' }
+          - checked = subject.name.in?(params.try(:[], :q).try(:[], :subjects_name_in) || [])
+          = check_box_tag "q[#{:subjects_name_in}][]", subject.name, checked
+          = subject.name
