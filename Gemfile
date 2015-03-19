@@ -21,6 +21,7 @@ gem 'will_paginate-bootstrap', '~> 1.0.0'
 gem 'ransack', :git => "git://github.com/activerecord-hackery/ransack.git"
 gem 'squeel', :git => "git://github.com/activerecord-hackery/squeel.git"
 gem 'simple_form'
+gem 'haml'
 
 group :development do
   gem 'letter_opener'
