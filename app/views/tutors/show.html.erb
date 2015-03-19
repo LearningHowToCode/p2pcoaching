@@ -11,7 +11,7 @@
               <h2 class="half-top">
                 <%= @tutor.name %>
               </h2>
-              <div id="tutor-rating" class="star-rating"></div>
+              <div class="tutor-star-rating"></div>
               <ul class="list-inline">
                 <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
                 <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
@@ -64,7 +64,7 @@
               <h2 class="half-top">
                 <%= @tutor.name %>
               </h2>
-              <div id="tutor-rating" class="star-rating"></div>
+              <div class="tutor-star-rating"></div>
               <ul class="list-inline">
                 <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
                 <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
@@ -177,7 +177,7 @@
 
 
 <script>
-  $("#tutor-rating").raty({
+  $(".tutor-star-rating").raty({
     score: <%= @tutor.rating.try(:round) %>,
     path: '/assets',
     readOnly: true});

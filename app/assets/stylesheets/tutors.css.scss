@@ -6,7 +6,7 @@
 	width: 136px;
 }
 .tutor .tutor-info{
-	width: calc(85% - 136px)
+	width: calc(80% - 136px)
 }
 .tutor .tutor-info h3{
 	margin-top: 0px;
@@ -20,8 +20,9 @@
 	color: #888;
 }
 .tutor .tutor-rate{
-	width: 15%;
+	width: 20%;
 	font-size: 18px;
+    text-align: right;
 }
 .tutor-header{
 	padding-bottom: 24px;
@@ -75,6 +76,6 @@
 .bg-paypal{
 	background-color: #003087;
 }
-.star-rating img{
-  width: 30px;
+.tutor-star-rating img{
+  width: 25px;
 }
