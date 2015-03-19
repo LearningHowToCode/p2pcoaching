@@ -23,6 +23,8 @@ class Tutor < ActiveRecord::Base
   delegate :email, to: :user
 
   def is_the?(current_user)
+    return false if current_user.nil?
+
     current_user == self.user
   end
 
