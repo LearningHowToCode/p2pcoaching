@@ -29,11 +29,7 @@
         .tutor-rate.flex.flex-center
           %div
             = number_to_currency tutor.price
-        /
-          remove to add rating
-          <div style='width: 10em'>
-          <haml_loud> (r = tutor.rating) ? r.round(1) : t(:not_rated) </haml_loud>
-          </div>
+        = tutor.rating ? tutor.rating.to_i : t(:not_rated)
 .center
   .center
     = will_paginate @tutors, renderer: BootstrapPagination::Rails
