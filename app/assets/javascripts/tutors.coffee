@@ -33,5 +33,8 @@ ready = ->
     $form.find('[name*=price_lteq]').val($(@).data('to'))
     $form.submit()
 
+  $('[data-selector="subject-filter"]').change ->
+    $(@).closest('form').submit()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
