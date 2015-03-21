@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
     @lesson = Lesson.find(params[:lesson_id])
 
     # TODO use authorization solution
-    # return redirect_to(root_path, notice: t(:unauthorized) ) if unauthorized_user
+    return redirect_to(root_path, notice: t(:unauthorized) ) if unauthorized_user
 
     respond_with(@review)
   end
