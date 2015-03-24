@@ -16,7 +16,7 @@ class Tutor < ActiveRecord::Base
 
   validates_presence_of  'name', 'price', 'bio',
                          'undergraduate_institution', 'undergraduate_major',
-                         'subject', 'long_bio', 'skype_id','gmail_address',
+                         'subjects', 'long_bio', 'skype_id','gmail_address',
                          'languages', on: :update
 
   scope :completed, ->{ where(completed_profile: true) }
@@ -38,9 +38,5 @@ class Tutor < ActiveRecord::Base
 
   def other_subject
     self.subject.split(',').last if self.subject.present?
-  end
-
-  def display_subjects
-    self.subject.sub(/Other, |, Other/, '')
   end
 end

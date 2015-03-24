@@ -16,8 +16,8 @@
                 <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
                 <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
               </ul>
-              <% @tutor.display_subjects.split(', ').each do |subject| %>
-                <span class="label label-info"><%= subject %></span>
+              <% @tutor.subjects.each do |subject| %>
+                <span class="label label-info"><%= subject.name %></span>
               <% end %>
               <h5>
                 <% @tutor.languages.split(', ').each do |language| %>
@@ -69,8 +69,8 @@
                 <li><%= @tutor.undergraduate_institution %> <%= @tutor.undergraduate_major %></li>
                 <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
               </ul>
-              <% @tutor.display_subjects.split(', ').each do |subject| %>
-                <span class="label label-info"><%= subject %></span>
+              <% @tutor.subjects.each do |subject| %>
+                <span class="label label-info"><%= subject.name %></span>
               <% end %>
               <h5>
                 <% @tutor.languages.split(', ').each do |language| %>
