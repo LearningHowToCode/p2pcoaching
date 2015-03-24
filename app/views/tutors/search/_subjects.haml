@@ -1,7 +1,7 @@
 %section.no-bottom-pad
   %h4= t(:subjects)
   %ul.list-unstyled
-    - Subject.all.each do |subject|
+    - Subject.own.all.each do |subject|
       %li
         %label{ "data-selector" => 'subject-filter' }
           - checked = subject.name.in?(params.try(:[], :q).try(:[], :subjects_name_in) || [])
