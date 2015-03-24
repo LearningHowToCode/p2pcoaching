@@ -17,6 +17,7 @@
                 <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
               </ul>
               <% @tutor.subjects.each do |subject| %>
+                <%- next if subject.name == 'Other' %>
                 <span class="label label-info"><%= subject.name %></span>
               <% end %>
               <h5>
@@ -70,6 +71,7 @@
                 <li><%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %></li>
               </ul>
               <% @tutor.subjects.each do |subject| %>
+                <%- next if subject.name == 'Other' %>
                 <span class="label label-info"><%= subject.name %></span>
               <% end %>
               <h5>

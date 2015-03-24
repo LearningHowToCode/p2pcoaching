@@ -20,7 +20,7 @@
               = tutor.graduate_study_field
           %h5
             - tutor.subjects.each do |subject|
-              %span.label.label-info= subject.name
+              %span.label.label-info= subject.name unless subject.name == 'Other'
           %h5
             - tutor.languages.split(', ').each do |language|
               %span.label.label-success= language
