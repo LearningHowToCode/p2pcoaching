@@ -53,6 +53,7 @@
       <%= label_tag :other_subjects, 'What subjects?' %><br>
       <%= text_field_tag 'tutor[other_subjects]',
                          @tutor.other_subjects, class: "form-control" %>
+      <small><%= t(:other_subjects_hint) %></small>
     </div>
     <div class="form-group">
       <%= f.label :price, 'Hourly Price USD* (This is the price students will pay. You will get 80% of it deposited to your PayPal or Venmo immediately after a lesson is completed.)' %><br>
