@@ -32,10 +32,6 @@ class Tutor < ActiveRecord::Base
     self.languages.split(', ').include?(language) if self.languages.present?
   end
 
-  def has_subject?(subject)
-    self.subject.split(', ').include?(subject) if self.subject.present?
-  end
-
   def other_subjects
     self.subjects.where(own: false).map(&:name).join(', ') if self.subjects.present?
   end

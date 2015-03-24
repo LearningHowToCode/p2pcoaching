@@ -55,11 +55,11 @@ class TutorsController < ApplicationController
   end
 
   def normalized_tutor_params
-    subjects = languages = {}
+    subject_ids = languages = {}
     attrs = tutor_params
 
-    subjects = NormalizeSubjects.new(params[:tutor][:subjects]).call if params[:tutor][:subjects]
-    languages = params[:tutor][:languages].values.join(', ') if params[:tutor][:languages]
+    subject_ids = SetOtherSubjects.new(params[:tutor][:other_subjects]).call if params[:tutor][:other_subjects]
+    attrs[:subject_ids] = attrs[:subject_ids].push(subject_ids).flatten if subject_ids
 
     if params[:tutor][:undergraduate_institution] == 'Other'
       attrs = attrs.merge(undergraduate_institution: params[:tutor][:other_undergraduate_institution])
@@ -68,7 +68,8 @@ class TutorsController < ApplicationController
       attrs = attrs.merge(graduate_institution: params[:tutor][:other_graduate_institution])
     end
 
-    attrs.merge(subject: subjects).merge(languages: languages)
+    languages = params[:tutor][:languages].values.join(', ') if params[:tutor][:languages]
+    attrs.merge(languages: languages)
   end
 
   def check_user_permissions

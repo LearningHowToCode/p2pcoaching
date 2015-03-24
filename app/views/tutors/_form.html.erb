@@ -50,8 +50,8 @@
       <%= f.association :subjects, as: :check_boxes, collection: Subject.own.all %><br>
     </div>
     <div class="form-group <%= other_subject_class(@tutor) %>" id='other-subject'>
-      <%= label_tag :other_subject, 'What subjects?' %><br>
-      <%= text_field_tag 'tutor[subjects][other_subject]',
+      <%= label_tag :other_subjects, 'What subjects?' %><br>
+      <%= text_field_tag 'tutor[other_subjects]',
                          @tutor.other_subjects, class: "form-control" %>
     </div>
     <div class="form-group">
