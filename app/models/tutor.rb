@@ -36,7 +36,7 @@ class Tutor < ActiveRecord::Base
     self.subject.split(', ').include?(subject) if self.subject.present?
   end
 
-  def other_subject
-    self.subject.split(',').last if self.subject.present?
+  def other_subjects
+    self.subjects.where(own: false).map(&:name).join(', ') if self.subjects.present?
   end
 end

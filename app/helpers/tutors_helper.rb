@@ -26,7 +26,9 @@ module TutorsHelper
   end
 
   def other_subject_class(tutor)
-    unless tutor.subject.try(:include?, 'Other')
+    other_subject = Subject.find_by_name('Other')
+
+    unless tutor.subjects.try(:include?, other_subject)
       'hide'
     end
   end

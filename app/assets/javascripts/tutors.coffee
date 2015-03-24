@@ -17,7 +17,7 @@ ready = ->
       $other.addClass "hide"
     return
 
-  $('#tutor_subjects_Other').change ->
+  $(".tutor_subjects input[type='checkbox']:last").change ->
     $other = $("#other-subject")
     $other.find("input").val ""
     $other.attr('value', '')
