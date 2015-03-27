@@ -18,8 +18,8 @@ gem 'country_select'
 gem 'fog'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap', '~> 1.0.0'
-gem 'ransack', :git => "git://github.com/activerecord-hackery/ransack.git"
-gem 'squeel', :git => "git://github.com/activerecord-hackery/squeel.git"
+gem 'ransack'
+gem 'squeel'
 gem 'simple_form'
 gem 'haml'
 
