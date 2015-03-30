@@ -1,0 +1,1 @@
+NonStupidDigestAssets.whitelist += ['star-on.png', 'star-off.png']
