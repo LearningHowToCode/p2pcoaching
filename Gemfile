@@ -22,7 +22,6 @@ gem 'ransack'
 gem 'squeel'
 gem 'simple_form'
 gem 'haml'
-gem "non-stupid-digest-assets"
 
 group :development do
   gem 'letter_opener'
