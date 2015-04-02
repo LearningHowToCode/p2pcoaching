@@ -26,6 +26,16 @@ $jumbotron-bg: white;
 .navbar-right{
 	width: 330px;
 }
+.navbar-toggle{
+	border: none;
+	margin-right: 0;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:focus{
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: white;
+}
 h1 .pull-right{
 	margin-top: 2px;
 }
@@ -50,10 +60,10 @@ section {
 }
 
 section.md{
-	padding: 12px 36px;
+	padding: 12px 15px;
 }
 section.sm{
-	padding: 6px 36px;
+	padding: 6px 15px;
 }
 .half-top{
 	margin-top: 3px;
@@ -175,7 +185,7 @@ section.sm{
 	width: 33.333333%;
 }
 .navbar-default{
-	background-color: #173e29;
+	background-color: #408b62;
 	border: none;
 }
 
@@ -193,7 +203,7 @@ section.sm{
 }
 
 .navbar-nav .dropdown-menu{
-	background-color: #173e29;
+	background-color: #408b62;
 	border-top: none;
 }
 
@@ -234,8 +244,13 @@ section.sm{
 	.flex{
 		flex-direction: column;
 	}
-
+	section{
+		padding: 15px;
+	}
 	.navbar-header{
 		width: auto;
+	}
+	.xs-mg-bottom{
+		margin-bottom: 24px;
 	}
 }
