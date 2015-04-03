@@ -1,4 +1,4 @@
-%header.how-it-works-banner
+%header.how-it-works-banner.hidden-xs.hidden-sm
   %h1.text-center= t :tutors
 - unless browser.mobile? || browser.tablet?
   .row.rm-all
@@ -39,8 +39,36 @@
         .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
 - else
   = render 'layouts/subheader'
-  #tutor_search_container
+  #tutor_search_container.hidden
     = render 'tutors/search'
+  .tutors
+    - @tutors.to_a.uniq.each do |tutor|
+      .tutor.flex
+        .tutor-img
+          = image_tag tutor.image, class: 'center-cropped'
+        .tutor-info
+          .tutor-info-inner
+            %h3
+              = link_to tutor.name, tutor
+            .tutor-star-rating{ "data-score" => tutor.rating.try(:round) }
+            %ul.list-inline
+              %li
+                = tutor.undergraduate_institution
+                = tutor.undergraduate_major
+                - if tutor.graduate_institution? || tutor.graduate_study_field?
+                  = ', '
+                = tutor.graduate_institution
+                = tutor.graduate_study_field
+            %p= tutor.bio
+            %h5
+              - tutor.subjects.each do |subject|
+                %span.label.label-info= subject.name unless subject.name == 'Other'
+              - tutor.languages.split(', ').each do |language|
+                %span.label.label-success= language
+            .tutor-rate
+              %h3.tutor-price
+                = number_to_currency tutor.price
+
 
 :javascript
     $(".tutor-star-rating").raty({

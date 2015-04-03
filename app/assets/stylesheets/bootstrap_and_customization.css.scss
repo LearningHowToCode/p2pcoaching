@@ -89,14 +89,6 @@ section.sm{
 .input-xsmall{
  width: 60px
 }
-.label-info{
-	background-color: #8cb9a1;
-	font-weight: normal;
-}
-.label-success{
-	background-color: #8cb9a1;
-	font-weight: normal;
-}
 .bg-white {
   background-color: white;
 }
@@ -261,12 +253,6 @@ section.sm{
 .filters .range-price li{
 	margin-bottom: 6px;
 }
-.center-cropped {
-  object-fit: cover;
-  object-position: center;
-  height: 184px;
-  width: 184px;
-}
 #error_explanation{
 	background-color: #f2dede;
 	margin-bottom: 16px;
@@ -302,20 +288,5 @@ section.sm{
 		font-size: 14px;
 		margin: 0px;
 		line-height: 1.428571429;
-	}
-	#tutor_search_container{
-		position: absolute;
-		background-color: white;
-		z-index: 60000;
-		width: 100%;
-		top: 0px;
-		left: 0;
-		height: 100%;
-		box-sizing: border-box;
-  	overflow: auto;
-  	-webkit-transform: translate3d(0,0,0);
-  	transform: translate3d(0,0,0);
-  	-webkit-transition-duration: 400ms;
-  	transition-duration: 400ms;
 	}
 }
