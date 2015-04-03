@@ -1,5 +1,7 @@
-%section.no-bottom-pad
-  %h4= t(:subjects)
+#subjects
+  %h4
+    = t(:subjects)
+  %hr
   %ul.list-unstyled
     - Subject.own.all.each do |subject|
       %li

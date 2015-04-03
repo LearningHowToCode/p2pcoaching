@@ -1,5 +1,6 @@
-<%= search_form_for(@q, html: {class: 'form-inline'}) do |f| %>
-  <%= render 'tutors/search/subjects', f: f %>
-  <%= render 'tutors/search/price', f: f %>
-<% end %>
-
+<div class="filters">
+  <%= search_form_for(@q, html: {class: 'form-inline'}) do |f| %>
+    <%= render 'tutors/search/subjects', f: f %>
+    <%= render 'tutors/search/price', f: f %>
+  <% end %>
+</div>

@@ -1,5 +1,7 @@
-%section.no-top-pad
-  %h4= t(:price)
+#pricing
+  %h4
+    = t(:price)
+  %hr
   %ul.list-unstyled
     - # When buttons are clicked they set inputs and submit form. See tutors.coffee
     %li
@@ -8,9 +10,15 @@
     %li= price_button 30, 50
     %li= price_button 50, 75
     %li= price_button 75, 100
-  .form-inline
-    = f.label '$'
-    = f.search_field :price_gteq, class: 'form-control input-xsmall'
-    = f.label 'to $'
-    = f.search_field :price_lteq, class: 'form-control input-xsmall'
-    = f.submit t(:go), class: 'btn'
+  %h4
+    = t('price_range')
+  %hr
+  %ul.list-unstyled.range-price
+    %li
+      = f.label 'From $'
+      = f.search_field :price_gteq, class: 'form-control'
+    %li
+      = f.label 'To $'
+      = f.search_field :price_lteq, class: 'form-control'
+    %li
+      = f.submit t(:go), class: 'btn btn-primary'

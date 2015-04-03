@@ -1,38 +1,46 @@
 %header.how-it-works-banner
   %h1.text-center= t :tutors
-.row
-  .col-md-3
+- unless browser.mobile? || browser.tablet?
+  .row.rm-all
+    .col-md-2
+      = render 'tutors/search'
+    .col-md-10
+      .tutors
+        - @tutors.to_a.uniq.each do |tutor|
+          .tutor.flex
+            .tutor-img
+              = image_tag tutor.image, class: 'tutor-img center-cropped'
+            .tutor-info
+              .tutor-info-inner
+                %h3
+                  = link_to tutor.name, tutor
+                %ul.list-inline
+                  %li
+                    = tutor.undergraduate_institution
+                    = tutor.undergraduate_major
+                  %li
+                    = tutor.graduate_institution
+                    = tutor.graduate_study_field
+                %p= tutor.bio
+                %h5
+                  - tutor.subjects.each do |subject|
+                    %span.label.label-info= subject.name unless subject.name == 'Other'
+                %h5
+                  - tutor.languages.split(', ').each do |language|
+                    %span.label.label-success= language
+            .tutor-rate
+              %h3.tutor-price
+                = number_to_currency tutor.price
+              .tutor-star-rating{ "data-score" => tutor.rating.try(:round) }
+  .row.rm-all
+    .col-md-9.col-md-offset-3
+      .center= will_paginate @tutors, renderer: BootstrapPagination::Rails
+      .center
+        .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
+- else
+  = render 'layouts/subheader'
+  #tutor_search_container
     = render 'tutors/search'
-  .col-md-9.bg-white.tutors
-    - @tutors.to_a.uniq.each do |tutor|
-      .tutor.flex
-        .tutor-img
-          = image_tag tutor.image, class: 'tutor-img'
-        .tutor-info
-          %h3
-            = link_to tutor.name, tutor
-          %ul.list-inline
-            %li
-              = tutor.undergraduate_institution
-              = tutor.undergraduate_major
-            %li
-              = tutor.graduate_institution
-              = tutor.graduate_study_field
-          %h5
-            - tutor.subjects.each do |subject|
-              %span.label.label-info= subject.name unless subject.name == 'Other'
-          %h5
-            - tutor.languages.split(', ').each do |language|
-              %span.label.label-success= language
-          %p= tutor.bio
-        .tutor-rate
-          .tutor-star-rating{ "data-score" => tutor.rating.try(:round) }
-          = number_to_currency tutor.price
-.row.add-bottom
-  .col-md-9.col-md-offset-3
-    .center= will_paginate @tutors, renderer: BootstrapPagination::Rails
-    .center
-      .fb-like{"data-action" => "like", "data-href" => "https://pairbis.com/", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
 
 :javascript
     $(".tutor-star-rating").raty({
