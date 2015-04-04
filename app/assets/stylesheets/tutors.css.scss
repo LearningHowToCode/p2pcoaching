@@ -98,6 +98,11 @@
 	display: inline-block;
 	margin-bottom: 12px;
 }
+.tutor-star-rating, .review-rating{
+  img{
+    width: 18px;
+  }
+}
 .bg-skype{
 	background-color: #00ADEF;
 }
@@ -110,11 +115,71 @@
 .bg-paypal{
 	background-color: #003087;
 }
-.tutor-star-rating, .review-rating{
-  img{
-    width: 18px;
-  }
+
+.tutor-mg{
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  padding: 0px;
+  right: 0px;
+  background-color: #102318;
+  overflow: hidden;
+  color: white;
 }
+.tutor-mg input, .tutor-mg textarea, .tutor-mg select{
+	background-color: #204631;
+	border-color: #204631;
+	color: white;
+}
+.tutor-mg-inner{
+	padding: 15px;
+}
+.tutor-mg h3{
+	color: #d9e8e0;
+	font-size: 20px;
+}
+.tutor-mg p{
+	color: white;
+}
+.tutor-mg .btn-primary{
+	background-color: #db6f46;
+}
+
+.tutor-sw{
+	margin-right: 300px;
+	padding: 18px 20px;
+}
+.tutor-sw-img img {
+  object-fit: cover;
+  object-position: center;
+  height: 150px;
+  width: 150px;
+}
+.tutor-sw-info{
+	padding: 12px 15px;
+	color: #777;
+}
+.tutor-sw-info h2, .tutor-sw-info h3, .tutor-sw-info h4, .tutor-sw-info h5 {
+	color: #555;
+}
+.tutor-sw-info h2{
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+.tutor-sw-info h5{
+	font-size: 16px;
+	margin-top: 3px;
+}
+.tutor-sw .tutor-star-rating{
+	margin-bottom: 12px;
+}
+.tutor-sw .tutor-sw-details{
+	padding: 15px;
+	background-color: #e8e8e8;
+	color: #878787;
+	margin-top: 15px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	.lm-sm{
 		padding: 0 6px;
