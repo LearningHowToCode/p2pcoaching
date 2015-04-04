@@ -1,9 +1,9 @@
 <% reviews.each do |review| %>
   <div class="row review">
-    <div class="col-sm-8 col-md-8">
+    <div class="col-md-8">
       <h4><%= review.lesson.student.name %></h4>      
     </div>
-    <div class="col-sm-4 col-md-4 text-right">
+    <div class="col-md-4 text-right">
       <div class="review-rating" data-score="<%= review.rating %>"></div>
       <% if current_user.try(:admin?) %>
         <%= link_to 'Destroy', review, method: :delete, class: 'btn btn-danger',data: { confirm: 'Are you sure?' } %>

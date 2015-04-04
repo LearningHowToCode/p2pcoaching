@@ -212,6 +212,9 @@
 	.lm-sm{
 		padding: 0 6px;
 	}
+	.content-pad{
+		padding: 12px 15px;
+	}
 	.tutor.flex{
 		flex-direction: row;
 	}
@@ -284,7 +287,33 @@
 	.tutor-star-rating img, .review-rating img {
   	width: 12px;
 	}
+	.tutor-sw{
+		margin-right: 0;
+	}
+	.tutor-sw .tutor-star-rating{
+		text-align: center;
+	}
+	.tutor-sw .tutor-sw-info{
+		padding: 0px;
+		margin-bottom: 15px;
+	}
+	.tutor-sw .tutor-sw-info .tutor-star-rating img{
+		width: 18px;
+	}
+	.tutor-sw .review h4{
+		margin-bottom: 4px;
+	}
+	.tutor-sw .review .review-rating{
+		text-align: left;
+		margin-bottom: 15px;
+	}
 	.tutor-mg{
 		right: -300px;
+	}
+	.lesson{
+		padding: 15px;
+		background-color: #f2f2f2;
+		border: 1px solid #eee;
+		margin-bottom: 15px;
 	}
 }
