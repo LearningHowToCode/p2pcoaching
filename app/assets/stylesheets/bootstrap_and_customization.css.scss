@@ -40,18 +40,9 @@ $jumbotron-bg: white;
 h1 .pull-right{
 	margin-top: 2px;
 }
-h3 {
-	color: #c0392b;
+h1, h2, h3, h4, h5, h6{
+	color: #555;
 }
-
-h4 {
-	color: #c0392b;
-}
-
-h2 {
-	color: #c0392b;
-}
-
 p{
 	color: #777;
 }
@@ -220,7 +211,9 @@ section.sm{
 	background-color: transparent;
 }
 
-
+.homepage h2, .homepage h3{
+	color: #c0392b;
+}
 .login{
 	width: 320px;
 	padding: 24px;

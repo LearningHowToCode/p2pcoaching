@@ -14,7 +14,8 @@
       = render 'lessons/lessons_list'
   - else
     - if lessons.count.zero?
-      = t :please_email_us
+      .alert.alert-info.rm-bottom
+        = t :please_email_us
     - else
       = render 'lessons/lessons_list'
       = t :if_none_of
