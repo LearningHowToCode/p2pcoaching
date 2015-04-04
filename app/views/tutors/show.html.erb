@@ -23,26 +23,23 @@
           <br>
           <%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %>
           <div class="tutor-sw-details">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled rm-bottom">
               <li>
-                <%= fa_icon "dollar"%>
-                <%=t :hourly_price %>
-                <%= number_to_currency @tutor.price %>
+                <%=t :hourly_price %> <%= number_to_currency @tutor.price %>
               </li>
               <li>
-                <%= fa_icon "clock-o"%>
                 <%=t :hourly_price2 %>
               </li>
-              <li>
-                <%= fa_icon "calendar"%>
-                <%=t :last_update %>
-                <%= @tutor.updated_at.strftime('%B %Y') %>
+              <li class="rm-bottom">
+                <%=t :last_update %> <%= @tutor.updated_at.strftime('%b %Y') %>
               </li>
             </ul>
           </div>
           <%= link_to edit_tutor_path(@tutor), class: 'btn btn-primary btn-block' do %>
+            <%= fa_icon 'pencil' %>
             Edit profile
           <% end %>
+          <button class="btn btn-primary btn-block"><%= fa_icon 'envelope' %> Send message</button>
         </div>
       </div>
     <% end %>

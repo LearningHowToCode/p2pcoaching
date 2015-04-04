@@ -73,7 +73,7 @@ section.sm{
 	margin-top: 0px;
 }
 .rm-bottom{
-	margin-bottom: 0px;
+	margin-bottom: 0px !important;
 }
 .rm-all{
 	margin: 0;
@@ -177,7 +177,7 @@ section.sm{
 	padding: 36px 0px; 
 }
 .content-pad{
-	padding: 36px;
+	padding: 30px 36px;
 }
 .full-width{
 	width: 100%;

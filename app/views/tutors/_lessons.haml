@@ -6,15 +6,15 @@
           %i.glyphicon.glyphicon-plus
           New Lesson
     = t :lessons
-  .bg-white.full-width.content-pad
-    - if @tutor.is_the?(current_user)
-      - if lessons.count.zero?
-        You haven't created open lessons yet. Click "New Lesson" to create one now!
-      - else
-        = render 'lessons/lessons_list'
+
+  - if @tutor.is_the?(current_user)
+    - if lessons.count.zero?
+      You haven't created open lessons yet. Click "New Lesson" to create one now!
     - else
-      - if lessons.count.zero?
-        = t :please_email_us
-      - else
-        = render 'lessons/lessons_list'
-        = t :if_none_of
+      = render 'lessons/lessons_list'
+  - else
+    - if lessons.count.zero?
+      = t :please_email_us
+    - else
+      = render 'lessons/lessons_list'
+      = t :if_none_of
