@@ -131,6 +131,7 @@
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
+
 .tutor-mg input, .tutor-mg textarea, .tutor-mg select{
 	background-color: #555;
 	border-color: #555;
@@ -243,20 +244,19 @@
 	.tutor-img{
 		margin-left: 6px;
 	}
-	#tutor_search_container{
-		position: absolute;
-		background-color: white;
-		z-index: 60000;
-		width: 100%;
-		top: 0px;
-		left: 0;
+	.tutor-fl{
+		position: fixed;
 		height: 100%;
-		box-sizing: border-box;
-  	overflow: auto;
-  	-webkit-transform: translate3d(0,0,0);
-  	transform: translate3d(0,0,0);
-  	-webkit-transition-duration: 400ms;
-  	transition-duration: 400ms;
+		width: 300px;
+		background-color: white;
+		z-index: 84000;
+		top: 0;
+		right: -300px;
+		overflow: auto;
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+		-webkit-transition-duration: 400ms;
+		transition-duration: 400ms;
 	}
 	.tutor .center-cropped{
 		width: 40px;

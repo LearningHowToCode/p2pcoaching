@@ -274,13 +274,17 @@ section.sm{
 	}
 	.subheader{
 		background-color: white;
-		padding: 15px;
+		padding: 6px;
 		boder-bottom: 1px solid #ccc;
 	}
 	.subheader h3{
 		color: #333;
-		font-size: 14px;
+		font-size: 15px;
 		margin: 0px;
+		padding: 6px 0px;
 		line-height: 1.428571429;
+	}
+	#subjects h4{
+		margin-top: 0;
 	}
 }
