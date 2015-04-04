@@ -5,6 +5,9 @@
     </div>
     <div class="col-sm-4 col-md-4 text-right">
       <div class="review-rating" data-score="<%= review.rating %>"></div>
+      <% if current_user.try(:admin?) %>
+        <%= link_to 'Destroy', review, method: :delete, class: 'btn btn-danger',data: { confirm: 'Are you sure?' } %>
+      <% end %>
     </div>
     <div class="clearfix"></div>
     <div class="col-md-12">
@@ -15,10 +18,6 @@
       </p>
     </div>
   </div>
-
-  <% if current_user.try(:admin?) %>
-    <%= link_to 'Destroy', review, method: :delete, class: 'btn btn-danger',data: { confirm: 'Are you sure?' } %>
-  <% end %>
 <% end %>
 
 <script>

@@ -2,7 +2,7 @@
   %h3.rm-top
     .pull-right
       - if (@tutor.is_the?(current_user)) && @tutor.completed_profile?
-        = link_to new_lesson_path, class: 'btn btn-primary pull-right', data: { no_turbolink: true } do
+        = link_to new_lesson_path, class: 'btn btn-primary btn-sm pull-right', data: { no_turbolink: true } do
           %i.glyphicon.glyphicon-plus
           New Lesson
     = t :lessons
