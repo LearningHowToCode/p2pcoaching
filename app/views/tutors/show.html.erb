@@ -7,6 +7,7 @@
 </div>
 
 <div class="tutor-sw">
+  <div id="notice"><%= notice %></div>
   <div class="row">
     <% unless @tutor.is_the?(current_user) %>
       <div class="col-sm-3 col-md-3">
@@ -22,13 +23,26 @@
           <br>
           <%= @tutor.graduate_institution %> <%= @tutor.graduate_study_field %>
           <div class="tutor-sw-details">
-            <%=t :hourly_price %>
-            <h5><%= number_to_currency @tutor.price %></h5>
-            <%=t :class_length %>
-            <h5><%=t :hourly_price2 %></h5>
-            <%=t :last_update %>
-            <h5><%= @tutor.updated_at.strftime('%B %Y') %></h5>
+            <ul class="list-unstyled">
+              <li>
+                <%= fa_icon "dollar"%>
+                <%=t :hourly_price %>
+                <%= number_to_currency @tutor.price %>
+              </li>
+              <li>
+                <%= fa_icon "clock-o"%>
+                <%=t :hourly_price2 %>
+              </li>
+              <li>
+                <%= fa_icon "calendar"%>
+                <%=t :last_update %>
+                <%= @tutor.updated_at.strftime('%B %Y') %>
+              </li>
+            </ul>
           </div>
+          <%= link_to edit_tutor_path(@tutor), class: 'btn btn-primary btn-block' do %>
+            Edit profile
+          <% end %>
         </div>
       </div>
     <% end %>
@@ -51,6 +65,93 @@
           <span class="label label-success"><%= language %></span>
         <% end %>
       </h5>
+    </div>
+    <% if @tutor.is_the?(current_user) %>
+      <br>
+      <div class="bg-white full-width content-pad">
+        <section class="flex space-between tutor-content md">
+          <div class="flex f-column relative">
+            <div class="flex f-auto f-column relative bg-white">
+              <div class="flex f-auto relative tutor-icon">
+                <div class="flex f-center f-center-jtd f-vertical centerblock">
+                  <div class="relative">
+                    <figure>
+                      <%= image_tag 'gmail-logo.png', width: 75, height: 75 %>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="f-center f-row flex tutor-value full-width bg-gmail">
+                <div class="centerblock text-center">
+                  <%= @tutor.gmail_address %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex f-column relative">
+            <div class="flex f-auto f-column relative bg-white">
+              <div class="flex f-auto relative tutor-icon">
+                <div class="flex f-center f-center-jtd f-vertical centerblock">
+                  <div class="relative">
+                    <figure>
+                      <%= image_tag 'language.png', width: 75, height: 75 %>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="f-center f-row flex tutor-value full-width bg-lang">
+                <div class="centerblock text-center">
+                  <%= @tutor.languages %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex f-column relative">
+            <div class="flex f-auto f-column relative bg-white">
+              <div class="flex f-auto relative tutor-icon">
+                <div class="flex f-center f-center-jtd f-vertical centerblock">
+                  <div class="relative">
+                    <figure>
+                      <%= image_tag 'skype-logo.png', width: 75, height: 75 %>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="f-center f-row flex tutor-value full-width bg-skype">
+                <div class="centerblock text-center">
+                  <%= @tutor.skype_id %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex f-column relative">
+            <div class="flex f-auto f-column relative bg-white">
+              <div class="flex f-auto relative tutor-icon">
+                <div class="flex f-center f-center-jtd f-vertical centerblock">
+                  <div class="relative">
+                    <figure>
+                      <%= image_tag 'paypal-logo.png', width: 75, height: 75 %>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="f-center f-row flex tutor-value full-width bg-paypal">
+                <div class="centerblock text-center">
+                  <%= @tutor.paypal_account %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    <% end %>
+    <br>
+    <div class="bg-white full-width content-pad">
+      <%= render 'lessons', lessons: @lessons %>
+    </div>
+    <br>
+    <div class="bg-white full-width content-pad">
+      <%= render 'reviews', reviews: @tutor.lessons.reviews %>
     </div>
   </div>
 </div>

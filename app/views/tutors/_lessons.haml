@@ -1,12 +1,11 @@
-%section.flex.md.f-column
-  %div
-    %h1
-      .pull-right
-        - if (@tutor.is_the?(current_user)) && @tutor.completed_profile?
-          = link_to new_lesson_path, class: 'btn btn-primary pull-right', data: { no_turbolink: true } do
-            %i.glyphicon.glyphicon-plus
-            New Lesson
-      = t :lessons
+.flex.f-column
+  %h3.rm-top
+    .pull-right
+      - if (@tutor.is_the?(current_user)) && @tutor.completed_profile?
+        = link_to new_lesson_path, class: 'btn btn-primary pull-right', data: { no_turbolink: true } do
+          %i.glyphicon.glyphicon-plus
+          New Lesson
+    = t :lessons
   .bg-white.full-width.content-pad
     - if @tutor.is_the?(current_user)
       - if lessons.count.zero?
