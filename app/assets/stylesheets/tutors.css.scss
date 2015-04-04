@@ -126,6 +126,10 @@
   background-color: #333;
   overflow: hidden;
   color: white;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
 }
 .tutor-mg input, .tutor-mg textarea, .tutor-mg select{
 	background-color: #555;
@@ -279,5 +283,8 @@
 	}
 	.tutor-star-rating img, .review-rating img {
   	width: 12px;
+	}
+	.tutor-mg{
+		right: -300px;
 	}
 }
