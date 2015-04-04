@@ -122,32 +122,36 @@
   position: fixed;
   padding: 0px;
   right: 0px;
-  background-color: #102318;
+  background-color: #333;
   overflow: hidden;
   color: white;
 }
 .tutor-mg input, .tutor-mg textarea, .tutor-mg select{
-	background-color: #204631;
-	border-color: #204631;
+	background-color: #555;
+	border-color: #555;
 	color: white;
 }
 .tutor-mg-inner{
 	padding: 15px;
 }
 .tutor-mg h3{
-	color: #d9e8e0;
-	font-size: 20px;
+	color: #fff;
+	font-size: 22px;
 }
 .tutor-mg p{
 	color: white;
 }
 .tutor-mg .btn-primary{
 	background-color: #db6f46;
+	border-color: #db6f46;
 }
 
 .tutor-sw{
 	margin-right: 300px;
 	padding: 18px 20px;
+}
+.tutor-sw.wm{
+	margin-right: 0px;
 }
 .tutor-sw-img img {
   object-fit: cover;
