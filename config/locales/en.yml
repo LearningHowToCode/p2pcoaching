@@ -149,6 +149,7 @@ en:
   i_have_a_question: 'I have a question'
   message: 'Message'
   message2: ''
+  message_tutor: 'Message tutor'
   send_message_directly_to: 'Send a message directly to'
   or_contact_pairbis_customer_support: 'or contact Pairbis customer support!'
   name_student: 'John Smith*'

@@ -124,7 +124,7 @@
   top: 0px;
   right: 0px;
   background-color: #333;
-  overflow: hidden;
+  overflow: auto;
   color: white;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
@@ -309,6 +309,8 @@
 	}
 	.tutor-mg{
 		right: -300px;
+		z-index: 800000;
+		padding-top: 0px;
 	}
 	.lesson{
 		padding: 15px;

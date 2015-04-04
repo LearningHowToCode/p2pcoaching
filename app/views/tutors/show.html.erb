@@ -1,7 +1,10 @@
 <% unless @tutor.is_the?(current_user) %>
   <div class="tutor-mg">
+    <% if browser.mobile? || browser.tablet? %>
+        <button class="btn btn-link btn-lg pull-right close-mg">&times;</button>
+      <% end %>
     <div class="tutor-mg-inner">
-      <h3 class="rm-top"><%=t :message %> <%= @tutor.name %> <%=t :message2 %></h3>
+      <h3 class="rm-top"><%=t :message_tutor %></h3>
       <p><%=t :send_message_directly_to %> <%= @tutor.name %> <%=t :or_contact_pairbis_customer_support %></p><br>
       <%= render 'messages/contact_form' %>
     </div>
@@ -47,7 +50,9 @@
             Edit profile
           <% end %>
         <% end %>
-        <button class="btn btn-primary btn-block"><%= fa_icon 'envelope' %> Send message</button>
+        <% if browser.mobile? || browser.tablet? %>
+          <button class="btn btn-primary btn-block reveal-mg"><%= fa_icon 'envelope' %> Send message</button>
+        <% end %>
       </div>
     </div>
   
@@ -168,6 +173,14 @@
     score: <%= @tutor.rating.try(:round) || 0 %>,
     path: '/assets',
     readOnly: true});
+
+  $('.reveal-mg').click(function(){
+    $('.tutor-mg').css('right', '0');
+  });
+
+  $('.close-mg').click(function(){
+    $('.tutor-mg').css('right', '-300px');
+  });
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
