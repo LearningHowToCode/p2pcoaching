@@ -121,6 +121,8 @@ GEM
     fog-xml (0.1.1)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     haml (4.0.6)
       tilt
@@ -292,6 +294,7 @@ DEPENDENCIES
   devise
   figaro
   fog
+  font-awesome-rails
   haml
   jbuilder (~> 1.2)
   jquery-rails

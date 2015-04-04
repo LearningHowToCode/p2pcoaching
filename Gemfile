@@ -23,6 +23,7 @@ gem 'squeel'
 gem 'simple_form'
 gem 'haml'
 gem 'browser'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'letter_opener'
