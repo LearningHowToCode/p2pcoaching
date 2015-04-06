@@ -1,484 +1,124 @@
 <body class="homepage">
     <section class="full-width height-two-thirds home-banner">
         <div class="text-center">
-            <h1 class="homepage-description"><%=t :welcome_to_pairbis %></h1>
-            <h4 class="homepage-description"><%=t :we_will_help %></h4>
-            <h4 class="homepage-description"><%=t :we_will_help2 %></h4>
+            <h1 class="homepage-description">Our professional coaches help you to lead your dream job</h1>
+         </div>   
+        </section>    
             
-            <% if I18n.locale == :ja %>
-            <center class="free-lesson-center">
-            <br>
-            <%= link_to root_path(anchor: 'free-lesson') do %>
-                <%= image_tag 'Free_Lessons3.gif', width: "280", height: "49", :title => 'Free Lesson' %>
-            <% end %>
-            </center>
-            <% end %>
-
-            <!-- <% if I18n.locale == :en %>
-                <%= link_to root_path(locale: 'ja') do %>
-                    <h5 class="black">日本語(独自の内容ご用意しております)</h5>
-                <% end %>
-                <%= link_to root_path(locale: 'cn') do %>
-                    <h5 class="black">中文</h5>
-                <% end %>
-            <% end %>
-            <% if I18n.locale == :ja %>
-                <%= link_to root_path(locale: 'en') do %>
-                    <h5 class="black">English</h5>
-                <% end %>
-                <%= link_to root_path(locale: 'cn') do %>
-                    <h5 class="black">中文</h5>
-                <% end %>
-            <% end %>
-            <% if I18n.locale == :cn %>
-                <%= link_to root_path(locale: 'en') do %>
-                    <h5 class="black">English</h5>
-                <% end %>
-                <%= link_to root_path(locale: 'ja') do %>
-                    <h5 class="black">日本語(独自の内容ご用意しております)</h5>
-                <% end %>
-            <% end %>
-            -->
-        </div>
-    </section>
-
-    <!--<% if I18n.locale == :ja %>
     <section class="flex bg-white">
-        <center class="free-lesson-center">
-            <br>
-            <%= link_to root_path(anchor: 'free-lesson') do %>
-                <%= image_tag 'Free_Lessons3.gif', width: "280", height: "49", :title => 'Free Lesson' %>
-              <% end %>
-        </center>
-    </section>
-    <% end %>-->
-
-<% if I18n.locale == :en %>
-    <section class="flex bg-grey">
+        </br>
+        </br>
         <div class="row">
-            <div class="col-md-4">
-                <% if I18n.locale == :ja %>
-                    <div class="text-center">
-                        <%= image_tag 'ESL.png', width: "270", height: "168", :title => '英会話' %>
-                    </div>
-                <% end %> 
-                <h3 class="text-center"><%=t :purpose1 %></h3>
-                <h5 class="text-center"><%=t :purpose1_description1 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description2 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description3 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description4 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description5 %></h5>
-                <div class="button">
-                    <% if I18n.locale == :ja %>
-                        <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                        <% end %> 
-                    <% end %>
-                    <br>
-                    <br>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <% if I18n.locale == :ja %>
-                    <div class='text-center'>
-                        <%= image_tag 'High_School_Study_Abroad.png', width: "270", height: "168", :title => 'ハーバード大学留学' %>
-                    </div>
-                <% end %>
-                <h3 class="text-center"><%=t :purpose2 %></h3>
-                <h5 class="text-center"><%=t :purpose2_description1 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description2 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description3 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description4 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description5 %></h5>
-                <div class="button">
-                    <% if I18n.locale == :ja %>
-                        <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>ハーバード日本人学生と相談
-                        <% end %> 
-                    <% end %>
-                <br>
-                <br>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <% if I18n.locale == :ja %>
-                    <div class='text-center'>
-                        <%= image_tag 'Baker.png', width: "270", height: "168", :title => 'MBA留学' %>
-                    </div>
-                <% end %>
-                <h3 class="text-center"><%=t :purpose3 %></h3>
-                <h5 class="text-center"><%=t :purpose3_description1 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description2 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description3 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description4 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description5 %></h5>
-                <div class="button">
-                    <% if I18n.locale == :ja %>
-                        <%= link_to graduate_school_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                        <% end %> 
-                    <% end %>
-                <br>
-                <br>
-                </div>
-            </div>
-        </div>
-    </section>
-<% end %>
-
-<% if I18n.locale == :cn %>
-    <section class="flex bg-grey">
-        <div class="row">
-            <div class="col-md-4">
-                <% if I18n.locale == :ja %>
-                    <div class='text-center'>
-                        <%= image_tag 'ESL.png', width: "270", height: "168", :title => '英会話' %>
-                    </div>
-                <% end %> 
-                <h3 class="text-center"><%=t :purpose1 %></h3>
-                <h5 class="text-center"><%=t :purpose1_description1 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description2 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description3 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description4 %></h5>
-                <h5 class="text-center"><%=t :purpose1_description5 %></h5>
-                <div class="button">
-                    <% if I18n.locale == :ja %>
-                        <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                        <% end %> 
-                    <% end %>
-                    <br>
-                    <br>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <% if I18n.locale == :ja %>
-                    <div class='text-center'>
-                        <%= image_tag 'High_School_Study_Abroad.png', width: "270", height: "168", :title => 'ハーバード大学留学' %>
-                    </div>
-                <% end %>
-                <h3 class="text-center"><%=t :purpose2 %></h3>
-                <h5 class="text-center"><%=t :purpose2_description1 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description2 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description3 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description4 %></h5>
-                <h5 class="text-center"><%=t :purpose2_description5 %></h5>
-                <div class="button">
-                    <% if I18n.locale == :ja %>
-                        <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>ハーバード日本人学生と相談
-                        <% end %> 
-                    <% end %>
-                <br>
-                <br>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <% if I18n.locale == :ja %>
-                    <div class='text-center'>
-                        <%= image_tag 'Baker.png', width: "270", height: "168", :title => 'ハーバードMBA留学' %>
-                    </div>
-                <% end %>
-                <h3 class="text-center"><%=t :purpose3 %></h3>
-                <h5 class="text-center"><%=t :purpose3_description1 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description2 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description3 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description4 %></h5>
-                <h5 class="text-center"><%=t :purpose3_description5 %></h5>
-                <div class="button">
-                    <% if I18n.locale == :ja %>
-                        <%= link_to graduate_school_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                        <% end %> 
-                    <% end %>
-                <br>
-                <br>
-                </div>
-            </div>
-        </div>
-    </section>
-<% end %>
-
-
-    <section class="flex bg-white">
-        <div class="row">
-            <h2 class="bottom-margin text-center"><%=t :Pairbis_charatetertics %></h2>
+            <h2 class="bottom-margin text-center">How it works</h2>
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
-                <div class="col-md-4 xs-mg-bottom">
+                <div class="col-md-4">
                     <div class='text-center'>
-                        <%= image_tag 'badge-ivy.png', width: "100", height: "100" %>
+                        <img src="find_your_coach.jpg" alt="FInd your coach" height: "100" width: "100">
                     </div>
-                    <h3 class="text-center"><%=t :ivy_league_tutors %></h3>
-                    <h5 class="text-center"><%=t :ivy_league_tutors_description1 %></h5>
-                    <h5 class="text-center"><%=t :ivy_league_tutors_description2 %></h5>
+                    <h3 class="text-center">Find your coach</h3>
+                    <h4 class="text-center">Choose a coach of your choice</h4>
                 </div>
-                <div class="col-md-4 xs-mg-bottom">
+                <div class="col-md-4">
                     <div class='text-center'>
-                        <%= image_tag 'badge-pay.png', width: "100", height: "100" %>
+                        <img src="set_a_lesson.jpg" alt="Set a lesson" height: "100" width: "100">
                     </div>
-                    <h3 class="text-center"><%=t :pay_per_lesson %></h3>
-                    <h5 class="text-center"><%=t :pay_per_lesson_description1 %></h5>
-                    <h5 class="text-center"><%=t :pay_per_lesson_description2 %></h5>
+                    <h3 class="text-center">Set a lesson</h3>
+                    <h4 class="text-center">Select a time that works for you</h4>
                 </div>
-                <div class="col-md-4 xs-mg-bottom">
+                <div class="col-md-4">
                     <div class='text-center'>
-                        <%= image_tag 'badge-schedule.png', width: "100", height: "100" %>
+                        <img src="get_career_advice.jpg" alt="Get career advice" height: "100" width: "100">
                     </div>
-                    <h3 class="text-center"><%=t :online_lesson %></h3>
-                    <h5 class="text-center"><%=t :online_lesson_description1 %></h5>
-                    <h5 class="text-center"><%=t :online_lesson_description2 %></h5>
+                    <h3 class="text-center">Get career advice</h3>
+                    <h4 class="text-center">Talk with your coach online and ask your questions</h4>
                 </div>
             </div>
             <div class="col-md-1">
             </div>
         </div>
+        </br>
+        </br>
     </section>
 
-    <% if I18n.locale == :ja %>
+    <section class="flex bg-gray">
+        </br>
+        </br>
+        <div class="row">
+          <h2 class="bottom-margin text-center">Our career coaches</h2>
+          <br>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <div class="col-md-4">
+              <div class='text-center'>
+                <img src="Tom.jpg" alt="Tom" height: "50" width: "50">
+              </div>
+              <h3 class="text-center">Tom</h3>
+              <h4 class="text-center">Goldman Sachs</h4>
+            </div>
+            <div class="col-md-4">
+              <div class='text-center'>
+                <img src="Sarah.jpg"alt="Sarah" height: "50" width: "50">
+              </div>
+              <h3 class="text-center">Sarah</h3>
+              <h4 class="text-center">UBS</h4>
+            </div>
+            <div class="col-md-4">
+              <div class='text-center'>
+                <img src="Mike.jpg" alt="Mike" height: "50" width: "50">
+              </div>
+              <h3 class="text-center">Tom</h3>
+              <h4 class="text-center">McKinsey</h4>
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+    </br>
+      </br>
+    </section>
+
     <section class="flex bg-white">
-        <center class="free-lesson-center">
-            <br>
-            <%= link_to root_path(anchor: 'free-lesson') do %>
-                <%= image_tag 'Free_Lessons3.gif', width: "280", height: "49", :title => 'Free Lesson' %>
-              <% end %>
-        </center>
-    </section>
-    <% end %>
-
-<% if I18n.locale == :ja %>
-    <section class="flex bg-grey">
-        <div class="row">
-            <br>
-            <h2 class="bottom-margin text-center">レッスンを選ぶ</h2>
-            <br>
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-5 xs-mg-bottom">
-                <div class='text-center'>
-                    <%= image_tag 'Justice.jpg', width: "270", height: "168", :title => '白熱教室' %>
-                </div>
-                <h3 class="text-center">アカデミック・ディスカッション</h3>
-                <h5 class="text-center">マイケル・サンデル教授の授業「Justice（正義）」のテーマを用いたハーバードの先生とのレッスンを通して、自分の考え・意見を的確に表現できるようになりましょう。</h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <div class="button">
-                    <%= link_to english_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                    <% end %> 
-                    <br>
-                    <br>
-                </div>
-            </div>
-            <div class="col-md-5 xs-mg-bottom">
-                <div class='text-center'>
-                    <%= image_tag 'Business.jpg', height: "168", :title => 'ハーバード大学留学' %>
-                </div>
-                <h3 class="text-center">ビジネス・ディスカッション</h3>
-                <h5 class="text-center">ハーバード流の交渉ケース、コンサルティング・ファーム面接に使われるケースを用いたハーバードの先生とのレッスンを通して、アメリカ人と対等に話すスキルを学びましょう。</h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <div class="button">
-                    <%= link_to business_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                    <% end %> 
-                <br>
-                <br>
-                </div>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
-    </section>
-    <section class="flex bg-grey">
-        <div class="row">
-            <div class="col-md-1"> 
-            </div>
-            <div class="col-md-5 xs-mg-bottom">
-                <div class='text-center'>
-                    <%= image_tag 'High_School_Study_Abroad.png', width: "270", height: "168", :title => 'ハーバード大学留学' %>
-                </div>
-                <h3 class="text-center">米国大学留学サポート</h3>
-                <h5 class="text-center">ハーバード大学に合格した先生に相談をして、受験のアドバイスをもらったり、エッセイの添削や出願準備を手伝ってもらいましょう。先生は日本人・アメリカ人両方ご用意いたしております。</h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <div class="button">
-                    <%= link_to root_path(anchor: 'free-lesson'), class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>ハーバード日本人学生と相談
-                    <% end %> 
-                <br>
-                <br>
-                </div>
-            </div> 
-            <div class="col-md-5 xs-mg-bottom">
-                <div class='text-center'>
-                    <%= image_tag 'Baker.png', width: "270", height: "168", :title => 'ハーバードMBA留学' %>
-                </div>
-                <h3 class="text-center">米国MBA留学サポート</h3>
-                <h5 class="text-center">ハーバードビジネススクールに合格した先生に相談をして、受験のアドバイスをもらったり、エッセイの添削や出願準備を手伝ってもらいましょう。先生は日本人・アメリカ人両方ご用意いたしております。</h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <h5 class="text-center"></h5>
-                <div class="button">
-                    <%= link_to graduate_school_path, class: "btn btn-primary btn-lg", data: { no_turbolink: true } do %>詳しくはこちら
-                    <% end %>
-                <br>
-                <br>
-                </div>
-            </div>
-            <div class="col-md-1"> 
-            </div>
-        </div>
-    </section>
-<% end %>
-
-<% if I18n.locale == :ja %>
-    <section class="bg-white">
-        <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
-                <center>
-                    <h3>受講者の声</h3>
-                    <%= image_tag 'Review1.jpg', height: "180", :title => '受講者の声' %>
-                    <h5>オンラインでのレッスンということで、最初はちょっと不安でしたが、実際にレッスンをやってみると</h5>
-                    <h5>動画でお互いの顔を見ながらの会話だったので、とても話しやすかったです。</h5>
-                    <h5>また、レッスンの中では教材の内容だけでなく、お互いの価値観や国民性についても</h5>
-                    <h5>議論ができ、自分の考えを的確に伝える練習をすることができました。</h5>
-                    <br>
-                    <h5>アカデミック・ディスカッション英会話受講者</h5>
-                    <h5>東京国立大学院生　K.K.さん</h5>
-                </center>
-            </div>
-            <div class="col-md-2">
-            </div>
-        </div>
+      </br>
+      </br>
+      <div class="row">
+        <h2 class="bottom-margin text-center">Customer reviews</h2>
         <br>
-    </section>
-<% end %>
-
-<% if I18n.locale == :ja %>
-    <section class="bg-gray">
-        <div class="row">
-            <h2 class="bottom-margin text-center">お薦めの先生</h2>
-            <h4 class="text-center text-black">先生は他にも多数在籍。ニーズに合った先生をお選びいただきます。</h4>
-            <br>
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-2">
-                <div class='text-center'>
-                    <%= image_tag 'Jennifer.jpg', height: "100" %>
-                </div>
-                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/33">Jennifer 先生</a></h4>
-                <h5 class="text-center">ハーバード大学博士課程在学</h5>
-                <h5 class="text-center">アカデミック・ディスカッション</h5>
-                <h5 class="text-center">日本語対応可</h5>
-            </div>
-            <div class="col-md-2">
-                <div class='text-center'>
-                    <%= image_tag 'Ashley.jpg', height: "100" %>
-                </div>
-                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/56">Ashley 先生</a></h4>
-                <h5 class="text-center">ハーバード教育大学院在学</h5>
-                <h5 class="text-center">アカデミック・ディスカッション</h5>
-            </div> 
-            <div class="col-md-2">
-                <div class='text-center'>
-                    <%= image_tag 'Cornelius.jpg', height: "100" %>
-                </div>
-                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/38">Cornelius 先生</a></h4>
-                <h5 class="text-center">ハーバード教育大学院在学</h5>
-                <h5 class="text-center">アカデミック・ディスカッション</h5>
-            </div>
-            <div class="col-md-2">
-                <div class='text-center'>
-                    <%= image_tag 'Turker.png', height: "100" %>
-                </div>
-                 <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/13">Turker 先生</a></h4>
-                <h5 class="text-center">ハーバードビジネススクール(HBS)在学</h5>
-                <h5 class="text-center">ビジネス・ディスカッション</h5>
-            </div>
-            <div class="col-md-2">
-                <div class='text-center'>
-                    <%= image_tag 'Ota.jpg', height: "100" %>
-                </div>
-                <h4 class="text-center"><a href="https://pairbis.com/ja/tutors/2">Mitsu 先生</a></h4>
-                <h5 class="text-center">ハーバードビジネススクール(HBS)在学</h5>
-                <h5 class="text-center">MBA留学サポート</h5>
-                <h5 class="text-center">日本語対応可</h5>
-            </div>
-            <div class="col-md-1">
-            </div>
+        <div class="col-md-1">
         </div>
-    </section>
-<% end %>
-
-<% if I18n.locale == :ja %>
-    <section class="bg-white" id="free-lesson">
-        <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
-                <center>
-                    <h3>レッスンのお申込みはこちらから！</h3>
-                    <h5>24時間以内にメールにてご連絡差し上げます。</h5>
-                </center>
-                <%= render 'contact_form'  %>
-            </div>
-            <div class="col-md-2">
-            </div>
+        <div class="col-md-5">
+          <div class='text-center'>
+            <img src="customer.jpg" alt="Customer 1" height: "100" width: "100">
+          </div>
+          <h3 class="text-center">"I was able to get inside perspectives about my top choice consulting firm."</h3>
+          <h4 class="text-center">A senior at Harvard College</h4>
         </div>
-         <br>
-    </section>
-<% end %>
-
-    <section class="bg-gray" id="contact">
-        <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
-                <center>
-                    <h2 class="text-center"><%=t :contact %></h2>
-                    <h4 class="text-center text-black"><%=t :contact_description1 %></h4>
-                    <h4 class="text-center text-black"><%=t :contact_description2 %></h4>
-                    <h4 class="text-center text-black"><%=t :contact_description3 %>
-                        <a href="mailto:pairbis@gmail.com">pairbis@gmail.com</a>
-                    </h4>
-                    <br>
-                    <%= image_tag 'contact.png', width: "280", height: "280", :title => 'Contact' %>
-                </center>
-            </div>
-            <div class="col-md-2">
-            </div>
+        <div class="col-md-5">
+          <div class='text-center'>
+            <img src="customer.jpg" alt="Customer 2" height: "100" width: "100">
+          </div>
+          <h3 class="text-center">"This service allowed me to ace my investment banking interview!"</h3>
+          <h4 class="text-center">A senior at UC Berkeley</h4>
         </div>
-    </section>
-
-    <section class="bg-white" id="about">
-        <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
-                <center>
-                    <h2 class="text-center"><%=t :about_team %></h2>
-                    <h4 class="text-black"><%=t :about_description1 %></h4>
-                    <h4 class="text-black"><%=t :about_description2 %></h4>
-                    <h4 class="text-black"><%=t :about_description3 %></h4>
-                    <h4 class="text-black"><%=t :about_description4 %></h4>
-                    <h4 class="text-black"><%=t :about_description5 %></h4>
-                    <a href="https://www.facebook.com/pairbis?ref=hl" target="_blank">
-                        <%= image_tag 'facebook.png', width: "30", height: "30", :title => 'Facebook' %> 
-                    </a>
-                    <a href="http://instagram.com/pairbis_ivy_league_tutoring" target="_blank">
-                        <%= image_tag 'instagram.jpg', width: "30", height: "30", :title => 'Instagram' %> 
-                    </a>
-                    <a href="http://pairbis.blogspot.jp/" target="_blank">
-                        <%= image_tag 'blogger.png', width: "30", height: "30", :title => 'Blogger' %> 
-                    </a>
-                    <br>
-                    <%= image_tag 'about-us.png', width: "280", height: "280", :title => 'About' %>
-                </center>
-            </div>
-            <div class="col-md-2">
-            </div>
+        <div class="col-md-1">
         </div>
+      </div>
+      </br>
+      </br>
     </section>
-</body>
+    
+    <section class="flex bg-gray">
+      </br>
+      </br>
+      <div class='text-center'>  
+        <h2>Contact us</h2>
+        </br>
+        <h3>Feel free to email us!</h3>
+        <h3><a href="mailto:p2pcoaching@gmail.com" target="_top">p2pcoaching@gmail.com</a></h3>
+      </div>
+      </br>
+      </br>
+    </section>
+  </body>
