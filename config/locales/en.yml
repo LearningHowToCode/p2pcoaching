@@ -171,3 +171,15 @@ en:
   timezone: 'Time Zone'
   go: "Go"
   other_subjects_hint: 'Add other subjects separated by ",": For example: Spanish, Technical English'
+  subjects: "Subjects"
+  price: "Price"
+  reviews: "Reviews"
+  tutor_has_not_been_reviewed_yet: "Tutor has not been reviewed yet."
+  select_your_timezone: "Select you timezone"
+  lesson_information: "Lesson information"
+  tutor: "Tutor:"
+  student: "Student:"
+  day: "Day:"
+  start_time: "Time:"
+  duration: "Duration:"
+  any_price: "Any price"

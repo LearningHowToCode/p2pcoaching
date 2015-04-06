@@ -180,7 +180,7 @@
 
 <script>
   $(".tutor-star-rating").raty({
-    score: <%= @tutor.rating.try(:round) %>,
+    score: <%= @tutor.rating.try(:round) || 0 %>,
     path: '/assets',
     readOnly: true});
 
