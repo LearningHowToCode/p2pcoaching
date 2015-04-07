@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <%= link_to root_path, class: "navbar-brand" do %>
-                <%= image_tag 'pairbis-logo.png' %>
+                    P2P Coaching
                 <% end %>
             </div>
 
@@ -28,9 +28,9 @@
                         <li><%= link_to_my_schedule %></li>
                         <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
                     <% else  %>
-                        <li><%= link_to t('log_in'), new_user_session_path %></li>
-                        <li><%= link_to t('student_sign_up'), new_registration_path('student') %><li>
-                        <li><%= link_to t('tutor_sign_up'), new_registration_path('tutor') %><li>
+                        <li><%= link_to "Login", new_user_session_path %></li>
+                        <li><%= link_to "Signup", new_registration_path('student') %><li>
+                        <li><%= link_to "Become a coach", new_registration_path('tutor') %><li>
                     <% end %>
                 </ul>
             </div>
