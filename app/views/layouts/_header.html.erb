@@ -17,10 +17,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <li><%= link_to "Find your coach", tutors_path %></li>
+                    <li><%= link_to "How it works", how_it_works_path %></li>
                     <li><%= link_to t('about'), root_path(anchor: 'about') %></li>
-                    <li><%= link_to t('how_it_works'), how_it_works_path %></li>
-                    <li><%= link_to t('faqs'), faqs_path %></li>
-                    <li><%= link_to t('search_tutors'), tutors_path %></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <% if user_signed_in?  %>
