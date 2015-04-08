@@ -19,6 +19,9 @@ $jumbotron-bg: white;
 }
 .navbar-brand{
 	padding: 4px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 37px;
 }
 .navbar-brand img{
 	width: 125px;
@@ -180,16 +183,17 @@ section.sm{
 	width: 33.333333%;
 }
 .navbar-default{
-	background-color: #408b62;
+	background-color: white;
 	border: none;
 }
 
 .navbar-default .navbar-nav > li > a{
-	color: #fff;
+	color: #555;
+    font-weight: 500;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
-	color: #b3d1c0;
+	color: #222;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
