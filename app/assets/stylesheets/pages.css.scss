@@ -9,13 +9,23 @@
 }
 
 .home-banner{
-	background: image-url('background.jpg') bottom center;
+	background: image-url('background.jpg');
 	background-repeat:no-repeat;
 	background-position:center;
+    background-size: cover;
+    height: 60vh;
 }
 
 .home-banner h1{
 	font-size: 2.5em;
+    color: #fdfdfd;
+}
+
+.home-banner .slogan{
+  position: relative;
+  width: 50%;
+  left: 50%;
+  top: 25%;
 }
 
 .home-banner h1, .home-banner h4{
