@@ -10,11 +10,11 @@
     <% end %>
     <p>Please take a few minutes to complete the form.</p>
     <div class="form-group">
-      <%= f.label :name, 'Your Name' %><br>
+      <%= f.label :name, 'Your Name*' %><br>
       <%= f.text_field :name, class: "form-control", placeholder: "Your Name" %>
     </div>
     <div class="form-group">
-      <%= f.label :image, 'Picture' %><br>
+      <%= f.label :image, 'Picture*' %><br>
       <%= f.file_field :image, class: "form-control" %>
     </div>
     <div class="form-group">
@@ -56,19 +56,19 @@
       <small><%= t(:other_subjects_hint) %></small>
     </div>
     <div class="form-group">
-      <%= f.label :price, 'Hourly Price USD* (This is the price students will pay. You will get 80% of it deposited to your PayPal or Venmo immediately after a lesson is completed.)' %><br>
-      <%= f.select :price, (20..100).step(5).to_a, { selected: @tutor.price.to_i }, {class: "form-control"} %>
+      <%= f.label :price, 'Hourly Price USD*' %><br>
+      <%= f.select :price, (50..300).step(25).to_a, { selected: @tutor.price.to_i }, {class: "form-control"} %>
     </div>
     <div class="form-group">
-      <%= f.label :bio, 'Profile (150 Characters or Less)* (This will show up on tutor search page.)' %><br>
+      <%= f.label :bio, 'Profile (Max: 150 Characters for search tutor page)*' %><br>
       <%= f.text_area :bio, class: "form-control", maxlength: 150 %>
     </div>
     <div class="form-group">
-      <%= f.label :long_bio, 'Profile (1,000 Characters or Less)* (This will show up on your public profile page. You can also copy & paste the same profile as above for your convenience.)' %><br>
+      <%= f.label :long_bio, 'Profile (Max: 1,00 Characters for your profile page)*' %><br>
       <%= f.text_area :long_bio, class: "form-control", maxlength: 1000 %>
     </div>
     <div class="form-group">
-      <%= f.label :skype_id, 'Skype ID* (Visible only to the student who has a confirmed lesson with you)' %><br>
+      <%= f.label :skype_id, 'Skype ID*' %><br>
       <%= f.text_field :skype_id, class: "form-control" %>
     </div>
     <div class="form-group">
@@ -82,7 +82,7 @@
     <% end  %>
     </div>
     <div class="form-group">
-      <%= f.label :paypal_account, 'PayPal　(email address) or Venmo (phone number). Visible only to you. You can also skip it for now.' %><br>
+      <%= f.label :paypal_account, 'PayPal　(Email Address)' %><br>
       <%= f.text_field :paypal_account, class: "form-control" %>
     </div>
     <div class="form-group">
