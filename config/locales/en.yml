@@ -172,7 +172,7 @@ en:
   Pairbis_charatetertics: 'What Makes Our Service Unique'
   timezone: 'Time Zone'
   go: "Go"
-  other_subjects_hint: 'Add other subjects separated by ",": For example: Spanish, Technical English'
+  other_subjects_hint: 'Add other industries separated by ",": For example: Spanish, Technical English'
   subjects: "Subjects"
   price: "Price"
   reviews: "Reviews"
@@ -185,3 +185,4 @@ en:
   start_time: "Time:"
   duration: "Duration:"
   any_price: "Any price"
+  price_range: "Price range"

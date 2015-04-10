@@ -1,4 +1,4 @@
-Tutor::SUBJECTS.each do |s|
+Tutor::INDUSTRIES.each do |s|
   Subject.create name: s
   print '.'
 end

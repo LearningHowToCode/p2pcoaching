@@ -55,7 +55,7 @@ class TutorsController < ApplicationController
   end
 
   def normalized_tutor_params
-    subject_ids = languages = {}
+    subject_ids = {}
     attrs = tutor_params
 
     subject_ids = SetOtherSubjects.new(params[:tutor][:other_subjects]).call if params[:tutor][:other_subjects]
@@ -68,8 +68,7 @@ class TutorsController < ApplicationController
       attrs = attrs.merge(graduate_institution: params[:tutor][:other_graduate_institution])
     end
 
-    languages = params[:tutor][:languages].values.join(', ') if params[:tutor][:languages]
-    attrs.merge(languages: languages)
+    attrs
   end
 
   def check_user_permissions

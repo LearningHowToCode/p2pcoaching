@@ -18,39 +18,31 @@
       <%= f.file_field :image, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :undergraduate_institution, 'College*' %><br>
-      <%= f.select :undergraduate_institution, Tutor::INSTITUTIONS,
+      <%= f.label :undergraduate_institution, 'Company*' %><br>
+      <%= f.select :undergraduate_institution, Tutor::COMPANIES,
                    { selected: selected_institution(@tutor) }, { class: "form-control", id: 'undergraduate-institution' } %>
     </div>
     <div class="form-group <%= other_institution_class(@tutor) %>" id='other-undergraduate-institution'>
-      <%= label_tag :other_undergraduate_institution, 'Which school?' %><br>
+      <%= label_tag :other_undergraduate_institution, 'Which company?' %><br>
       <%= text_field_tag 'tutor[other_undergraduate_institution]',
                          @tutor.undergraduate_institution, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :undergraduate_major, 'Major*' %><br>
-      <%= f.text_field :undergraduate_major, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :graduate_institution, 'Graduate School (Optional)' %><br>
-      <%= f.select :graduate_institution, Tutor::INSTITUTIONS,
+      <%= f.label :graduate_institution, 'Company 2 (Optional)' %><br>
+      <%= f.select :graduate_institution, Tutor::COMPANIES,
                    { selected: selected_graduate_institution(@tutor), include_blank: true },
                    { class: "form-control", id: 'graduate-institution' } %>
     </div>
     <div class="form-group <%= other_graduate_institution_class(@tutor) %>" id='other-graduate-institution'>
-      <%= label_tag :other_graduate_institution, 'Which school?' %><br>
+      <%= label_tag :other_graduate_institution, 'Which company?' %><br>
       <%= text_field_tag 'tutor[other_graduate_institution]',
                          @tutor.graduate_institution, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :graduate_study_field, 'Graduate School Field of Study (Optional)' %><br>
-      <%= f.text_field :graduate_study_field, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.association :subjects, as: :check_boxes, collection: Subject.own.all %><br>
+      <%= f.association :subjects, as: :check_boxes, collection: Subject.own.all, label: 'Industries' %><br>
     </div>
     <div class="form-group <%= other_subject_class(@tutor) %>" id='other-subject'>
-      <%= label_tag :other_subjects, 'What subjects?' %><br>
+      <%= label_tag :other_subjects, 'What industries?' %><br>
       <%= text_field_tag 'tutor[other_subjects]',
                          @tutor.other_subjects, class: "form-control" %>
       <small><%= t(:other_subjects_hint) %></small>
@@ -74,12 +66,6 @@
     <div class="form-group">
       <%= f.label :gmail_address, 'Gmail Address for Google Hangouts*' %><br>
       <%= f.email_field :gmail_address, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <label for="">Languages You Speak*</label>
-      <% Tutor::LANGUAGES.each do |language| %>
-          <%= custom_checkbox 'languages', language, @tutor.has_language?(language) %>
-    <% end  %>
     </div>
     <div class="form-group">
       <%= f.label :paypal_account, 'PayPal　(Email Address)' %><br>

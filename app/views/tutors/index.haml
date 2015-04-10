@@ -25,9 +25,6 @@
                 %h5
                   - tutor.subjects.each do |subject|
                     %span.label.label-info= subject.name unless subject.name == 'Other'
-                %h5
-                  - tutor.languages.split(', ').each do |language|
-                    %span.label.label-success= language
             .tutor-rate
               %h3.tutor-price
                 = number_to_currency tutor.price
@@ -71,8 +68,6 @@
             %h5
               - tutor.subjects.each do |subject|
                 %span.label.label-info= subject.name unless subject.name == 'Other'
-              - tutor.languages.split(', ').each do |language|
-                %span.label.label-success= language
             .tutor-rate
               %h3.tutor-price
                 = number_to_currency tutor.price

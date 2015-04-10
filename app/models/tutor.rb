@@ -3,9 +3,13 @@ class Tutor < ActiveRecord::Base
   # Do not remove, needed for seeds, in case of needing more subjects add from admin interface
   SUBJECTS = ['English', 'Business English', 'TOEFL', 'SAT', 'GRE', 'GMAT',
               'Essay Editing', 'General Admissions Advice', 'Other']
+  INDUSTRIES = ['Consulting', 'Investment Banking', 'Venture Capital',
+                'Private Equity', 'Hedge Fund', 'Technology', 'Startup', 'Other']
 
   LANGUAGES = ['English', '中文', '日本語', '한국어', 'Español']
   INSTITUTIONS = ['Brown','Columbia','Cornell','Dartmouth','Harvard', 'MIT','Princeton', 'Stanford','UPenn', 'Yale', 'Other']
+  COMPANIES = ["Bain and Company", "Boton Consulting Group", "McKinsey",
+               "Goldman Sachs", "UBS", "Google", "Other"]
 
   has_one :user, as: :profile, dependent: :destroy
   has_many :lessons, dependent: :destroy
@@ -14,10 +18,9 @@ class Tutor < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  validates_presence_of  'name', 'price', 'bio',
-                         'undergraduate_institution', 'undergraduate_major',
+  validates_presence_of  'name', 'price', 'bio', 'undergraduate_institution',
                          'subjects', 'long_bio', 'skype_id','gmail_address',
-                         'languages', on: :update
+                          on: :update
 
   scope :completed, ->{ where(completed_profile: true) }
   delegate :email, to: :user

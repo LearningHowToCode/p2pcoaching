@@ -17,7 +17,7 @@ def tutor_attrs
     "undergraduate_major" => "qwe",
     "graduate_institution" => "UPenn",
     "graduate_study_field" => "",
-    "subject" => Tutor::SUBJECTS.sample(5).join(', '),
+    "subject" => Tutor::INDUSTRIES.sample(5).join(', '),
     "long_bio" => "d saf da fasf",
     "skype_id" => "fdafdsf",
     "gmail_address" => "sdfsf@fads.dsa",
